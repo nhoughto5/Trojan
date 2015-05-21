@@ -15,8 +15,14 @@ namespace Trojan.Models
 
         public string ImagePath { get; set; }
 
-        [Display(Name = "Price")]
-        public double? UnitPrice { get; set; }
+        [Display(Name = "F_in")]
+        public int F_in { get; set; }
+
+        [Display(Name = "F_out")]
+        public int F_out { get; set; }
+
+        [Display(Name = "F_sum")]
+        public int F_sum { get; set; }
 
         public int? CategoryID { get; set; }
 

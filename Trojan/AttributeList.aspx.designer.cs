@@ -10,7 +10,7 @@
 namespace Trojan {
     
     
-    public partial class ProductList {
+    public partial class AttributeList {
         
         /// <summary>
         /// attributeList control.

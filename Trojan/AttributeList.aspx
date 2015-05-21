@@ -36,14 +36,17 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="AttributeDetails.aspx?productID=<%#:Item.AttributeID%>">
+                                    <a href="AttributeDetails.aspx?AttributeID=<%#:Item.AttributeID%>">
                                         <span>
                                             <%#:Item.AttributeName%>
                                         </span>
                                     </a>
                                     <br />
                                     <span>
-                                        <b>Price: </b><%#:String.Format("{0:c}", Item.UnitPrice)%>
+                                        <b>F_in: </b><%#:String.Format("{0:d}", Item.F_in)%>
+                                    </span>
+                                    <span>
+                                        <b>F_out: </b><%#:String.Format("{0:d}", Item.F_out)%>
                                     </span>
                                     <br />
                                 </td>
