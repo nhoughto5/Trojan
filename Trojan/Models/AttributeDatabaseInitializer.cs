@@ -75,7 +75,7 @@ namespace Trojan.Models
                 new Attribute
                 {
                     AttributeID = 4,
-                    AttributeName = "Testing",
+                    AttributeName = "Penis Testing",
                     Description = "Insertion",
                     ImagePath="four.png",
                     F_in = 1,
