@@ -80,7 +80,7 @@ namespace Trojan.Models
                     ImagePath="four.png",
                     F_in = 1,
                     F_out = 3,
-                    CategoryID = 1
+                    CategoryID = 2
                 },
                 new Attribute
                 {
@@ -140,7 +140,7 @@ namespace Trojan.Models
                     ImagePath="ten.png",
                     F_in = 1,
                     F_out = 10,
-                    CategoryID = 3
+                    CategoryID = 2
                 },
                 new Attribute
                 {
