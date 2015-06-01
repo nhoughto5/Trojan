@@ -441,9 +441,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Logic\VirusDescriptionActions.cs" />
     <Compile Include="Models\Attribute.cs" />
     <Compile Include="Models\AttributeContext.cs" />
     <Compile Include="Models\AttributeDatabaseInitializer.cs" />
+    <Compile Include="Models\Virus_Item.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -57,7 +57,7 @@ namespace Trojan.Models
                     AttributeID = 2,
                     AttributeName = "Design",
                     Description = "Insertion",
-                    ImagePath="rocket.png",
+                    ImagePath="two.png",
                     F_in = 1,
                     F_out = 2,
                     CategoryID = 1
@@ -75,12 +75,12 @@ namespace Trojan.Models
                 new Attribute
                 {
                     AttributeID = 4,
-                    AttributeName = "Penis Testing",
+                    AttributeName = "Testing",
                     Description = "Insertion",
                     ImagePath="four.png",
                     F_in = 1,
                     F_out = 3,
-                    CategoryID = 2
+                    CategoryID = 1
                 },
                 new Attribute
                 {
