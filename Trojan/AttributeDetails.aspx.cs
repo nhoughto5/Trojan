@@ -16,13 +16,13 @@ namespace Trojan
 
         }
 
-        public IQueryable<Trojan.Models.Attribute> GetAttribute([QueryString("attributeID")] int? attributeId)
+        public IQueryable<Trojan.Models.Attribute> GetAttribute([QueryString("AttributeID")] int? AttributeId)
         {
             var _db = new Trojan.Models.AttributeContext();
             IQueryable<Trojan.Models.Attribute> query = _db.Attributes;
-            if (attributeId.HasValue && attributeId > 0)
+            if (AttributeId.HasValue && AttributeId > 0)
             {
-                query = query.Where(p => p.AttributeID == attributeId);
+                query = query.Where(p => p.AttributeID == AttributeId);
             }
             else
             {

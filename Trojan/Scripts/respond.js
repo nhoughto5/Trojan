@@ -138,7 +138,7 @@ window.matchMedia = window.matchMedia || (function(doc, undefined){
 			//if no internal queries exist, but media attr does, use that	
 			//note: this currently lacks support for situations where a media attr is specified on a link AND
 				//its associated stylesheet has internal CSS media queries.
-				//In those cases, the media attribute will currently be ignored.
+				//In those cases, the media Attribute will currently be ignored.
 			if( useMedia ){
 				ql = 1;
 			}

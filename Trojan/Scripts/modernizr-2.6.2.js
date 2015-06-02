@@ -871,9 +871,9 @@ window.Modernizr = (function( window, document, undefined ) {
     // Hold this guy to execute in a moment.
     function webforms() {
         /*>>input*/
-        // Run through HTML5's new input attributes to see if the UA understands any.
+        // Run through HTML5's new input Attributes to see if the UA understands any.
         // We're using f which is the <input> element created early on
-        // Mike Taylr has created a comprehensive resource for testing these attributes
+        // Mike Taylr has created a comprehensive resource for testing these Attributes
         //   when applied to all input types:
         //   miketaylr.com/code/input-type-attr.html
         // spec: www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#input-type-attr-summary
@@ -1152,7 +1152,7 @@ window.Modernizr = (function( window, document, undefined ) {
         // Avoid adding some elements to fragments in IE < 9 because
         // * Attributes like `name` or `type` cannot be set/changed once an element
         //   is inserted into a document/fragment
-        // * Link elements with `src` attributes that are inaccessible, as with
+        // * Link elements with `src` Attributes that are inaccessible, as with
         //   a 403 response, will cause the tab/window to crash
         // * Script elements appended to fragments will execute when their `src`
         //   or `text` property is set

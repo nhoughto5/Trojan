@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Attribute Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" 
          CodeBehind="AttributeDetails.aspx.cs" Inherits="Trojan.AttributeDetails" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:FormView ID="attributeDetail" runat="server" ItemType="Trojan.Models.Attribute" SelectMethod ="GetAttribute" RenderOuterTable="false">
+    <asp:FormView ID="AttributeDetail" runat="server" ItemType="Trojan.Models.Attribute" SelectMethod ="GetAttribute" RenderOuterTable="false">
         <ItemTemplate>
             <div>
                 <h1><%#:Item.AttributeName %></h1>

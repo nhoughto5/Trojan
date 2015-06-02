@@ -26,6 +26,8 @@ namespace Trojan.Models
 
         public int? CategoryID { get; set; }
 
+        public string CategoryName { get; set; }
+
         public virtual Category Category { get; set; }
     }
 }

@@ -568,16 +568,16 @@ if (window.jQuery) {
             normalizedAttributes = { validationgroup: "validationGroup", focusonerror: "focusOnError" };
         function getAttributesWithPrefix(element, prefix) {
             var i,
-                attribute,
+                Attribute,
                 list = {},
-                attributes = element.attributes,
-                length = attributes.length,
+                Attributes = element.Attributes,
+                length = Attributes.length,
                 prefixLength = prefix.length;
             prefix = prefix.toLowerCase();
             for (i = 0; i < length; i++) {
-                attribute = attributes[i];
-                if (attribute.specified && attribute.name.substr(0, prefixLength).toLowerCase() === prefix) {
-                    list[attribute.name.substr(prefixLength)] = attribute.value;
+                Attribute = Attributes[i];
+                if (Attribute.specified && Attribute.name.substr(0, prefixLength).toLowerCase() === prefix) {
+                    list[Attribute.name.substr(prefixLength)] = Attribute.value;
                 }
             }
             return list;
@@ -587,8 +587,8 @@ if (window.jQuery) {
             return normalizedAttributes[key] === undefined ? key : normalizedAttributes[key];
         }
         function addValidationExpando(element) {
-            var attributes = getAttributesWithPrefix(element, dataValidationAttribute + "-");
-            $.each(attributes, function (key, value) {
+            var Attributes = getAttributesWithPrefix(element, dataValidationAttribute + "-");
+            $.each(Attributes, function (key, value) {
                 element[normalizeKey(key)] = value;
             });
         }
@@ -601,8 +601,8 @@ if (window.jQuery) {
         function addNormalizedAttribute(name, normalizedName) {
             normalizedAttributes[name.toLowerCase()] = normalizedName;
         }
-        function parseSpecificAttribute(selector, attribute, validatorsArray) {
-            return $(selector).find("[" + attribute + "='true']").each(function (index, element) {
+        function parseSpecificAttribute(selector, Attribute, validatorsArray) {
+            return $(selector).find("[" + Attribute + "='true']").each(function (index, element) {
                 addValidationExpando(element);
                 element.dispose = function () { dispose(element); element.dispose = null; };
                 if ($.inArray(element, validatorsArray) === -1) {

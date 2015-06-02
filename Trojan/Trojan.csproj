@@ -161,6 +161,7 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="AddToDescription.aspx" />
     <Content Include="AttributeDetails.aspx" />
     <Content Include="AttributeList.aspx" />
     <Content Include="Catalog\Images\eight.png" />
@@ -238,6 +239,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Images\logo.jpg" />
     <Content Include="Images\one.png" />
+    <Content Include="obj\Debug\Trojan.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Trojan.dll" />
+    <Content Include="obj\Debug\Trojan.pdb" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -247,6 +251,7 @@
     <Content Include="Catalog\Images\Thumbs\Thumbs.db" />
     <Content Include="Catalog\Images\icon_template.psd" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\Trojan.csprojResolveAssemblyReference.cache" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -282,6 +287,7 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="VirusDescription.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <None Include="Project_Readme.html" />
@@ -400,6 +406,13 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AddToDescription.aspx.cs">
+      <DependentUpon>AddToDescription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddToDescription.aspx.designer.cs">
+      <DependentUpon>AddToDescription.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -442,9 +455,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Logic\VirusDescriptionActions.cs" />
     <Compile Include="Models\Attribute.cs" />
     <Compile Include="Models\AttributeContext.cs" />
     <Compile Include="Models\AttributeDatabaseInitializer.cs" />
+    <Compile Include="Models\Virus_Item.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
@@ -472,6 +487,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="VirusDescription.aspx.cs">
+      <DependentUpon>VirusDescription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VirusDescription.aspx.designer.cs">
+      <DependentUpon>VirusDescription.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

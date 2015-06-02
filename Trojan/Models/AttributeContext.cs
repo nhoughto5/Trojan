@@ -9,5 +9,6 @@ namespace Trojan.Models
         }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Attribute> Attributes { get; set; }
+        public DbSet<Virus_Item> VirusDescriptionItems { get; set; }
     }
 }
