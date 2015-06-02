@@ -174,7 +174,7 @@ jQuery.fn = jQuery.prototype = {
 							if ( jQuery.isFunction( this[ match ] ) ) {
 								this[ match ]( context[ match ] );
 
-							// ...and otherwise set as attributes
+							// ...and otherwise set as Attributes
 							} else {
 								this.attr( match, context[ match ] );
 							}
@@ -1095,21 +1095,21 @@ var i,
 	characterEncoding = "(?:\\\\.|[\\w-]|[^\\x00-\\xa0])+",
 
 	// Loosely modeled on CSS identifier characters
-	// An unquoted value should be a CSS identifier http://www.w3.org/TR/css3-selectors/#attribute-selectors
+	// An unquoted value should be a CSS identifier http://www.w3.org/TR/css3-selectors/#Attribute-selectors
 	// Proper syntax: http://www.w3.org/TR/CSS21/syndata.html#value-def-identifier
 	identifier = characterEncoding.replace( "w", "w#" ),
 
-	// Acceptable operators http://www.w3.org/TR/selectors/#attribute-selectors
-	attributes = "\\[" + whitespace + "*(" + characterEncoding + ")" + whitespace +
+	// Acceptable operators http://www.w3.org/TR/selectors/#Attribute-selectors
+	Attributes = "\\[" + whitespace + "*(" + characterEncoding + ")" + whitespace +
 		"*(?:([*^$|!~]?=)" + whitespace + "*(?:(['\"])((?:\\\\.|[^\\\\])*?)\\3|(" + identifier + ")|)|)" + whitespace + "*\\]",
 
 	// Prefer arguments quoted,
 	//   then not containing pseudos/brackets,
-	//   then attribute selectors/non-parenthetical expressions,
+	//   then Attribute selectors/non-parenthetical expressions,
 	//   then anything else
 	// These preferences are here to reduce the number of selectors
 	//   needing tokenize in the PSEUDO preFilter
-	pseudos = ":(" + characterEncoding + ")(?:\\(((['\"])((?:\\\\.|[^\\\\])*?)\\3|((?:\\\\.|[^\\\\()[\\]]|" + attributes.replace( 3, 8 ) + ")*)|.*)\\)|)",
+	pseudos = ":(" + characterEncoding + ")(?:\\(((['\"])((?:\\\\.|[^\\\\])*?)\\3|((?:\\\\.|[^\\\\()[\\]]|" + Attributes.replace( 3, 8 ) + ")*)|.*)\\)|)",
 
 	// Leading and non-escaped trailing whitespace, capturing some non-whitespace characters preceding the latter
 	rtrim = new RegExp( "^" + whitespace + "+|((?:^|[^\\\\])(?:\\\\.)*)" + whitespace + "+$", "g" ),
@@ -1118,7 +1118,7 @@ var i,
 	rcombinators = new RegExp( "^" + whitespace + "*([>+~]|" + whitespace + ")" + whitespace + "*" ),
 
 	rsibling = new RegExp( whitespace + "*[+~]" ),
-	rattributeQuotes = new RegExp( "=" + whitespace + "*([^\\]'\"]*)" + whitespace + "*\\]", "g" ),
+	rAttributeQuotes = new RegExp( "=" + whitespace + "*([^\\]'\"]*)" + whitespace + "*\\]", "g" ),
 
 	rpseudo = new RegExp( pseudos ),
 	ridentifier = new RegExp( "^" + identifier + "$" ),
@@ -1127,7 +1127,7 @@ var i,
 		"ID": new RegExp( "^#(" + characterEncoding + ")" ),
 		"CLASS": new RegExp( "^\\.(" + characterEncoding + ")" ),
 		"TAG": new RegExp( "^(" + characterEncoding.replace( "w", "w*" ) + ")" ),
-		"ATTR": new RegExp( "^" + attributes ),
+		"ATTR": new RegExp( "^" + Attributes ),
 		"PSEUDO": new RegExp( "^" + pseudos ),
 		"CHILD": new RegExp( "^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\(" + whitespace +
 			"*(even|odd|(([+-]|)(\\d*)n|)" + whitespace + "*(?:([+-]|)" + whitespace +
@@ -1355,7 +1355,7 @@ function assert( fn ) {
 
 /**
  * Adds the same handler for all of the specified attrs
- * @param {String} attrs Pipe-separated list of attributes
+ * @param {String} attrs Pipe-separated list of Attributes
  * @param {Function} handler The method that will be applied
  */
 function addHandle( attrs, handler ) {
@@ -1489,8 +1489,8 @@ setDocument = Sizzle.setDocument = function( node ) {
 	---------------------------------------------------------------------- */
 
 	// Support: IE<8
-	// Verify that getAttribute really returns attributes and not properties (excepting IE8 booleans)
-	support.attributes = assert(function( div ) {
+	// Verify that getAttribute really returns Attributes and not properties (excepting IE8 booleans)
+	support.Attributes = assert(function( div ) {
 		div.className = "i";
 		return !div.getAttribute("className");
 	});
@@ -1609,13 +1609,13 @@ setDocument = Sizzle.setDocument = function( node ) {
 		assert(function( div ) {
 			// Select is set to empty string on purpose
 			// This is to test IE's treatment of not explicitly
-			// setting a boolean content attribute,
+			// setting a boolean content Attribute,
 			// since its presence should be enough
 			// http://bugs.jquery.com/ticket/12359
 			div.innerHTML = "<select><option selected=''></option></select>";
 
 			// Support: IE8
-			// Boolean attributes and "value" are not treated correctly
+			// Boolean Attributes and "value" are not treated correctly
 			if ( !div.querySelectorAll("[selected]").length ) {
 				rbuggyQSA.push( "\\[" + whitespace + "*(?:value|" + booleans + ")" );
 			}
@@ -1634,7 +1634,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 			// ^= $= *= and empty values
 			// Should not select anything
 			// Support: Windows 8 Native Apps
-			// The type attribute is restricted during .innerHTML assignment
+			// The type Attribute is restricted during .innerHTML assignment
 			var input = doc.createElement("input");
 			input.setAttribute( "type", "hidden" );
 			div.appendChild( input ).setAttribute( "t", "" );
@@ -1808,8 +1808,8 @@ Sizzle.matchesSelector = function( elem, expr ) {
 		setDocument( elem );
 	}
 
-	// Make sure that attribute selectors are quoted
-	expr = expr.replace( rattributeQuotes, "='$1']" );
+	// Make sure that Attribute selectors are quoted
+	expr = expr.replace( rAttributeQuotes, "='$1']" );
 
 	if ( support.matchesSelector && documentIsHTML &&
 		( !rbuggyMatches || !rbuggyMatches.test( expr ) ) &&
@@ -1852,7 +1852,7 @@ Sizzle.attr = function( elem, name ) {
 			undefined;
 
 	return val === undefined ?
-		support.attributes || !documentIsHTML ?
+		support.Attributes || !documentIsHTML ?
 			elem.getAttribute( name ) :
 			(val = elem.getAttributeNode(name)) && val.specified ?
 				val.value :
@@ -2940,7 +2940,7 @@ support.sortDetached = assert(function( div1 ) {
 });
 
 // Support: IE<8
-// Prevent attribute/property "interpolation"
+// Prevent Attribute/property "interpolation"
 // http://msdn.microsoft.com/en-us/library/ms536429%28VS.85%29.aspx
 if ( !assert(function( div ) {
 	div.innerHTML = "<a href='#'></a>";
@@ -2955,7 +2955,7 @@ if ( !assert(function( div ) {
 
 // Support: IE<9
 // Use defaultValue in place of getAttribute("value")
-if ( !support.attributes || !assert(function( div ) {
+if ( !support.Attributes || !assert(function( div ) {
 	div.innerHTML = "<input/>";
 	div.firstChild.setAttribute( "value", "" );
 	return div.firstChild.getAttribute( "value" ) === "";
@@ -3433,7 +3433,7 @@ jQuery.support = (function( support ) {
 	input.setAttribute( "type", "radio" );
 	support.radioValue = input.value === "t";
 
-	// #11217 - WebKit loses check when the name is after the checked attribute
+	// #11217 - WebKit loses check when the name is after the checked Attribute
 	input.setAttribute( "checked", "t" );
 	input.setAttribute( "name", "t" );
 
@@ -3463,7 +3463,7 @@ jQuery.support = (function( support ) {
 	for ( i in { submit: true, change: true, focusin: true }) {
 		div.setAttribute( eventName = "on" + i, "t" );
 
-		support[ i + "Bubbles" ] = eventName in window || div.attributes[ eventName ].expando === false;
+		support[ i + "Bubbles" ] = eventName in window || div.Attributes[ eventName ].expando === false;
 	}
 
 	div.style.backgroundClip = "content-box";
@@ -3822,7 +3822,7 @@ jQuery.fn.extend({
 				data = jQuery.data( elem );
 
 				if ( elem.nodeType === 1 && !jQuery._data( elem, "parsedAttrs" ) ) {
-					attrs = elem.attributes;
+					attrs = elem.Attributes;
 					for ( ; i < attrs.length; i++ ) {
 						name = attrs[i].name;
 
@@ -3867,7 +3867,7 @@ jQuery.fn.extend({
 
 function dataAttr( elem, key, data ) {
 	// If nothing was found internally, try to fetch any
-	// data from the HTML5 data-* attribute
+	// data from the HTML5 data-* Attribute
 	if ( data === undefined && elem.nodeType === 1 ) {
 
 		var name = "data-" + key.replace( rmultiDash, "-$1" ).toLowerCase();
@@ -4293,7 +4293,7 @@ jQuery.extend({
 	valHooks: {
 		option: {
 			get: function( elem ) {
-				// Use proper attribute retrieval(#6932, #12072)
+				// Use proper Attribute retrieval(#6932, #12072)
 				var val = jQuery.find.attr( elem, "value" );
 				return val != null ?
 					val :
@@ -4364,17 +4364,17 @@ jQuery.extend({
 		var hooks, ret,
 			nType = elem.nodeType;
 
-		// don't get/set attributes on text, comment and attribute nodes
+		// don't get/set Attributes on text, comment and Attribute nodes
 		if ( !elem || nType === 3 || nType === 8 || nType === 2 ) {
 			return;
 		}
 
-		// Fallback to prop when attributes are not supported
+		// Fallback to prop when Attributes are not supported
 		if ( typeof elem.getAttribute === core_strundefined ) {
 			return jQuery.prop( elem, name, value );
 		}
 
-		// All attributes are lowercase
+		// All Attributes are lowercase
 		// Grab necessary hook if one is defined
 		if ( nType !== 1 || !jQuery.isXMLDoc( elem ) ) {
 			name = name.toLowerCase();
@@ -4401,7 +4401,7 @@ jQuery.extend({
 		} else {
 			ret = jQuery.find.attr( elem, name );
 
-			// Non-existent attributes return null, we normalize to undefined
+			// Non-existent Attributes return null, we normalize to undefined
 			return ret == null ?
 				undefined :
 				ret;
@@ -4417,7 +4417,7 @@ jQuery.extend({
 			while ( (name = attrNames[i++]) ) {
 				propName = jQuery.propFix[ name ] || name;
 
-				// Boolean attributes get special treatment (#10870)
+				// Boolean Attributes get special treatment (#10870)
 				if ( jQuery.expr.match.bool.test( name ) ) {
 					// Set corresponding property to false
 					if ( getSetInput && getSetAttribute || !ruseDefault.test( name ) ) {
@@ -4465,7 +4465,7 @@ jQuery.extend({
 		var ret, hooks, notxml,
 			nType = elem.nodeType;
 
-		// don't get/set properties on text, comment and attribute nodes
+		// don't get/set properties on text, comment and Attribute nodes
 		if ( !elem || nType === 3 || nType === 8 || nType === 2 ) {
 			return;
 		}
@@ -4495,7 +4495,7 @@ jQuery.extend({
 			get: function( elem ) {
 				// elem.tabIndex doesn't always return the correct value when it hasn't been explicitly set
 				// http://fluidproject.org/blog/2008/01/09/getting-setting-and-removing-tabindex-values-with-javascript/
-				// Use proper attribute retrieval(#12072)
+				// Use proper Attribute retrieval(#12072)
 				var tabindex = jQuery.find.attr( elem, "tabindex" );
 
 				return tabindex ?
@@ -4508,11 +4508,11 @@ jQuery.extend({
 	}
 });
 
-// Hooks for boolean attributes
+// Hooks for boolean Attributes
 boolHook = {
 	set: function( elem, value, name ) {
 		if ( value === false ) {
-			// Remove boolean attributes when set to false
+			// Remove boolean Attributes when set to false
 			jQuery.removeAttr( elem, name );
 		} else if ( getSetInput && getSetAttribute || !ruseDefault.test( name ) ) {
 			// IE<8 needs the *property* name
@@ -4567,14 +4567,14 @@ if ( !getSetInput || !getSetAttribute ) {
 	};
 }
 
-// IE6/7 do not support getting/setting some attributes with get/setAttribute
+// IE6/7 do not support getting/setting some Attributes with get/setAttribute
 if ( !getSetAttribute ) {
 
-	// Use this for any attribute in IE6/7
+	// Use this for any Attribute in IE6/7
 	// This fixes almost every IE6/7 issue
 	nodeHook = {
 		set: function( elem, value, name ) {
-			// Set the existing or create a new attribute node
+			// Set the existing or create a new Attribute node
 			var ret = elem.getAttributeNode( name );
 			if ( !ret ) {
 				elem.setAttributeNode(
@@ -4591,7 +4591,7 @@ if ( !getSetAttribute ) {
 		}
 	};
 	jQuery.expr.attrHandle.id = jQuery.expr.attrHandle.name = jQuery.expr.attrHandle.coords =
-		// Some attributes are constructed with empty-string values when not defined
+		// Some Attributes are constructed with empty-string values when not defined
 		function( elem, name, isXML ) {
 			var ret;
 			return isXML ?
@@ -4633,7 +4633,7 @@ if ( !getSetAttribute ) {
 }
 
 
-// Some attributes require a special call on IE
+// Some Attributes require a special call on IE
 // http://msdn.microsoft.com/en-us/library/ms536429%28VS.85%29.aspx
 if ( !jQuery.support.hrefNormalized ) {
 	// href/src property should get the full normalized URL (#10299/#12915)
@@ -6318,7 +6318,7 @@ function manipulationTarget( elem, content ) {
 		elem;
 }
 
-// Replace/restore the type attribute of script elements for safe DOM manipulation
+// Replace/restore the type Attribute of script elements for safe DOM manipulation
 function disableScript( elem ) {
 	elem.type = (jQuery.find.attr( elem, "type" ) !== null) + "/" + elem.type;
 	return elem;
@@ -7159,7 +7159,7 @@ if ( window.getComputedStyle ) {
 
 		// If we're not dealing with a regular pixel number
 		// but a number that has a weird ending, we need to convert it to pixels
-		// but not position css attributes, as those are proportional to the parent element instead
+		// but not position css Attributes, as those are proportional to the parent element instead
 		// and we can't measure the parent instead because it might trigger a "stacking dolls" problem
 		if ( rnumnonpx.test( ret ) && !rposition.test( name ) ) {
 
@@ -7364,7 +7364,7 @@ if ( !jQuery.support.opacity ) {
 			// Force it by setting the zoom level
 			style.zoom = 1;
 
-			// if setting opacity to 1, and no other filters exist - attempt to remove filter attribute #6652
+			// if setting opacity to 1, and no other filters exist - attempt to remove filter Attribute #6652
 			// if value === "", then remove inline opacity #12685
 			if ( ( value >= 1 || value === "" ) &&
 					jQuery.trim( filter.replace( ralpha, "" ) ) === "" &&
@@ -7642,7 +7642,7 @@ var
 try {
 	ajaxLocation = location.href;
 } catch( e ) {
-	// Use the href attribute of an A element
+	// Use the href Attribute of an A element
 	// since IE will modify it given document.location
 	ajaxLocation = document.createElement( "a" );
 	ajaxLocation.href = "";
@@ -9112,8 +9112,8 @@ function defaultPrefilter( elem, props, opts ) {
 	// height/width overflow pass
 	if ( elem.nodeType === 1 && ( "height" in props || "width" in props ) ) {
 		// Make sure that nothing sneaks out
-		// Record all 3 overflow attributes because IE does not
-		// change the overflow attribute when overflowX and
+		// Record all 3 overflow Attributes because IE does not
+		// change the overflow Attribute when overflowX and
 		// overflowY are set to the same value
 		opts.overflow = [ style.overflow, style.overflowX, style.overflowY ];
 

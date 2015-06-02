@@ -29,7 +29,7 @@
                         <table>
                             <tr>
                                 <td>
-                                    <a href="AttributeDetails.aspx?attributeID=<%#:Item.AttributeID%>">
+                                    <a href="AttributeDetails.aspx?AttributeID=<%#:Item.AttributeID%>">
                                         <img src="/Catalog/Images/Thumbs/<%#:Item.ImagePath%>"
                                             width="100" height="75" style="border: solid" /></a>
                                 </td>
@@ -49,6 +49,11 @@
                                         <b>F_out: </b><%#:String.Format("{0:d}", Item.F_out)%>
                                     </span>
                                     <br />
+                                    <a href="/AddToDescription.aspx?AttributeID=<%#:Item.AttributeID %>">               
+                                        <span class="AttributeListItem">
+                                            <b>Add To Virus Description<b>
+                                        </span>           
+                                    </a>
                                 </td>
                             </tr>
                             <tr>

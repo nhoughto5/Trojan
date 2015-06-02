@@ -38,7 +38,7 @@ namespace Trojan.Models
 
             return categories;
         }
-
+ 
         private static List<Attribute> GetAttributes()
         {
             var Attributes = new List<Attribute> {
@@ -50,7 +50,8 @@ namespace Trojan.Models
                     ImagePath="one.png",
                     F_in = 0,
                     F_out = 3,
-                    CategoryID = 1
+                    CategoryID = 1,
+                    CategoryName = "Chip Life Cycle"
                },
                 new Attribute 
                 {
@@ -60,7 +61,8 @@ namespace Trojan.Models
                     ImagePath="two.png",
                     F_in = 1,
                     F_out = 2,
-                    CategoryID = 1
+                    CategoryID = 1,
+                    CategoryName = "Chip Life Cycle"
                },
                 new Attribute
                 {
@@ -70,7 +72,8 @@ namespace Trojan.Models
                     ImagePath="three.png",
                     F_in = 1,
                     F_out = 2,
-                    CategoryID = 1
+                    CategoryID = 1,
+                    CategoryName = "Chip Life Cycle"
                 },
                 new Attribute
                 {
@@ -80,7 +83,8 @@ namespace Trojan.Models
                     ImagePath="four.png",
                     F_in = 1,
                     F_out = 3,
-                    CategoryID = 1
+                    CategoryID = 1,
+                    CategoryName = "Chip Life Cycle"
                 },
                 new Attribute
                 {
@@ -90,7 +94,8 @@ namespace Trojan.Models
                     ImagePath="five.png",
                     F_in = 1,
                     F_out = 1,
-                    CategoryID = 1
+                    CategoryID = 1,
+                    CategoryName = "Chip Life Cycle"
                 },
                 new Attribute
                 {
@@ -100,7 +105,8 @@ namespace Trojan.Models
                     ImagePath="six.png",
                     F_in = 3,
                     F_out = 7,
-                    CategoryID = 2
+                    CategoryID = 2,
+                    CategoryName = "Abstraction"
                 },
                 new Attribute
                 {
@@ -110,7 +116,8 @@ namespace Trojan.Models
                     ImagePath="seven.png",
                     F_in = 2,
                     F_out = 11,
-                    CategoryID = 2
+                    CategoryID = 2,
+                    CategoryName = "Abstraction"
                 },
                 new Attribute
                 {
@@ -120,7 +127,8 @@ namespace Trojan.Models
                     ImagePath="eight.png",
                     F_in = 1,
                     F_out = 15,
-                    CategoryID = 2
+                    CategoryID = 2,
+                    CategoryName = "Abstraction"
                 },
                 new Attribute
                 {
@@ -130,7 +138,8 @@ namespace Trojan.Models
                     ImagePath="nine.png",
                     F_in = 2,
                     F_out = 9,
-                    CategoryID = 2
+                    CategoryID = 2,
+                    CategoryName = "Abstraction"
                 },
                 new Attribute
                 {
@@ -140,7 +149,8 @@ namespace Trojan.Models
                     ImagePath="ten.png",
                     F_in = 1,
                     F_out = 10,
-                    CategoryID = 2
+                    CategoryID = 2,
+                    CategoryName = "Abstraction"
                 },
                 new Attribute
                 {
@@ -150,7 +160,8 @@ namespace Trojan.Models
                     ImagePath="eleven.png",
                     F_in = 2,
                     F_out = 12,
-                    CategoryID = 2
+                    CategoryID = 2,
+                    CategoryName = "Abstraction"
                 },
                 new Attribute
                 {
@@ -160,7 +171,8 @@ namespace Trojan.Models
                     ImagePath="twelve.png",
                     F_in = 18,
                     F_out = 17,
-                    CategoryID = 3
+                    CategoryID = 3,
+                    CategoryName = "Properties"
                 },
                 new Attribute
                 {
@@ -170,7 +182,8 @@ namespace Trojan.Models
                     ImagePath="thirteen.png",
                     F_in = 10,
                     F_out = 13,
-                    CategoryID = 3
+                    CategoryID = 3,
+                    CategoryName = "Properties"
                 },
                 new Attribute
                 {
@@ -180,7 +193,8 @@ namespace Trojan.Models
                     ImagePath="fourteen.png",
                     F_in = 8,
                     F_out = 11,
-                    CategoryID = 3
+                    CategoryID = 3,
+                    CategoryName = "Properties"
                 },
                 new Attribute
                 {
@@ -190,7 +204,8 @@ namespace Trojan.Models
                     ImagePath="fifteen.png",
                     F_in = 16,
                     F_out = 16,
-                    CategoryID = 3
+                    CategoryID = 3,
+                    CategoryName = "Properties"
                 },
                 new Attribute
                 {
@@ -200,7 +215,8 @@ namespace Trojan.Models
                     ImagePath="sixteen.png",
                     F_in = 13,
                     F_out = 15,
-                    CategoryID = 3
+                    CategoryID = 3,
+                    CategoryName = "Properties"
                 },
                 new Attribute
                 {
@@ -210,7 +226,8 @@ namespace Trojan.Models
                     ImagePath="seventeen.png",
                     F_in = 17,
                     F_out = 18,
-                    CategoryID = 3
+                    CategoryID = 3,
+                    CategoryName = "Properties"
                 },
                 new Attribute
                 {
@@ -220,7 +237,8 @@ namespace Trojan.Models
                     ImagePath="eighteen.png",
                     F_in = 19,
                     F_out = 18,
-                    CategoryID = 3
+                    CategoryID = 3,
+                    CategoryName = "Properties"
                 },
                 new Attribute
                 {
@@ -230,7 +248,8 @@ namespace Trojan.Models
                     ImagePath="nineteen.png",
                     F_in = 9,
                     F_out = 9,
-                    CategoryID = 3
+                    CategoryID = 3,
+                    CategoryName = "Properties"
                 },
                 new Attribute
                 {
@@ -240,7 +259,8 @@ namespace Trojan.Models
                     ImagePath="twenty.png",
                     F_in = 19,
                     F_out = 18,
-                    CategoryID = 3
+                    CategoryID = 3,
+                    CategoryName = "Properties"
                 },
                 new Attribute
                 {
@@ -250,7 +270,8 @@ namespace Trojan.Models
                     ImagePath="twenty_one.png",
                     F_in = 13,
                     F_out = 15,
-                    CategoryID = 3
+                    CategoryID = 3,
+                    CategoryName = "Properties"
                 },
                 new Attribute
                 {
@@ -260,7 +281,8 @@ namespace Trojan.Models
                     ImagePath="twenty_two.png",
                     F_in = 12,
                     F_out = 14,
-                    CategoryID = 3
+                    CategoryID = 3,
+                    CategoryName = "Properties"
                 },
                 new Attribute
                 {
@@ -270,7 +292,8 @@ namespace Trojan.Models
                     ImagePath="twenty_three.png",
                     F_in = 14,
                     F_out = 13,
-                    CategoryID = 3
+                    CategoryID = 3,
+                    CategoryName = "Properties"
                 },
                 new Attribute
                 {
@@ -280,7 +303,8 @@ namespace Trojan.Models
                     ImagePath="twenty_four.png",
                     F_in = 16,
                     F_out = 17,
-                    CategoryID = 3
+                    CategoryID = 3,
+                    CategoryName = "Properties"
                 },
                 new Attribute
                 {
@@ -290,7 +314,8 @@ namespace Trojan.Models
                     ImagePath="twenty_five.png",
                     F_in = 11,
                     F_out = 14,
-                    CategoryID = 3
+                    CategoryID = 3,
+                    CategoryName = "Properties"
                 },
                 new Attribute
                 {
@@ -300,7 +325,8 @@ namespace Trojan.Models
                     ImagePath="twenty_six.png",
                     F_in = 19,
                     F_out = 21,
-                    CategoryID = 3
+                    CategoryID = 3,
+                    CategoryName = "Properties"
                 },
                 new Attribute
                 {
@@ -310,7 +336,8 @@ namespace Trojan.Models
                     ImagePath="twenty_seven.png",
                     F_in = 17,
                     F_out = 19,
-                    CategoryID = 3
+                    CategoryID = 3,
+                    CategoryName = "Properties"
                 },
                 new Attribute
                 {
@@ -320,7 +347,8 @@ namespace Trojan.Models
                     ImagePath="twenty_eight.png",
                     F_in = 14,
                     F_out = 17,
-                    CategoryID = 3
+                    CategoryID = 3,
+                    CategoryName = "Properties"
                 },
                 new Attribute
                 {
@@ -330,7 +358,8 @@ namespace Trojan.Models
                     ImagePath="twenty_nine.png",
                     F_in = 16,
                     F_out = 0,
-                    CategoryID = 4
+                    CategoryID = 4,
+                    CategoryName = "Location"
                 },
                 new Attribute
                 {
@@ -340,7 +369,8 @@ namespace Trojan.Models
                     ImagePath="thirty.png",
                     F_in = 15,
                     F_out = 0,
-                    CategoryID = 4
+                    CategoryID = 4,
+                    CategoryName = "Location"
                 },
                 new Attribute
                 {
@@ -350,7 +380,8 @@ namespace Trojan.Models
                     ImagePath="thirty_one.png",
                     F_in = 16,
                     F_out = 0,
-                    CategoryID = 4
+                    CategoryID = 4,
+                    CategoryName = "Location"
                 },
                 new Attribute
                 {
@@ -360,7 +391,8 @@ namespace Trojan.Models
                     ImagePath="thirty_two.png",
                     F_in = 16,
                     F_out = 0,
-                    CategoryID = 4
+                    CategoryID = 4,
+                    CategoryName = "Location"
                 },
                 new Attribute
                 {
@@ -370,7 +402,8 @@ namespace Trojan.Models
                     ImagePath="thirty_three.png",
                     F_in = 16,
                     F_out = 0,
-                    CategoryID = 4
+                    CategoryID = 4,
+                    CategoryName = "Location"
                 },
             };
 

@@ -754,7 +754,7 @@ intellisense.annotate(jQuery.fn, {
   'addClass': function() {
     /// <signature>
     ///   <summary>Adds the specified class(es) to each of the set of matched elements.</summary>
-    ///   <param name="className" type="String">One or more space-separated classes to be added to the class attribute of each matched element.</param>
+    ///   <param name="className" type="String">One or more space-separated classes to be added to the class Attribute of each matched element.</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
@@ -866,84 +866,84 @@ intellisense.annotate(jQuery.fn, {
   },
   'attr': function() {
     /// <signature>
-    ///   <summary>Set one or more attributes for the set of matched elements.</summary>
-    ///   <param name="attributeName" type="String">The name of the attribute to set.</param>
-    ///   <param name="value" type="Number">A value to set for the attribute.</param>
+    ///   <summary>Set one or more Attributes for the set of matched elements.</summary>
+    ///   <param name="AttributeName" type="String">The name of the Attribute to set.</param>
+    ///   <param name="value" type="Number">A value to set for the Attribute.</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
-    ///   <summary>Set one or more attributes for the set of matched elements.</summary>
-    ///   <param name="attributes" type="PlainObject">An object of attribute-value pairs to set.</param>
+    ///   <summary>Set one or more Attributes for the set of matched elements.</summary>
+    ///   <param name="Attributes" type="PlainObject">An object of Attribute-value pairs to set.</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
-    ///   <summary>Set one or more attributes for the set of matched elements.</summary>
-    ///   <param name="attributeName" type="String">The name of the attribute to set.</param>
-    ///   <param name="function(index, attr)" type="Function">A function returning the value to set. this is the current element. Receives the index position of the element in the set and the old attribute value as arguments.</param>
+    ///   <summary>Set one or more Attributes for the set of matched elements.</summary>
+    ///   <param name="AttributeName" type="String">The name of the Attribute to set.</param>
+    ///   <param name="function(index, attr)" type="Function">A function returning the value to set. this is the current element. Receives the index position of the element in the set and the old Attribute value as arguments.</param>
     ///   <returns type="jQuery" />
     /// </signature>
   },
-  'attributeContains': function() {
+  'AttributeContains': function() {
     /// <signature>
-    ///   <summary>Selects elements that have the specified attribute with a value containing the a given substring.</summary>
-    ///   <param name="attribute" type="String">An attribute name.</param>
-    ///   <param name="value" type="String">An attribute value. Can be either an unquoted single word or a quoted string.</param>
+    ///   <summary>Selects elements that have the specified Attribute with a value containing the a given substring.</summary>
+    ///   <param name="Attribute" type="String">An Attribute name.</param>
+    ///   <param name="value" type="String">An Attribute value. Can be either an unquoted single word or a quoted string.</param>
     /// </signature>
   },
-  'attributeContainsPrefix': function() {
+  'AttributeContainsPrefix': function() {
     /// <signature>
-    ///   <summary>Selects elements that have the specified attribute with a value either equal to a given string or starting with that string followed by a hyphen (-).</summary>
-    ///   <param name="attribute" type="String">An attribute name.</param>
-    ///   <param name="value" type="String">An attribute value. Can be either an unquoted single word or a quoted string.</param>
+    ///   <summary>Selects elements that have the specified Attribute with a value either equal to a given string or starting with that string followed by a hyphen (-).</summary>
+    ///   <param name="Attribute" type="String">An Attribute name.</param>
+    ///   <param name="value" type="String">An Attribute value. Can be either an unquoted single word or a quoted string.</param>
     /// </signature>
   },
-  'attributeContainsWord': function() {
+  'AttributeContainsWord': function() {
     /// <signature>
-    ///   <summary>Selects elements that have the specified attribute with a value containing a given word, delimited by spaces.</summary>
-    ///   <param name="attribute" type="String">An attribute name.</param>
-    ///   <param name="value" type="String">An attribute value. Can be either an unquoted single word or a quoted string.</param>
+    ///   <summary>Selects elements that have the specified Attribute with a value containing a given word, delimited by spaces.</summary>
+    ///   <param name="Attribute" type="String">An Attribute name.</param>
+    ///   <param name="value" type="String">An Attribute value. Can be either an unquoted single word or a quoted string.</param>
     /// </signature>
   },
-  'attributeEndsWith': function() {
+  'AttributeEndsWith': function() {
     /// <signature>
-    ///   <summary>Selects elements that have the specified attribute with a value ending exactly with a given string. The comparison is case sensitive.</summary>
-    ///   <param name="attribute" type="String">An attribute name.</param>
-    ///   <param name="value" type="String">An attribute value. Can be either an unquoted single word or a quoted string.</param>
+    ///   <summary>Selects elements that have the specified Attribute with a value ending exactly with a given string. The comparison is case sensitive.</summary>
+    ///   <param name="Attribute" type="String">An Attribute name.</param>
+    ///   <param name="value" type="String">An Attribute value. Can be either an unquoted single word or a quoted string.</param>
     /// </signature>
   },
-  'attributeEquals': function() {
+  'AttributeEquals': function() {
     /// <signature>
-    ///   <summary>Selects elements that have the specified attribute with a value exactly equal to a certain value.</summary>
-    ///   <param name="attribute" type="String">An attribute name.</param>
-    ///   <param name="value" type="String">An attribute value. Can be either an unquoted single word or a quoted string.</param>
+    ///   <summary>Selects elements that have the specified Attribute with a value exactly equal to a certain value.</summary>
+    ///   <param name="Attribute" type="String">An Attribute name.</param>
+    ///   <param name="value" type="String">An Attribute value. Can be either an unquoted single word or a quoted string.</param>
     /// </signature>
   },
-  'attributeHas': function() {
+  'AttributeHas': function() {
     /// <signature>
-    ///   <summary>Selects elements that have the specified attribute, with any value.</summary>
-    ///   <param name="attribute" type="String">An attribute name.</param>
+    ///   <summary>Selects elements that have the specified Attribute, with any value.</summary>
+    ///   <param name="Attribute" type="String">An Attribute name.</param>
     /// </signature>
   },
-  'attributeMultiple': function() {
+  'AttributeMultiple': function() {
     /// <signature>
-    ///   <summary>Matches elements that match all of the specified attribute filters.</summary>
-    ///   <param name="attributeFilter1" type="String">An attribute filter.</param>
-    ///   <param name="attributeFilter2" type="String">Another attribute filter, reducing the selection even more</param>
-    ///   <param name="attributeFilterN" type="String">As many more attribute filters as necessary</param>
+    ///   <summary>Matches elements that match all of the specified Attribute filters.</summary>
+    ///   <param name="AttributeFilter1" type="String">An Attribute filter.</param>
+    ///   <param name="AttributeFilter2" type="String">Another Attribute filter, reducing the selection even more</param>
+    ///   <param name="AttributeFilterN" type="String">As many more Attribute filters as necessary</param>
     /// </signature>
   },
-  'attributeNotEqual': function() {
+  'AttributeNotEqual': function() {
     /// <signature>
-    ///   <summary>Select elements that either don't have the specified attribute, or do have the specified attribute but not with a certain value.</summary>
-    ///   <param name="attribute" type="String">An attribute name.</param>
-    ///   <param name="value" type="String">An attribute value. Can be either an unquoted single word or a quoted string.</param>
+    ///   <summary>Select elements that either don't have the specified Attribute, or do have the specified Attribute but not with a certain value.</summary>
+    ///   <param name="Attribute" type="String">An Attribute name.</param>
+    ///   <param name="value" type="String">An Attribute value. Can be either an unquoted single word or a quoted string.</param>
     /// </signature>
   },
-  'attributeStartsWith': function() {
+  'AttributeStartsWith': function() {
     /// <signature>
-    ///   <summary>Selects elements that have the specified attribute with a value beginning exactly with a given string.</summary>
-    ///   <param name="attribute" type="String">An attribute name.</param>
-    ///   <param name="value" type="String">An attribute value. Can be either an unquoted single word or a quoted string.</param>
+    ///   <summary>Selects elements that have the specified Attribute with a value beginning exactly with a given string.</summary>
+    ///   <param name="Attribute" type="String">An Attribute name.</param>
+    ///   <param name="value" type="String">An Attribute value. Can be either an unquoted single word or a quoted string.</param>
     /// </signature>
   },
   'before': function() {
@@ -1527,8 +1527,8 @@ intellisense.annotate(jQuery.fn, {
   },
   'id': function() {
     /// <signature>
-    ///   <summary>Selects a single element with the given id attribute.</summary>
-    ///   <param name="id" type="String">An ID to search for, specified via the id attribute of an element.</param>
+    ///   <summary>Selects a single element with the given id Attribute.</summary>
+    ///   <param name="id" type="String">An ID to search for, specified via the id Attribute of an element.</param>
     /// </signature>
   },
   'image': function() {
@@ -2168,15 +2168,15 @@ intellisense.annotate(jQuery.fn, {
   },
   'removeAttr': function() {
     /// <signature>
-    ///   <summary>Remove an attribute from each element in the set of matched elements.</summary>
-    ///   <param name="attributeName" type="String">An attribute to remove; as of version 1.7, it can be a space-separated list of attributes.</param>
+    ///   <summary>Remove an Attribute from each element in the set of matched elements.</summary>
+    ///   <param name="AttributeName" type="String">An Attribute to remove; as of version 1.7, it can be a space-separated list of Attributes.</param>
     ///   <returns type="jQuery" />
     /// </signature>
   },
   'removeClass': function() {
     /// <signature>
     ///   <summary>Remove a single class, multiple classes, or all classes from each element in the set of matched elements.</summary>
-    ///   <param name="className" type="String">One or more space-separated classes to be removed from the class attribute of each matched element.</param>
+    ///   <param name="className" type="String">One or more space-separated classes to be removed from the class Attribute of each matched element.</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
@@ -2490,7 +2490,7 @@ intellisense.annotate(jQuery.fn, {
     /// </signature>
     /// <signature>
     ///   <summary>Add or remove one or more classes from each element in the set of matched elements, depending on either the class's presence or the value of the switch argument.</summary>
-    ///   <param name="function(index, class, switch)" type="Function">A function that returns class names to be toggled in the class attribute of each element in the matched set. Receives the index position of the element in the set, the old class value, and the switch as arguments.</param>
+    ///   <param name="function(index, class, switch)" type="Function">A function that returns class names to be toggled in the class Attribute of each element in the matched set. Receives the index position of the element in the set, the old class value, and the switch as arguments.</param>
     ///   <param name="switch" type="Boolean">A boolean value to determine whether the class should be added or removed.</param>
     ///   <returns type="jQuery" />
     /// </signature>
