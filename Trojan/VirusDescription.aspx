@@ -10,9 +10,10 @@
         <asp:BoundField DataField="Attribute.CategoryName" HeaderText="Category" />
         <asp:BoundField DataField="Attribute.F_in" HeaderText="F_in" />
         <asp:BoundField DataField="Attribute.F_out" HeaderText="F_out" />     
-        <asp:TemplateField   HeaderText="On: True, Off: False">            
+        <asp:TemplateField   HeaderText="Attribute on/off">            
                 <ItemTemplate>
-                    <asp:TextBox ID="On_Off" Width="40" runat="server" Text="<%#: Item.On_Off %>"></asp:TextBox> 
+                    <asp:CheckBox id="On_Off_CheckBox" runat="server"></asp:CheckBox>
+                    <!--<asp:TextBox ID="On_Off" Width="40" runat="server" Text="<%#: Item.On_Off %>"></asp:TextBox> -->
                 </ItemTemplate>        
         </asp:TemplateField>
         <asp:TemplateField HeaderText="Remove Item">            
@@ -27,6 +28,7 @@
         <strong>
             <asp:Label ID="LabelTotalText" runat="server" Text="Total Attributes: "></asp:Label>
             <asp:Label ID="lblTotal" runat="server" EnableViewState="false"></asp:Label>
+        </strong>
     </div>
     <div>
         <strong>
@@ -41,4 +43,14 @@
         </strong>
     </div>
     <br />
+    <table> 
+    <tr>
+      <td>
+        <asp:Button ID="UpdateBtn" runat="server" Text="Update" OnClick="UpdateBtn_Click" />
+      </td>
+      <td>
+        <!--Checkout Placeholder -->
+      </td>
+    </tr>
+    </table>
 </asp:Content>
