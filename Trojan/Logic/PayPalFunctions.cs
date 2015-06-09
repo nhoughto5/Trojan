@@ -72,7 +72,7 @@ public class NVPAPICaller
         encoder["PAYMENTREQUEST_0_PAYMENTACTION"] = "Sale";
         encoder["PAYMENTREQUEST_0_CURRENCYCODE"] = "USD";
 
-        // Get the Shopping Cart Products
+        // Get the Shopping Cart Attributes
         using (Trojan.Logic.VirusDescriptionActions myCartOrders = new Trojan.Logic.VirusDescriptionActions())
         {
             List<Virus_Item> myOrderList = myCartOrders.GetDescriptionItems();

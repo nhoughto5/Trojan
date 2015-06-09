@@ -13,13 +13,13 @@ namespace Trojan.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string productAction = Request.QueryString["AttributeAction"];
-            if (productAction == "add")
+            string attributeAction = Request.QueryString["AttributeAction"];
+            if (attributeAction == "add")
             {
                 LabelAddStatus.Text = "Attribute added!";
             }
 
-            if (productAction == "remove")
+            if (attributeAction == "remove")
             {
                 LabelRemoveStatus.Text = "Attribute removed!";
             }
@@ -56,9 +56,9 @@ namespace Trojan.Admin
                     LabelAddStatus.Text = ex.Message;
                 }
 
-                // Add product data to DB.
-                AddAttributes products = new AddAttributes();
-                bool addSuccess = products.AddAttribute(AddAttributeName.Text, AddAttributeDescription.Text,
+                // Add attribute data to DB.
+                AddAttributes attributes = new AddAttributes();
+                bool addSuccess = attributes.AddAttribute(AddAttributeName.Text, AddAttributeDescription.Text,
                     AddAttributeF_in.Text, AddAttributeF_out.Text, DropDownAddCategory.SelectedValue, AttributeImage.FileName);
                 if (addSuccess)
                 {
@@ -68,7 +68,7 @@ namespace Trojan.Admin
                 }
                 else
                 {
-                    LabelAddStatus.Text = "Unable to add new product to database.";
+                    LabelAddStatus.Text = "Unable to add new attribute to database.";
                 }
             }
             else
@@ -95,8 +95,8 @@ namespace Trojan.Admin
         {
             using (var _db = new Trojan.Models.AttributeContext())
             {
-                int productId = Convert.ToInt16(DropDownRemoveAttribute.SelectedValue);
-                var myItem = (from c in _db.Attributes where c.AttributeID == productId select c).FirstOrDefault();
+                int attributeId = Convert.ToInt16(DropDownRemoveAttribute.SelectedValue);
+                var myItem = (from c in _db.Attributes where c.AttributeID == attributeId select c).FirstOrDefault();
                 if (myItem != null)
                 {
                     _db.Attributes.Remove(myItem);
@@ -108,7 +108,7 @@ namespace Trojan.Admin
                 }
                 else
                 {
-                    LabelRemoveStatus.Text = "Unable to locate product.";
+                    LabelRemoveStatus.Text = "Unable to locate attribute.";
                 }
             }
         }

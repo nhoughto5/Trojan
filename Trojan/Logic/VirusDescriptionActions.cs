@@ -16,7 +16,7 @@ namespace Trojan.Logic
 
         public void AddToVirus(int id)
         {
-            // Retrieve the product from the database.           
+            // Retrieve the Attribute from the database.           
             VirusDescriptionID = GetVirusId();
 
             var virItem = _db.VirusDescriptionItems.SingleOrDefault(
@@ -100,9 +100,9 @@ namespace Trojan.Logic
         public int GetTotal()
         {
             VirusDescriptionID = GetVirusId();
-            // Multiply product price by quantity of that product to get        
-            // the current price for each of those products in the cart.  
-            // Sum all product price totals to get the cart total.   
+            // Multiply Attribute price by quantity of that Attribute to get        
+            // the current price for each of those Attributes in the cart.  
+            // Sum all Attribute price totals to get the cart total.   
             int? total = 0;
             total = (int?)(from virusItems in _db.VirusDescriptionItems where virusItems.VirusId == VirusDescriptionID select (int?)(virusItems.On_Off == true ? 1: 1)).Sum();
             return total ?? 0;
@@ -110,9 +110,9 @@ namespace Trojan.Logic
         public int getTotalF_in()
         {
             VirusDescriptionID = GetVirusId();
-            // Multiply product price by quantity of that product to get        
-            // the current price for each of those products in the cart.  
-            // Sum all product price totals to get the cart total.   
+            // Multiply Attribute price by quantity of that Attribute to get        
+            // the current price for each of those Attributes in the cart.  
+            // Sum all Attribute price totals to get the cart total.   
             int? total = 0;
             total = (int?)(from virusItems in _db.VirusDescriptionItems where virusItems.VirusId == VirusDescriptionID select (int?)(virusItems.On_Off == true ? virusItems.Attribute.F_in : 0)).Sum();
             return total ?? 0;
@@ -120,9 +120,9 @@ namespace Trojan.Logic
         public int getTotalF_out()
         {
             VirusDescriptionID = GetVirusId();
-            // Multiply product price by quantity of that product to get        
-            // the current price for each of those products in the cart.  
-            // Sum all product price totals to get the cart total.   
+            // Multiply Attribute price by quantity of that Attribute to get        
+            // the current price for each of those Attributes in the cart.  
+            // Sum all Attribute price totals to get the cart total.   
             int? total = 0;
             total = (int?)(from virusItems in _db.VirusDescriptionItems where virusItems.VirusId == VirusDescriptionID select (int?)(virusItems.On_Off == true ? virusItems.Attribute.F_out : 0)).Sum();
             return total ?? 0;
@@ -191,13 +191,13 @@ namespace Trojan.Logic
             }
         }
 
-        public void UpdateItem(string updateCartID, int updateProductID, bool OnOff)
+        public void UpdateItem(string updateCartID, int updateAttributeID, bool OnOff)
         {
             using (var _db = new Trojan.Models.AttributeContext())
             {
                 try
                 {
-                    var myItem = (from c in _db.VirusDescriptionItems where c.VirusId == updateCartID && c.Attribute.AttributeID == updateProductID select c).FirstOrDefault();
+                    var myItem = (from c in _db.VirusDescriptionItems where c.VirusId == updateCartID && c.Attribute.AttributeID == updateAttributeID select c).FirstOrDefault();
                     if (myItem != null)
                     {
                         myItem.On_Off = OnOff;
