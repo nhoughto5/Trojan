@@ -25,6 +25,13 @@ namespace Trojan.Account
                 //manager.SendEmail(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>.");
 
                 signInManager.SignIn( user, isPersistent: false, rememberBrowser: false);
+
+                using (Trojan.Logic.VirusDescriptionActions usersShoppingCart = new Trojan.Logic.VirusDescriptionActions())
+                {
+                    String cartId = usersShoppingCart.GetVirusId();
+                    usersShoppingCart.MigrateCart(cartId, user.Id);
+                }
+
                 IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
             }
             else 

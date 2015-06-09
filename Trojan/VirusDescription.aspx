@@ -10,11 +10,15 @@
         <asp:BoundField DataField="Attribute.CategoryName" HeaderText="Category" />
         <asp:BoundField DataField="Attribute.F_in" HeaderText="F_in" />
         <asp:BoundField DataField="Attribute.F_out" HeaderText="F_out" />     
-        <asp:TemplateField   HeaderText="Attribute on/off">            
+        <asp:TemplateField   HeaderText="Select Attribute">            
                 <ItemTemplate>
                     <asp:CheckBox id="On_Off_CheckBox" runat="server"></asp:CheckBox>
-                    <!--<asp:TextBox ID="On_Off" Width="40" runat="server" Text="<%#: Item.On_Off %>"></asp:TextBox> -->
                 </ItemTemplate>        
+        </asp:TemplateField >
+        <asp:TemplateField HeaderText="On/Off">
+            <ItemTemplate>
+                <asp:Label ID ="Attrib_OnOff" runat="server" Text='<%#Item.On_Off ? "On" : "Off" %>'></asp:Label>
+            </ItemTemplate>
         </asp:TemplateField>
         <asp:TemplateField HeaderText="Remove Item">            
                 <ItemTemplate>
@@ -49,7 +53,9 @@
         <asp:Button ID="UpdateBtn" runat="server" Text="Update" OnClick="UpdateBtn_Click" />
       </td>
       <td>
-        <!--Checkout Placeholder -->
+          <asp:ImageButton ID="CheckoutImageBtn" runat="server" ImageUrl="https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" Width="145" AlternateText="Check out with PayPal" 
+                      OnClick="CheckoutBtn_Click" 
+                      BackColor="Transparent" BorderWidth="0" />
       </td>
     </tr>
     </table>

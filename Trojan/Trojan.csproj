@@ -15,7 +15,7 @@
     <AssemblyName>Trojan</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44301</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -39,6 +39,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -112,9 +116,6 @@
     </Reference>
     <Reference Include="System.Web.Providers">
       <HintPath>..\packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin">
-      <HintPath>..\packages\Microsoft.Owin.3.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Owin.Host.SystemWeb">
       <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
@@ -230,6 +231,11 @@
     <Content Include="Catalog\Images\twenty_three.png" />
     <Content Include="Catalog\Images\twenty_two.png" />
     <Content Include="Catalog\Images\two.png" />
+    <Content Include="Checkout\CheckoutCancel.aspx" />
+    <Content Include="Checkout\CheckoutComplete.aspx" />
+    <Content Include="Checkout\CheckoutError.aspx" />
+    <Content Include="Checkout\CheckoutReview.aspx" />
+    <Content Include="Checkout\CheckoutStart.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-original.css" />
     <Content Include="Content\bootstrap-original.min.css" />
@@ -252,6 +258,7 @@
     <Content Include="Catalog\Images\icon_template.psd" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="obj\Debug\Trojan.csprojResolveAssemblyReference.cache" />
+    <Content Include="Checkout\Web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -438,6 +445,41 @@
     <Compile Include="AttributeList.aspx.designer.cs">
       <DependentUpon>AttributeList.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Checkout\CheckoutCancel.aspx.cs">
+      <DependentUpon>CheckoutCancel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout\CheckoutCancel.aspx.designer.cs">
+      <DependentUpon>CheckoutCancel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout\CheckoutComplete.aspx.cs">
+      <DependentUpon>CheckoutComplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout\CheckoutComplete.aspx.designer.cs">
+      <DependentUpon>CheckoutComplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout\CheckoutError.aspx.cs">
+      <DependentUpon>CheckoutError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout\CheckoutError.aspx.designer.cs">
+      <DependentUpon>CheckoutError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout\CheckoutReview.aspx.cs">
+      <DependentUpon>CheckoutReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout\CheckoutReview.aspx.designer.cs">
+      <DependentUpon>CheckoutReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout\CheckoutStart.aspx.cs">
+      <DependentUpon>CheckoutStart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout\CheckoutStart.aspx.designer.cs">
+      <DependentUpon>CheckoutStart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -455,10 +497,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Logic\PayPalFunctions.cs" />
     <Compile Include="Logic\VirusDescriptionActions.cs" />
     <Compile Include="Models\Attribute.cs" />
     <Compile Include="Models\AttributeContext.cs" />
     <Compile Include="Models\AttributeDatabaseInitializer.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderDetails.cs" />
     <Compile Include="Models\Virus_Item.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -515,7 +560,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50834</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50834/</IISUrl>
+          <IISUrl>https://localhost:44301/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
