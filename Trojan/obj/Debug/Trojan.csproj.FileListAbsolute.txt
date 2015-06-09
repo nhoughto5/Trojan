@@ -28,6 +28,7 @@ C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\Owin.d
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\System.Web.Optimization.dll
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\System.Web.Providers.dll
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\WebGrease.dll
+C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\Microsoft.Owin.xml
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\System.Web.Optimization.xml
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\Antlr3.Runtime.pdb
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\Newtonsoft.Json.xml
@@ -38,7 +39,6 @@ C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\Micros
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\Microsoft.AspNet.Identity.Owin.xml
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\System.Web.Providers.xml
-C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\Microsoft.Owin.xml
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\Microsoft.Owin.Security.xml
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\Microsoft.Owin.Security.Facebook.xml
@@ -49,3 +49,4 @@ C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\Micros
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\obj\Debug\Trojan.dll
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\obj\Debug\Trojan.pdb
+C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\obj\Debug\Trojan.csprojResolveAssemblyReference.cache

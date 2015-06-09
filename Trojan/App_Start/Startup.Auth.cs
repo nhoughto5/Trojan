@@ -59,11 +59,11 @@ namespace Trojan
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "604077824666-66g6e433ddc7ff02muricncvt6qsq3r0.apps.googleusercontent.com",
+                ClientSecret = "o2k0rq2jQA-WQSmXoRWgrEqY"
+            });
         }
     }
 }

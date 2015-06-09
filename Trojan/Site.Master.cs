@@ -8,6 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Linq;
 using Trojan.Models;
+using Trojan.Logic;
 
 namespace Trojan
 {
@@ -70,7 +71,10 @@ namespace Trojan
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (HttpContext.Current.User.IsInRole("canEdit"))
+            {
+                adminLink.Visible = true;
+            }
         }
 
         public IQueryable<Category> GetCategories()
@@ -83,6 +87,14 @@ namespace Trojan
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {
             Context.GetOwinContext().Authentication.SignOut();
+        }
+        protected void Page_PreRender(object sender, EventArgs e)
+        {
+            using (VirusDescriptionActions usersVirusDescription = new VirusDescriptionActions())
+            {
+                string cartStr = string.Format("Description ({0})", usersVirusDescription.GetCount());
+                descriptionCount.InnerText = cartStr;
+            }
         }
     }
 

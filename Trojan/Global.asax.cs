@@ -8,6 +8,7 @@ using System.Web.Security;
 using System.Web.SessionState;
 using System.Data.Entity;
 using Trojan.Models;
+using Trojan.Logic;
 
 namespace Trojan
 {
@@ -21,6 +22,10 @@ namespace Trojan
 
             // Initialize the Attribute database.
             Database.SetInitializer(new AttributeDatabaseInitializer());
+
+            // Create the custom role and user.
+            RoleActions roleActions = new RoleActions();
+            roleActions.AddUserAndRole();
         }
     }
 }
