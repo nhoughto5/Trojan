@@ -29,17 +29,14 @@
                         <table>
                             <tr>
                                 <td>
-                                    <a href="AttributeDetails.aspx?AttributeID=<%#:Item.AttributeID%>">
-                                        <img src="/Catalog/Images/Thumbs/<%#:Item.ImagePath%>"
-                                            width="100" height="75" style="border: solid" /></a>
+                                    <a href="<%#: GetRouteUrl("AttributeByNameRoute", new {attributeName = Item.AttributeName}) %>"> 
+                                        <image src='/Catalog/Images/Thumbs/<%#:Item.ImagePath%>' width="100" height="75" border="1" /></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="AttributeDetails.aspx?AttributeID=<%#:Item.AttributeID%>">
-                                        <span>
-                                            <%#:Item.AttributeName%>
-                                        </span>
+                                    <a href="<%#: GetRouteUrl("AttributeByNameRoute", new {attributeName = Item.AttributeName}) %>">
+                                      <%#:Item.AttributeName%>
                                     </a>
                                     <br />
                                     <span>

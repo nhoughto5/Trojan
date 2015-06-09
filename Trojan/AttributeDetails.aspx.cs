@@ -16,13 +16,20 @@ namespace Trojan
 
         }
 
-        public IQueryable<Trojan.Models.Attribute> GetAttribute([QueryString("AttributeID")] int? AttributeId)
+        public IQueryable<Trojan.Models.Attribute> GetAttribute(
+                            [QueryString("AttributeID")] int? AttributeId,
+                            [RouteData] string AttributeName)
         {
             var _db = new Trojan.Models.AttributeContext();
             IQueryable<Trojan.Models.Attribute> query = _db.Attributes;
             if (AttributeId.HasValue && AttributeId > 0)
             {
                 query = query.Where(p => p.AttributeID == AttributeId);
+            }
+            else if (!String.IsNullOrEmpty(AttributeName))
+            {
+                query = query.Where(p =>
+                          String.Compare(p.AttributeName, AttributeName) == 0);
             }
             else
             {

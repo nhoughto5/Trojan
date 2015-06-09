@@ -20,7 +20,7 @@ namespace Trojan.Logic
 
             using (AttributeContext _db = new AttributeContext())
             {
-                // Add product to DB.
+                // Add Attribute to DB.
                 _db.Attributes.Add(myAttribute);
                 _db.SaveChanges();
             }

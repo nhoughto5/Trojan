@@ -26,6 +26,23 @@ namespace Trojan
             // Create the custom role and user.
             RoleActions roleActions = new RoleActions();
             roleActions.AddUserAndRole();
+
+            // Add Routes.
+            RegisterCustomRoutes(RouteTable.Routes);
+        }
+
+        void RegisterCustomRoutes(RouteCollection routes)
+        {
+          routes.MapPageRoute(
+              "AttributesByCategoryRoute",
+              "Category/{categoryName}",
+              "~/AttributeList.aspx"
+          );
+          routes.MapPageRoute(
+              "AttributeByNameRoute",
+              "Attribute/{attributeName}",
+              "~/AttributeDetails.aspx"
+          );
         }
     }
 }

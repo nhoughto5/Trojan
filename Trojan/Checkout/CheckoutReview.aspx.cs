@@ -67,14 +67,14 @@ namespace Trojan.Checkout
                     {
                         List<Virus_Item> myOrderList = usersShoppingCart.GetDescriptionItems();
 
-                        // Add OrderDetail information to the DB for each product purchased.
+                        // Add OrderDetail information to the DB for each Attribute purchased.
                         for (int i = 0; i < myOrderList.Count; i++)
                         {
                             // Create a new OrderDetail object.
                             var myOrderDetail = new OrderDetail();
                             myOrderDetail.OrderId = myOrder.OrderId;
                             myOrderDetail.Username = User.Identity.Name;
-                            myOrderDetail.ProductId = myOrderList[i].AttributeId;
+                            myOrderDetail.AttributeId = myOrderList[i].AttributeId;
                             //myOrderDetail.Quantity = myOrderList[i].Quantity;
                             //myOrderDetail.UnitPrice = myOrderList[i].Attribute.UnitPrice;
 
