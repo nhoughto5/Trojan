@@ -375,7 +375,7 @@ namespace Trojan.Models
                 new Attribute
                 {
                     AttributeID = 31,
-                    AttributeName = "I/O",
+                    AttributeName = "IO",
                     Description = "Location",
                     ImagePath="thirty_one.png",
                     F_in = 16,
