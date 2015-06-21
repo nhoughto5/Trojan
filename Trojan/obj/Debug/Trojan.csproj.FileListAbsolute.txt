@@ -1,9 +1,11 @@
+C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\Properties\AssemblyInfo.cs
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\Trojan.dll.config
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\Trojan.dll
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\Trojan.pdb
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\Antlr3.Runtime.dll
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\AspNet.ScriptManager.bootstrap.dll
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\Elmah.dll
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\EntityFramework.dll
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\EntityFramework.SqlServer.dll
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\Microsoft.AspNet.FriendlyUrls.dll
@@ -49,5 +51,3 @@ C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\Micros
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\obj\Debug\Trojan.dll
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\obj\Debug\Trojan.pdb
-C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\obj\Debug\Trojan.csprojResolveAssemblyReference.cache
-C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\Elmah.dll

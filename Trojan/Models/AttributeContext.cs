@@ -9,6 +9,7 @@ namespace Trojan.Models
         }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Attribute> Attributes { get; set; }
+        public DbSet<MatrixRow> MatrixRow { get; set; }
         public DbSet<Virus_Item> VirusDescriptionItems { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }

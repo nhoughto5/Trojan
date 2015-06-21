@@ -251,7 +251,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Images\logo.jpg" />
     <Content Include="Images\one.png" />
-    <Content Include="obj\Debug\Trojan.csproj.FileListAbsolute.txt" />
+    <Content Include="Matrix.aspx" />
     <Content Include="obj\Debug\Trojan.dll" />
     <Content Include="obj\Debug\Trojan.pdb" />
     <Content Include="packages.config" />
@@ -263,7 +263,6 @@
     <Content Include="Catalog\Images\Thumbs\Thumbs.db" />
     <Content Include="Catalog\Images\icon_template.psd" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="obj\Debug\Trojan.csprojResolveAssemblyReference.cache" />
     <Content Include="Checkout\Web.config" />
     <Content Include="Admin\Web.config" />
     <None Include="Properties\PublishProfiles\UvicTrojanSystem.pubxml" />
@@ -526,9 +525,17 @@
     <Compile Include="Logic\PayPalFunctions.cs" />
     <Compile Include="Logic\RoleActions.cs" />
     <Compile Include="Logic\VirusDescriptionActions.cs" />
+    <Compile Include="Matrix.aspx.cs">
+      <DependentUpon>Matrix.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Matrix.aspx.designer.cs">
+      <DependentUpon>Matrix.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Models\Attribute.cs" />
     <Compile Include="Models\AttributeContext.cs" />
     <Compile Include="Models\AttributeDatabaseInitializer.cs" />
+    <Compile Include="Models\MatrixRow.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderDetails.cs" />
     <Compile Include="Models\Virus_Item.cs" />
@@ -537,7 +544,9 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
