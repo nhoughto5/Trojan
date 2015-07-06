@@ -10,7 +10,7 @@ namespace Trojan.Models
             GetCategories().ForEach(c => context.Categories.Add(c));
             GetAttributes().ForEach(p => context.Attributes.Add(p));
             GetMatrixRow().ForEach(j => context.MatrixRow.Add(j));
-            GetMatrix().ForEach(c => context.Matrix_Element.Add(c));
+            GetMatrix().ForEach(a => context.default_Matrix.Add(a));
         }
 
         private static List<Category> GetCategories()

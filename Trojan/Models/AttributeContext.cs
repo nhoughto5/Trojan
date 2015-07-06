@@ -12,6 +12,6 @@ namespace Trojan.Models
         public DbSet<Virus_Item> VirusDescriptionItems { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
-        //public DbSet<Matrix_Element> Matrix_Element { get; set; }
+        public DbSet<Matrix_Element> default_Matrix { get; set; }
     }
 }
