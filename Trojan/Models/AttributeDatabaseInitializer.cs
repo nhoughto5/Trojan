@@ -10,6 +10,7 @@ namespace Trojan.Models
             GetCategories().ForEach(c => context.Categories.Add(c));
             GetAttributes().ForEach(p => context.Attributes.Add(p));
             GetMatrixRow().ForEach(j => context.MatrixRow.Add(j));
+            GetMatrix().ForEach(c => context.Matrix_Element.Add(c));
         }
 
         private static List<Category> GetCategories()
@@ -1638,6 +1639,2309 @@ namespace Trojan.Models
                 },
                };
             return Rows;
-        } 
+        }
+        private static List<Matrix_Element> GetMatrix()
+        {
+            var entries = new List<Matrix_Element>
+            {
+                new Matrix_Element{
+                    RowID = 1, ColID = 1,
+                    cellValue = 0, R = "1"
+                },
+                new Matrix_Element{
+                    RowID = 1, ColID = 2,
+                    cellValue = 1, R = "1"
+                },
+                new Matrix_Element{
+                    RowID = 1, ColID = 3,
+                    cellValue = 0, R = "1"
+                },
+                new Matrix_Element{
+                    RowID = 1, ColID = 4,
+                    cellValue = 0, R = "1"
+                },
+                new Matrix_Element{
+                    RowID = 1, ColID = 5,
+                    cellValue = 0, R = "1"
+                },
+                new Matrix_Element{
+                    RowID = 2, ColID = 1,
+                    cellValue = 0, R = "1"
+                },
+                new Matrix_Element{
+                    RowID = 2, ColID = 2,
+                    cellValue = 0, R = "1"
+                },
+                new Matrix_Element{
+                    RowID = 2, ColID = 3,
+                    cellValue = 1, R = "1"
+                },
+                new Matrix_Element{
+                    RowID = 2, ColID = 4,
+                    cellValue = 0, R = "1"
+                },
+                new Matrix_Element{
+                    RowID = 2, ColID = 5,
+                    cellValue = 0, R = "1"
+                },
+                new Matrix_Element{
+                    RowID = 3, ColID = 1,
+                    cellValue = 0, R = "1"
+                },
+                new Matrix_Element{
+                    RowID = 3, ColID = 2,
+                    cellValue = 0, R = "1"
+                },
+                new Matrix_Element{
+                    RowID = 3, ColID = 3,
+                    cellValue = 0, R = "1"
+                },
+                new Matrix_Element{
+                    RowID = 3, ColID = 4,
+                    cellValue = 1, R = "1"
+                },
+                new Matrix_Element{
+                    RowID = 3, ColID = 5,
+                    cellValue = 0, R = "1"
+                },
+                new Matrix_Element{
+                    RowID = 4, ColID = 1,
+                    cellValue = 0, R = "1"
+                },
+                new Matrix_Element{
+                    RowID = 4, ColID = 2,
+                    cellValue = 0, R = "1"
+                },
+                new Matrix_Element{
+                    RowID = 4, ColID = 3,
+                    cellValue = 0, R = "1"
+                },
+                new Matrix_Element{
+                    RowID = 4, ColID = 4,
+                    cellValue = 0, R = "1"
+                },
+                new Matrix_Element{
+                    RowID = 4, ColID = 5,
+                    cellValue = 1, R = "1"
+                },
+                new Matrix_Element{
+                    RowID = 5, ColID = 1,
+                    cellValue = 0, R = "1"
+                },
+                new Matrix_Element{
+                    RowID = 5, ColID = 2,
+                    cellValue = 0, R = "1"
+                },
+                new Matrix_Element{
+                    RowID = 5, ColID = 3,
+                    cellValue = 0, R = "1"
+                },
+                new Matrix_Element{
+                    RowID = 5, ColID = 4,
+                    cellValue = 0, R = "1"
+                },
+                new Matrix_Element{
+                    RowID = 5, ColID = 5,
+                    cellValue = 0, R = "1"
+                },
+
+//=============Matrix R12 =============//
+            
+                new Matrix_Element{
+                    RowID = 1, ColID = 6,
+                    cellValue = 1, R = "12"
+                },
+                new Matrix_Element{
+                    RowID = 1, ColID = 7,
+                    cellValue = 0, R = "12"
+                },
+                new Matrix_Element{
+                    RowID = 1, ColID = 8,
+                    cellValue = 0, R = "12"
+                },
+                new Matrix_Element{
+                    RowID = 1, ColID = 9,
+                    cellValue = 0, R = "12"
+                },
+                new Matrix_Element{
+                    RowID = 1, ColID = 10,
+                    cellValue = 0, R = "12"
+                },
+                new Matrix_Element{
+                    RowID = 1, ColID = 11,
+                    cellValue = 0, R = "12"
+                },
+                new Matrix_Element{
+                    RowID = 2, ColID = 6,
+                    cellValue = 0, R = "12"
+                },
+                new Matrix_Element{
+                    RowID = 2, ColID = 7,
+                    cellValue = 1, R = "12"
+                },
+                new Matrix_Element{
+                    RowID = 2, ColID = 8,
+                    cellValue = 0, R = "12"
+                },
+                new Matrix_Element{
+                    RowID = 2, ColID = 9,
+                    cellValue = 0, R = "12"
+                },
+                new Matrix_Element{
+                    RowID = 2, ColID = 10,
+                    cellValue = 0, R = "12"
+                },
+                new Matrix_Element{
+                    RowID = 2, ColID = 11,
+                    cellValue = 0, R = "12"
+                },
+                new Matrix_Element{
+                    RowID = 3, ColID = 6,
+                    cellValue = 0, R = "12"
+                },
+                new Matrix_Element{
+                    RowID = 3, ColID = 7,
+                    cellValue = 0, R = "12"
+                },
+                new Matrix_Element{
+                    RowID = 3, ColID = 8,
+                    cellValue = 0, R = "12"
+                },
+                new Matrix_Element{
+                    RowID = 3, ColID = 9,
+                    cellValue = 0, R = "12"
+                },
+                new Matrix_Element{
+                    RowID = 3, ColID = 10,
+                    cellValue = 0, R = "12"
+                },
+                new Matrix_Element{
+                    RowID = 3, ColID = 11,
+                    cellValue = 1, R = "12"
+                },
+                new Matrix_Element{
+                    RowID = 4, ColID = 6,
+                    cellValue = 1, R = "12"
+                },
+                new Matrix_Element{
+                    RowID = 4, ColID = 7,
+                    cellValue = 0, R = "12"
+                },
+                new Matrix_Element{
+                    RowID = 4, ColID = 8,
+                    cellValue = 0, R = "12"
+                },
+                new Matrix_Element{
+                    RowID = 4, ColID = 9,
+                    cellValue = 1, R = "12"
+                },
+                new Matrix_Element{
+                    RowID = 4, ColID = 10,
+                    cellValue = 0, R = "12"
+                },
+                new Matrix_Element{
+                    RowID = 4, ColID = 11,
+                    cellValue = 0, R = "12"
+                },
+                new Matrix_Element{
+                    RowID = 5, ColID = 6,
+                    cellValue = 1, R = "12"
+                },
+                new Matrix_Element{
+                    RowID = 5, ColID = 7,
+                    cellValue = 0, R = "12"
+                },
+                new Matrix_Element{
+                    RowID = 5, ColID = 8,
+                    cellValue = 0, R = "12"
+                },
+                new Matrix_Element{
+                    RowID = 5, ColID = 9,
+                    cellValue = 0, R = "12"
+                },
+                new Matrix_Element{
+                    RowID = 5, ColID = 10,
+                    cellValue = 0, R = "12"
+                },     
+                new Matrix_Element{
+                    RowID = 5, ColID = 11,
+                    cellValue = 0, R = "12"
+                },
+
+//================Matrix R2 ===============//
+                new Matrix_Element{
+                    RowID = 6, ColID = 6,
+                    cellValue = 0, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 6, ColID = 7,
+                    cellValue = 1, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 6, ColID = 8,
+                    cellValue = 0, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 6, ColID = 9,
+                    cellValue = 0, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 6, ColID = 10,
+                    cellValue = 0, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 6, ColID = 11,
+                    cellValue = 0, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 7, ColID = 6,
+                    cellValue = 0, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 7, ColID = 7,
+                    cellValue = 0, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 7, ColID = 8,
+                    cellValue = 1, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 7, ColID = 9,
+                    cellValue = 0, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 7, ColID = 10,
+                    cellValue = 0, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 7, ColID = 11,
+                    cellValue = 0, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 8, ColID = 6,
+                    cellValue = 0, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 8, ColID = 7,
+                    cellValue = 0, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 8, ColID = 8,
+                    cellValue = 0, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 8, ColID = 9,
+                    cellValue = 1, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 8, ColID = 10,
+                    cellValue = 0, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 8, ColID = 11,
+                    cellValue = 0, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 9, ColID = 6,
+                    cellValue = 0, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 9, ColID = 7,
+                    cellValue = 0, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 9, ColID = 8,
+                    cellValue = 0, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 9, ColID = 9,
+                    cellValue = 0, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 9, ColID = 10,
+                    cellValue = 1, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 9, ColID = 11,
+                    cellValue = 0, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 10, ColID = 6,
+                    cellValue = 0, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 10, ColID = 7,
+                    cellValue = 0, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 10, ColID = 8,
+                    cellValue = 0, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 10, ColID = 9,
+                    cellValue = 0, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 10, ColID = 10,
+                    cellValue = 0, R = "2"
+                },     
+                new Matrix_Element{
+                    RowID = 10, ColID = 11,
+                    cellValue = 1, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 11, ColID = 6,
+                    cellValue = 0, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 11, ColID = 7,
+                    cellValue = 0, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 11, ColID = 8,
+                    cellValue = 0, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 11, ColID = 9,
+                    cellValue = 0, R = "2"
+                },
+                new Matrix_Element{
+                    RowID = 11, ColID = 10,
+                    cellValue = 0, R = "2"
+                },     
+                new Matrix_Element{
+                    RowID = 11, ColID = 11,
+                    cellValue = 0, R = "2"
+                },
+//============== Matrix R23 ===============//
+                new Matrix_Element{
+                    RowID = 6, ColID = 12,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 6, ColID = 13,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 6, ColID = 14,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 6, ColID = 15,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 6, ColID = 16,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 6, ColID = 17,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 6, ColID = 18,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 6, ColID = 19,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 6, ColID = 20,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 6, ColID = 21,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 6, ColID = 22,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 6, ColID = 23,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 6, ColID = 24,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 6, ColID = 25,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 6, ColID = 26,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 6, ColID = 27,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 6, ColID = 28,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 7, ColID = 12,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 7, ColID = 13,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 7, ColID = 14,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 7, ColID = 15,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 7, ColID = 16,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 7, ColID = 17,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 7, ColID = 18,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 7, ColID = 19,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 7, ColID = 20,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 7, ColID = 21,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 7, ColID = 22,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 7, ColID = 23,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 7, ColID = 24,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 7, ColID = 25,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 7, ColID = 26,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 7, ColID = 27,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 7, ColID = 28,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 8, ColID = 12,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 8, ColID = 13,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 8, ColID = 14,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 8, ColID = 15,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 8, ColID = 16,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 8, ColID = 17,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 8, ColID = 18,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 8, ColID = 19,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 8, ColID = 20,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 8, ColID = 21,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 8, ColID = 22,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 8, ColID = 23,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 8, ColID = 24,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 8, ColID = 25,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 8, ColID = 26,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 8, ColID = 27,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 8, ColID = 28,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 9, ColID = 12,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 9, ColID = 13,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 9, ColID = 14,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 9, ColID = 15,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 9, ColID = 16,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 9, ColID = 17,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 9, ColID = 18,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 9, ColID = 19,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 9, ColID = 20,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 9, ColID = 21,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 9, ColID = 22,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 9, ColID = 23,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 9, ColID = 24,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 9, ColID = 25,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 9, ColID = 26,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 9, ColID = 27,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 9, ColID = 28,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 10, ColID = 12,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 10, ColID = 13,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 10, ColID = 14,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 10, ColID = 15,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 10, ColID = 16,
+                    cellValue = 0, R = "23"
+                },     
+                new Matrix_Element{
+                    RowID = 10, ColID = 17,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 10, ColID = 18,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 10, ColID = 19,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 10, ColID = 20,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 10, ColID = 21,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 10, ColID = 22,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 10, ColID = 23,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 10, ColID = 24,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 10, ColID = 25,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 10, ColID = 26,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 10, ColID = 27,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 10, ColID = 28,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 11, ColID = 12,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 11, ColID = 13,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 11, ColID = 14,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 11, ColID = 15,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 11, ColID = 16,
+                    cellValue = 0, R = "23"
+                },     
+                new Matrix_Element{
+                    RowID = 11, ColID = 17,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 11, ColID = 18,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 11, ColID = 19,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 11, ColID = 20,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 11, ColID = 21,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 11, ColID = 22,
+                    cellValue = 0, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 11, ColID = 23,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 11, ColID = 24,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 11, ColID = 25,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 11, ColID = 26,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 11, ColID = 27,
+                    cellValue = 1, R = "23"
+                },
+                new Matrix_Element{
+                    RowID = 11, ColID = 28,
+                    cellValue = 1, R = "23"
+                },
+//==============Matrix R3 =================//
+                new Matrix_Element{
+                    RowID = 12, ColID = 12,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 12, ColID = 13,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 12, ColID = 14,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 12, ColID = 15,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 12, ColID = 16,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 12, ColID = 17,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 12, ColID = 18,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 12, ColID = 19,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 12, ColID = 20,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 12, ColID = 21,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 12, ColID = 22,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 12, ColID = 23,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 12, ColID = 24,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 12, ColID = 25,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 12, ColID = 26,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 12, ColID = 27,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 12, ColID = 28,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 13, ColID = 12,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 13, ColID = 13,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 13, ColID = 14,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 13, ColID = 15,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 13, ColID = 16,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 13, ColID = 17,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 13, ColID = 18,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 13, ColID = 19,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 13, ColID = 20,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 13, ColID = 21,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 13, ColID = 22,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 13, ColID = 23,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 13, ColID = 24,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 13, ColID = 25,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 13, ColID = 26,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 13, ColID = 27,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 13, ColID = 28,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 14, ColID = 12,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 14, ColID = 13,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 14, ColID = 14,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 14, ColID = 15,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 14, ColID = 16,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 14, ColID = 17,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 14, ColID = 18,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 14, ColID = 19,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 14, ColID = 20,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 14, ColID = 21,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 14, ColID = 22,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 14, ColID = 23,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 14, ColID = 24,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 14, ColID = 25,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 14, ColID = 26,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 14, ColID = 27,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 14, ColID = 28,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 15, ColID = 12,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 15, ColID = 13,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 15, ColID = 14,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 15, ColID = 15,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 15, ColID = 16,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 15, ColID = 17,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 15, ColID = 18,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 15, ColID = 19,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 15, ColID = 20,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 15, ColID = 21,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 15, ColID = 22,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 15, ColID = 23,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 15, ColID = 24,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 15, ColID = 25,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 15, ColID = 26,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 15, ColID = 27,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 15, ColID = 28,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 16, ColID = 12,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 16, ColID = 13,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 16, ColID = 14,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 16, ColID = 15,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 16, ColID = 16,
+                    cellValue = 0, R = "3"
+                },     
+                new Matrix_Element{
+                    RowID = 16, ColID = 17,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 16, ColID = 18,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 16, ColID = 19,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 16, ColID = 20,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 16, ColID = 21,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 16, ColID = 22,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 16, ColID = 23,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 16, ColID = 24,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 16, ColID = 25,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 16, ColID = 26,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 16, ColID = 27,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 16, ColID = 28,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 17, ColID = 12,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 17, ColID = 13,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 17, ColID = 14,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 17, ColID = 15,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 17, ColID = 16,
+                    cellValue = 0, R = "3"
+                },     
+                new Matrix_Element{
+                    RowID = 17, ColID = 17,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 17, ColID = 18,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 17, ColID = 19,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 17, ColID = 20,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 17, ColID = 21,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 17, ColID = 22,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 17, ColID = 23,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 17, ColID = 24,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 17, ColID = 25,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 17, ColID = 26,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 17, ColID = 27,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 17, ColID = 28,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 18, ColID = 12,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 18, ColID = 13,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 18, ColID = 14,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 18, ColID = 15,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 18, ColID = 16,
+                    cellValue = 1, R = "3"
+                },     
+                new Matrix_Element{
+                    RowID = 18, ColID = 17,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 18, ColID = 18,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 18, ColID = 19,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 18, ColID = 20,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 18, ColID = 21,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 18, ColID = 22,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 18, ColID = 23,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 18, ColID = 24,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 18, ColID = 25,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 18, ColID = 26,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 18, ColID = 27,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 18, ColID = 28,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 19, ColID = 12,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 19, ColID = 13,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 19, ColID = 14,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 19, ColID = 15,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 19, ColID = 16,
+                    cellValue = 0, R = "3"
+                },     
+                new Matrix_Element{
+                    RowID = 19, ColID = 17,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 19, ColID = 18,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 19, ColID = 19,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 19, ColID = 20,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 19, ColID = 21,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 19, ColID = 22,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 19, ColID = 23,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 19, ColID = 24,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 19, ColID = 25,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 19, ColID = 26,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 19, ColID = 27,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 19, ColID = 28,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 20, ColID = 12,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 20, ColID = 13,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 20, ColID = 14,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 20, ColID = 15,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 20, ColID = 16,
+                    cellValue = 0, R = "3"
+                },     
+                new Matrix_Element{
+                    RowID = 20, ColID = 17,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 20, ColID = 18,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 20, ColID = 19,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 20, ColID = 20,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 20, ColID = 21,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 20, ColID = 22,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 20, ColID = 23,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 20, ColID = 24,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 20, ColID = 25,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 20, ColID = 26,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 20, ColID = 27,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 20, ColID = 28,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 21, ColID = 12,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 21, ColID = 13,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 21, ColID = 14,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 21, ColID = 15,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 21, ColID = 16,
+                    cellValue = 1, R = "3"
+                },     
+                new Matrix_Element{
+                    RowID = 21, ColID = 17,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 21, ColID = 18,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 21, ColID = 19,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 21, ColID = 20,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 21, ColID = 21,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 21, ColID = 22,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 21, ColID = 23,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 21, ColID = 24,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 21, ColID = 25,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 21, ColID = 26,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 21, ColID = 27,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 21, ColID = 28,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 22, ColID = 12,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 22, ColID = 13,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 22, ColID = 14,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 22, ColID = 15,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 22, ColID = 16,
+                    cellValue = 1, R = "3"
+                },     
+                new Matrix_Element{
+                    RowID = 22, ColID = 17,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 22, ColID = 18,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 22, ColID = 19,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 22, ColID = 20,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 22, ColID = 21,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 22, ColID = 22,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 22, ColID = 23,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 22, ColID = 24,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 22, ColID = 25,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 22, ColID = 26,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 22, ColID = 27,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 22, ColID = 28,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 23, ColID = 12,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 23, ColID = 13,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 23, ColID = 14,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 23, ColID = 15,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 23, ColID = 16,
+                    cellValue = 1, R = "3"
+                },     
+                new Matrix_Element{
+                    RowID = 23, ColID = 17,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 23, ColID = 18,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 23, ColID = 19,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 23, ColID = 20,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 23, ColID = 21,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 23, ColID = 22,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 23, ColID = 23,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 23, ColID = 24,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 23, ColID = 25,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 23, ColID = 26,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 23, ColID = 27,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 23, ColID = 28,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 24, ColID = 12,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 24, ColID = 13,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 24, ColID = 14,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 24, ColID = 15,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 24, ColID = 16,
+                    cellValue = 0, R = "3"
+                },     
+                new Matrix_Element{
+                    RowID = 24, ColID = 17,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 24, ColID = 18,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 24, ColID = 19,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 24, ColID = 20,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 24, ColID = 21,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 24, ColID = 22,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 24, ColID = 23,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 24, ColID = 24,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 24, ColID = 25,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 24, ColID = 26,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 24, ColID = 27,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 24, ColID = 28,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 25, ColID = 12,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 25, ColID = 13,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 25, ColID = 14,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 25, ColID = 15,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 25, ColID = 16,
+                    cellValue = 1, R = "3"
+                },     
+                new Matrix_Element{
+                    RowID = 25, ColID = 17,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 25, ColID = 18,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 25, ColID = 19,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 25, ColID = 20,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 25, ColID = 21,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 25, ColID = 22,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 25, ColID = 23,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 25, ColID = 24,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 25, ColID = 25,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 25, ColID = 26,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 25, ColID = 27,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 25, ColID = 28,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 26, ColID = 12,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 26, ColID = 13,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 26, ColID = 14,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 26, ColID = 15,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 26, ColID = 16,
+                    cellValue = 1, R = "3"
+                },     
+                new Matrix_Element{
+                    RowID = 26, ColID = 17,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 26, ColID = 18,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 26, ColID = 19,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 26, ColID = 20,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 26, ColID = 21,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 26, ColID = 22,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 26, ColID = 23,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 26, ColID = 24,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 26, ColID = 25,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 26, ColID = 26,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 26, ColID = 27,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 26, ColID = 28,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 27, ColID = 12,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 27, ColID = 13,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 27, ColID = 14,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 27, ColID = 15,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 27, ColID = 16,
+                    cellValue = 1, R = "3"
+                },     
+                new Matrix_Element{
+                    RowID = 27, ColID = 17,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 27, ColID = 18,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 27, ColID = 19,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 27, ColID = 20,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 27, ColID = 21,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 27, ColID = 22,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 27, ColID = 23,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 27, ColID = 24,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 27, ColID = 25,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 27, ColID = 26,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 27, ColID = 27,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 27, ColID = 28,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 28, ColID = 12,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 28, ColID = 13,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 28, ColID = 14,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 28, ColID = 15,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 28, ColID = 16,
+                    cellValue = 1, R = "3"
+                },     
+                new Matrix_Element{
+                    RowID = 28, ColID = 17,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 28, ColID = 18,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 28, ColID = 19,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 28, ColID = 20,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 28, ColID = 21,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 28, ColID = 22,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 28, ColID = 23,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 28, ColID = 24,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 28, ColID = 25,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 28, ColID = 26,
+                    cellValue = 1, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 28, ColID = 27,
+                    cellValue = 0, R = "3"
+                },
+                new Matrix_Element{
+                    RowID = 28, ColID = 28,
+                    cellValue = 0, R = "3"
+                },
+//================= Matrix R34 ==============//
+                new Matrix_Element{
+                    RowID = 12, ColID = 29,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 12, ColID = 30,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 12, ColID = 31,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 12, ColID = 32,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 12, ColID = 33,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 12, ColID = 29,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 12, ColID = 30,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 12, ColID = 31,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 12, ColID = 32,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 12, ColID = 33,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 13, ColID = 29,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 13, ColID = 30,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 13, ColID = 31,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 13, ColID = 32,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 13, ColID = 33,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 14, ColID = 29,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 14, ColID = 30,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 14, ColID = 31,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 14, ColID = 32,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 14, ColID = 33,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 15, ColID = 29,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 15, ColID = 30,
+                    cellValue = 0, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 15, ColID = 31,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 15, ColID = 32,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 15, ColID = 33,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 16, ColID = 29,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 16, ColID = 30,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 16, ColID = 31,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 16, ColID = 32,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 16, ColID = 33,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 17, ColID = 29,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 17, ColID = 30,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 17, ColID = 31,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 17, ColID = 32,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 17, ColID = 33,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 18, ColID = 29,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 18, ColID = 30,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 18, ColID = 31,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 18, ColID = 32,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 18, ColID = 33,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 19, ColID = 29,
+                    cellValue = 0, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 19, ColID = 30,
+                    cellValue = 0, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 19, ColID = 31,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 19, ColID = 32,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 19, ColID = 33,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 20, ColID = 29,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 20, ColID = 30,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 20, ColID = 31,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 20, ColID = 32,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 20, ColID = 33,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 21, ColID = 29,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 21, ColID = 30,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 21, ColID = 31,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 21, ColID = 32,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 21, ColID = 33,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 22, ColID = 29,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 22, ColID = 30,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 22, ColID = 31,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 22, ColID = 32,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 22, ColID = 33,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 23, ColID = 29,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 23, ColID = 30,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 23, ColID = 31,
+                    cellValue = 0, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 23, ColID = 32,
+                    cellValue = 0, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 23, ColID = 33,
+                    cellValue = 0, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 24, ColID = 29,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 24, ColID = 30,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 24, ColID = 31,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 24, ColID = 32,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 24, ColID = 33,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 25, ColID = 29,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 25, ColID = 30,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 25, ColID = 31,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 25, ColID = 32,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 25, ColID = 33,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 26, ColID = 29,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 26, ColID = 30,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 26, ColID = 31,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 26, ColID = 32,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 26, ColID = 33,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 27, ColID = 29,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 27, ColID = 30,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 27, ColID = 31,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 27, ColID = 32,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 27, ColID = 33,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 28, ColID = 29,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 28, ColID = 30,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 28, ColID = 31,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 28, ColID = 32,
+                    cellValue = 1, R = "34"
+                },
+                new Matrix_Element{
+                    RowID = 28, ColID = 33,
+                    cellValue = 1, R = "34"
+                },
+            };
+            return entries;
+        }
     }
 }

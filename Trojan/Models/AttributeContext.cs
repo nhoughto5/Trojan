@@ -3,8 +3,7 @@ namespace Trojan.Models
 {
     public class AttributeContext : DbContext
     {
-        public AttributeContext()
-            : base("Trojan")
+        public AttributeContext() : base("Trojan")
         {
         }
         public DbSet<Category> Categories { get; set; }
@@ -13,5 +12,6 @@ namespace Trojan.Models
         public DbSet<Virus_Item> VirusDescriptionItems { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
+        //public DbSet<Matrix_Element> Matrix_Element { get; set; }
     }
 }
