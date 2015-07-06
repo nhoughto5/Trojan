@@ -18,7 +18,6 @@ namespace Trojan
             var list = new List<Trojan.Models.MatrixRow>(Entries);
             GridView1.DataSource = list;
             GridView1.DataBind();
-            
         }
 
     }

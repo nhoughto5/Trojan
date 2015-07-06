@@ -18,22 +18,22 @@ namespace Trojan.Models
                 new Category
                 {
                     CategoryID = 1,
-                    CategoryName = "Chip Life Cycle"
+                    CategoryName = "Chip Life Cycle",
                 },
                 new Category
                 {
                     CategoryID = 2,
-                    CategoryName = "Abstraction"
+                    CategoryName = "Abstraction",
                 },
                 new Category
                 {
                     CategoryID = 3,
-                    CategoryName = "Properties"
+                    CategoryName = "Properties",
                 },
                 new Category
                 {
                     CategoryID = 4,
-                    CategoryName = "Location"
+                    CategoryName = "Location",
                 },
             };
 
@@ -52,7 +52,7 @@ namespace Trojan.Models
                     F_in = 0,
                     F_out = 3,
                     CategoryID = 1,
-                    CategoryName = "Chip Life Cycle"
+                    CategoryName = "Chip Life Cycle",
                },
                 new Attribute 
                 {
@@ -63,7 +63,7 @@ namespace Trojan.Models
                     F_in = 1,
                     F_out = 2,
                     CategoryID = 1,
-                    CategoryName = "Chip Life Cycle"
+                    CategoryName = "Chip Life Cycle",
                },
                 new Attribute
                 {
@@ -74,7 +74,7 @@ namespace Trojan.Models
                     F_in = 1,
                     F_out = 2,
                     CategoryID = 1,
-                    CategoryName = "Chip Life Cycle"
+                    CategoryName = "Chip Life Cycle",
                 },
                 new Attribute
                 {
@@ -85,7 +85,7 @@ namespace Trojan.Models
                     F_in = 1,
                     F_out = 3,
                     CategoryID = 1,
-                    CategoryName = "Chip Life Cycle"
+                    CategoryName = "Chip Life Cycle",
                 },
                 new Attribute
                 {
@@ -96,7 +96,7 @@ namespace Trojan.Models
                     F_in = 1,
                     F_out = 1,
                     CategoryID = 1,
-                    CategoryName = "Chip Life Cycle"
+                    CategoryName = "Chip Life Cycle",
                 },
                 new Attribute
                 {
@@ -107,7 +107,7 @@ namespace Trojan.Models
                     F_in = 3,
                     F_out = 7,
                     CategoryID = 2,
-                    CategoryName = "Abstraction"
+                    CategoryName = "Abstraction",
                 },
                 new Attribute
                 {
@@ -118,7 +118,7 @@ namespace Trojan.Models
                     F_in = 2,
                     F_out = 11,
                     CategoryID = 2,
-                    CategoryName = "Abstraction"
+                    CategoryName = "Abstraction",
                 },
                 new Attribute
                 {
@@ -129,7 +129,7 @@ namespace Trojan.Models
                     F_in = 1,
                     F_out = 15,
                     CategoryID = 2,
-                    CategoryName = "Abstraction"
+                    CategoryName = "Abstraction",
                 },
                 new Attribute
                 {
@@ -140,7 +140,7 @@ namespace Trojan.Models
                     F_in = 2,
                     F_out = 9,
                     CategoryID = 2,
-                    CategoryName = "Abstraction"
+                    CategoryName = "Abstraction",
                 },
                 new Attribute
                 {
@@ -151,7 +151,7 @@ namespace Trojan.Models
                     F_in = 1,
                     F_out = 10,
                     CategoryID = 2,
-                    CategoryName = "Abstraction"
+                    CategoryName = "Abstraction",
                 },
                 new Attribute
                 {
@@ -162,7 +162,7 @@ namespace Trojan.Models
                     F_in = 2,
                     F_out = 12,
                     CategoryID = 2,
-                    CategoryName = "Abstraction"
+                    CategoryName = "Abstraction",
                 },
                 new Attribute
                 {
@@ -173,7 +173,7 @@ namespace Trojan.Models
                     F_in = 18,
                     F_out = 17,
                     CategoryID = 3,
-                    CategoryName = "Properties"
+                    CategoryName = "Properties",
                 },
                 new Attribute
                 {
@@ -184,7 +184,7 @@ namespace Trojan.Models
                     F_in = 10,
                     F_out = 13,
                     CategoryID = 3,
-                    CategoryName = "Properties"
+                    CategoryName = "Properties",
                 },
                 new Attribute
                 {
@@ -195,7 +195,7 @@ namespace Trojan.Models
                     F_in = 8,
                     F_out = 11,
                     CategoryID = 3,
-                    CategoryName = "Properties"
+                    CategoryName = "Properties",
                 },
                 new Attribute
                 {
@@ -206,7 +206,7 @@ namespace Trojan.Models
                     F_in = 16,
                     F_out = 16,
                     CategoryID = 3,
-                    CategoryName = "Properties"
+                    CategoryName = "Properties",
                 },
                 new Attribute
                 {
@@ -217,7 +217,7 @@ namespace Trojan.Models
                     F_in = 13,
                     F_out = 15,
                     CategoryID = 3,
-                    CategoryName = "Properties"
+                    CategoryName = "Properties",
                 },
                 new Attribute
                 {
@@ -228,7 +228,7 @@ namespace Trojan.Models
                     F_in = 17,
                     F_out = 18,
                     CategoryID = 3,
-                    CategoryName = "Properties"
+                    CategoryName = "Properties",
                 },
                 new Attribute
                 {
@@ -239,7 +239,7 @@ namespace Trojan.Models
                     F_in = 19,
                     F_out = 18,
                     CategoryID = 3,
-                    CategoryName = "Properties"
+                    CategoryName = "Properties",
                 },
                 new Attribute
                 {
@@ -250,7 +250,7 @@ namespace Trojan.Models
                     F_in = 9,
                     F_out = 9,
                     CategoryID = 3,
-                    CategoryName = "Properties"
+                    CategoryName = "Properties",
                 },
                 new Attribute
                 {
@@ -261,7 +261,7 @@ namespace Trojan.Models
                     F_in = 19,
                     F_out = 18,
                     CategoryID = 3,
-                    CategoryName = "Properties"
+                    CategoryName = "Properties",
                 },
                 new Attribute
                 {
@@ -272,7 +272,7 @@ namespace Trojan.Models
                     F_in = 13,
                     F_out = 15,
                     CategoryID = 3,
-                    CategoryName = "Properties"
+                    CategoryName = "Properties",
                 },
                 new Attribute
                 {
@@ -283,7 +283,7 @@ namespace Trojan.Models
                     F_in = 12,
                     F_out = 14,
                     CategoryID = 3,
-                    CategoryName = "Properties"
+                    CategoryName = "Properties",
                 },
                 new Attribute
                 {
@@ -294,7 +294,7 @@ namespace Trojan.Models
                     F_in = 14,
                     F_out = 13,
                     CategoryID = 3,
-                    CategoryName = "Properties"
+                    CategoryName = "Properties",
                 },
                 new Attribute
                 {
@@ -305,7 +305,7 @@ namespace Trojan.Models
                     F_in = 16,
                     F_out = 17,
                     CategoryID = 3,
-                    CategoryName = "Properties"
+                    CategoryName = "Properties",
                 },
                 new Attribute
                 {
@@ -316,7 +316,7 @@ namespace Trojan.Models
                     F_in = 11,
                     F_out = 14,
                     CategoryID = 3,
-                    CategoryName = "Properties"
+                    CategoryName = "Properties",
                 },
                 new Attribute
                 {
@@ -327,7 +327,7 @@ namespace Trojan.Models
                     F_in = 19,
                     F_out = 21,
                     CategoryID = 3,
-                    CategoryName = "Properties"
+                    CategoryName = "Properties",
                 },
                 new Attribute
                 {
@@ -338,7 +338,7 @@ namespace Trojan.Models
                     F_in = 17,
                     F_out = 19,
                     CategoryID = 3,
-                    CategoryName = "Properties"
+                    CategoryName = "Properties",
                 },
                 new Attribute
                 {
@@ -349,7 +349,7 @@ namespace Trojan.Models
                     F_in = 14,
                     F_out = 17,
                     CategoryID = 3,
-                    CategoryName = "Properties"
+                    CategoryName = "Properties",
                 },
                 new Attribute
                 {
@@ -360,7 +360,7 @@ namespace Trojan.Models
                     F_in = 16,
                     F_out = 0,
                     CategoryID = 4,
-                    CategoryName = "Location"
+                    CategoryName = "Location",
                 },
                 new Attribute
                 {
@@ -371,7 +371,7 @@ namespace Trojan.Models
                     F_in = 15,
                     F_out = 0,
                     CategoryID = 4,
-                    CategoryName = "Location"
+                    CategoryName = "Location",
                 },
                 new Attribute
                 {
@@ -382,7 +382,7 @@ namespace Trojan.Models
                     F_in = 16,
                     F_out = 0,
                     CategoryID = 4,
-                    CategoryName = "Location"
+                    CategoryName = "Location",
                 },
                 new Attribute
                 {
@@ -393,7 +393,7 @@ namespace Trojan.Models
                     F_in = 16,
                     F_out = 0,
                     CategoryID = 4,
-                    CategoryName = "Location"
+                    CategoryName = "Location",
                 },
                 new Attribute
                 {
@@ -404,19 +404,21 @@ namespace Trojan.Models
                     F_in = 16,
                     F_out = 0,
                     CategoryID = 4,
-                    CategoryName = "Location"
+                    CategoryName = "Location",
                 },
             };
 
             return Attributes;
         }
+
+
+
         private static List<MatrixRow> GetMatrixRow()
         {
             var Rows = new List<MatrixRow> {
                 new MatrixRow
                 {
                     AttributeID = 1,
-                    A1 = false,
                     A2 = true,
                     A3 = false,
                     A4 = false,

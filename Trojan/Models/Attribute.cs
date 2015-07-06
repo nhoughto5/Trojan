@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Trojan.Models
 {
@@ -29,5 +30,17 @@ namespace Trojan.Models
         public string CategoryName { get; set; }
 
         public virtual Category Category { get; set; }
+
+        public List<int> R1 { get; set; }
+
+        public List<int> R12 { get; set; }
+
+        public List<int> R2 { get; set; }
+
+        public List<int> R23 { get; set; }
+
+        public List<int> R3 { get; set; }
+
+        public List<int> R34 { get; set; }
     }
 }

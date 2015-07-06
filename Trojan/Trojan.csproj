@@ -535,7 +535,10 @@
     <Compile Include="Models\Attribute.cs" />
     <Compile Include="Models\AttributeContext.cs" />
     <Compile Include="Models\AttributeDatabaseInitializer.cs" />
+    <Compile Include="Models\MatrixContext.cs" />
+    <Compile Include="Models\MatrixDatabaseInitializer.cs" />
     <Compile Include="Models\MatrixRow.cs" />
+    <Compile Include="Models\Matrix_Element.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderDetails.cs" />
     <Compile Include="Models\Virus_Item.cs" />

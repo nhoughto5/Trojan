@@ -53,10 +53,23 @@
         <asp:Button ID="UpdateBtn" runat="server" Text="Update" OnClick="UpdateBtn_Click" />
       </td>
       <td>
-          <asp:ImageButton ID="CheckoutImageBtn" runat="server" ImageUrl="https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" Width="145" AlternateText="Check out with PayPal" 
-                      OnClick="CheckoutBtn_Click" 
-                      BackColor="Transparent" BorderWidth="0" />
+          <asp:Button ID="BuildBtn" runat="server" Text="Build" OnClick="BuildBtn_Click" />
+      </td>
+      <td>
+          <asp:Button ID="ClearBtn" runat="server" Text="Clear" OnClick="ClearBtn_Click" />
       </td>
     </tr>
     </table>
+
+    <div id="RelationDiv" runat="server" class="ContentHead"><h1>Description Relations</h1></div>
+    <asp:GridView ID="RelationGrid" runat="server" AutoGenerateColumns="false" ItemType="int" SelectMethod="Build_Virus">
+        <Columns>
+            <asp:BoundField DataField="AttributeID" HeaderText="ID" SortExpression="AttributeID" />     
+            <asp:TemplateField   HeaderText="Relations">            
+                    <ItemTemplate>
+                        <asp:Label id="ConnectionsLbl" runat="server"></asp:Label>
+                    </ItemTemplate>        
+            </asp:TemplateField >
+        </Columns>
+    </asp:GridView>
 </asp:Content>
