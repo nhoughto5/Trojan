@@ -61,15 +61,19 @@
     </tr>
     </table>
 
-    <div id="RelationDiv" runat="server" class="ContentHead"><h1>Description Relations</h1></div>
-    <asp:GridView ID="RelationGrid" runat="server" AutoGenerateColumns="false" ItemType="int" SelectMethod="Build_Virus">
-        <Columns>
-            <asp:BoundField DataField="AttributeID" HeaderText="ID" SortExpression="AttributeID" />     
-            <asp:TemplateField   HeaderText="Relations">            
-                    <ItemTemplate>
-                        <asp:Label id="ConnectionsLbl" runat="server"></asp:Label>
-                    </ItemTemplate>        
-            </asp:TemplateField >
-        </Columns>
-    </asp:GridView>
+    <asp:ListView runat="server" ID="ListView_Connections" DataSourceID="Connections_DS">
+        <LayoutTemplate>
+            <table runat="server" id="table1" >
+            <tr runat="server" id="itemPlaceholder" ></tr>
+            </table>
+        </LayoutTemplate>
+        <ItemTemplate>
+            <tr runat="server">
+                <td runat="server">
+                    <%-- Data-bound content. --%>
+                    <asp:Label ID="NameLabel" runat="server" Text='<%#Eval("Name") %>' />
+                </td>
+            </tr>
+        </ItemTemplate>
+    </asp:ListView>
 </asp:Content>

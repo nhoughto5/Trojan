@@ -83,7 +83,7 @@ namespace Trojan
         {
             using (VirusDescriptionActions usersShoppingCart = new VirusDescriptionActions())
             {
-                String cartId = usersShoppingCart.GetVirusId();
+                String virusId = usersShoppingCart.GetVirusId();
 
                 VirusDescriptionActions.VirusDescriptionUpdates[] cartUpdates = new VirusDescriptionActions.VirusDescriptionUpdates[DescriptionList.Rows.Count];
                 for (int i = 0; i < DescriptionList.Rows.Count; i++)
@@ -100,7 +100,7 @@ namespace Trojan
                     cbOnOff = (CheckBox)DescriptionList.Rows[i].FindControl("On_Off_CheckBox");
                     if (cbOnOff.Checked == true) //Check to see if On/off is checked
                     {
-                        if (usersShoppingCart.Get_OnOff(cartId, cartUpdates[i].AttributeId) == true) //If checked and currently on, turn off
+                        if (usersShoppingCart.Get_OnOff(virusId, cartUpdates[i].AttributeId) == true) //If checked and currently on, turn off
                         {
                             cartUpdates[i].OnOff = false;
                         }
@@ -112,12 +112,12 @@ namespace Trojan
                     }
                     else //if not checked, query DB for previous state
                     {
-                        cartUpdates[i].OnOff = usersShoppingCart.Get_OnOff(cartId, cartUpdates[i].AttributeId);
+                        cartUpdates[i].OnOff = usersShoppingCart.Get_OnOff(virusId, cartUpdates[i].AttributeId);
                     }
                     //cartUpdates[i].OnOff = cbOnOff.Checked;
 
                 }
-                usersShoppingCart.UpdateVirusDescriptionDatabase(cartId, cartUpdates);
+                usersShoppingCart.UpdateVirusDescriptionDatabase(virusId, cartUpdates);
                 DescriptionList.DataBind();
                 lblTotal.Text = String.Format("{0:d}", usersShoppingCart.GetCount());
                 lblTotalF_in.Text = String.Format("{0:d}", usersShoppingCart.getTotalF_in());
@@ -144,11 +144,21 @@ namespace Trojan
         {
             UpdateCartItems();
         }
+        List<int> getConnections(System.Linq.IQueryable<Matrix_Element> Row_Values)
+        {
+            List<Matrix_Element> Row = Row_Values.ToList();
+            List<int> connects = new List<int>();
+            foreach (var item in Row)
+            {
+                connects.Add(item.ColID);
+            }
+            return connects;
+        }
 
         public void Build_Virus()
         {
             AttributeContext _db = new AttributeContext();
-            List<List<int>> grid= new List<List<int>>();
+            List<int> tempList = new List<int>();
             int currentID;
             using (VirusDescriptionActions usersShoppingCart = new VirusDescriptionActions())
             {
@@ -160,22 +170,9 @@ namespace Trojan
                     rowValues = GetValues(DescriptionList.Rows[i]);
                     cartUpdates[i].AttributeId = Convert.ToInt32(rowValues["AttributeID"]);
                     currentID = cartUpdates[i].AttributeId;
-                    //var Entries = (from p in _db.MatrixRow select p);
-                    //IQueryable<MatrixRow> Row = (from p in _db.MatrixRow where p.AttributeID == currentID select p);
-                    MatrixRow Row = (from p in _db.MatrixRow where p.AttributeID == currentID select p).SingleOrDefault();
-                   // var Row = _db.MatrixRow.here()
-                    //List<MatrixRow> list = new List<MatrixRow>(Row);
-                    List<int> Columns = CheckRow(Row);
-                    connectionsDictionary.Add(cartUpdates[i].AttributeId, Columns);
-                    //ConnectionsLbl.Text = Columns;
-                    //RelationGrid.DataSource = list;
-                    //RelationGrid.DataBind();
-                    //grid.Add(Columns);
-
+                    System.Linq.IQueryable<Matrix_Element> Row = (from p in _db.default_Matrix where p.RowID == currentID select p);
+                    tempList = getConnections(Row);
                 }
-                //return gridList;
-                RelationGrid.DataSource = connectionsDictionary;
-                RelationGrid.DataBind();
             }
         }
         protected void ClearBtn_Click(object sender, EventArgs e)
@@ -190,45 +187,6 @@ namespace Trojan
             RelationDiv.Visible = true;
             RelationGrid.Visible = true;
             Build_Virus();
-        }
-
-        private List<int> CheckRow(MatrixRow Row){
-            List<int> list = new List<int>();
-
-            if (Row.A1 == true) list.Add(1);
-            if (Row.A2 == true) list.Add(2);
-            if (Row.A3 == true) list.Add(3);
-            if (Row.A4 == true) list.Add(4);
-            if (Row.A5 == true) list.Add(5);
-            if (Row.A6 == true) list.Add(6);
-            if (Row.A7 == true) list.Add(7);
-            if (Row.A8 == true) list.Add(8);
-            if (Row.A9 == true) list.Add(9);
-            if (Row.A10 == true) list.Add(10);
-            if (Row.A11 == true) list.Add(11);
-            if (Row.A12 == true) list.Add(12);
-            if (Row.A13 == true) list.Add(13);
-            if (Row.A14 == true) list.Add(14);
-            if (Row.A15 == true) list.Add(15);
-            if (Row.A16 == true) list.Add(16);
-            if (Row.A17 == true) list.Add(17);
-            if (Row.A18 == true) list.Add(18);
-            if (Row.A19 == true) list.Add(19);
-            if (Row.A20 == true) list.Add(20);
-            if (Row.A21 == true) list.Add(21);
-            if (Row.A22 == true) list.Add(22);
-            if (Row.A23 == true) list.Add(23);
-            if (Row.A24 == true) list.Add(24);
-            if (Row.A25 == true) list.Add(25);
-            if (Row.A26 == true) list.Add(26);
-            if (Row.A27 == true) list.Add(27);
-            if (Row.A28 == true) list.Add(28);
-            if (Row.A29 == true) list.Add(29);
-            if (Row.A30 == true) list.Add(30);
-            if (Row.A31 == true) list.Add(31);
-            if (Row.A32 == true) list.Add(32);
-            if (Row.A33 == true) list.Add(33);
-            return list;
         }
     }
 }

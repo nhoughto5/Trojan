@@ -10,7 +10,7 @@ namespace Trojan.Models
             GetCategories().ForEach(c => context.Categories.Add(c));
             GetAttributes().ForEach(p => context.Attributes.Add(p));
             GetMatrixRow().ForEach(j => context.MatrixRow.Add(j));
-            //GetMatrix().ForEach(a => context.default_Matrix.Add(a));
+            GetMatrix().ForEach(a => context.default_Matrix.Add(a));
         }
 
         private static List<Category> GetCategories()
@@ -1645,127 +1645,127 @@ namespace Trojan.Models
             var entries = new List<Matrix_Element>
             {
                 new Matrix_Element{ 
-					ElementID = 1,
+					//Id = 1,
                     RowID = 1, ColID = 1,
                     cellValue = 0, R = "1"
                 },
                 new Matrix_Element{ 
-					ElementID = 2,
+					//Id = 2,
                     RowID = 1, ColID = 2,
                     cellValue = 1, R = "1"
                 },
                 new Matrix_Element{ 
-					ElementID = 3,
+					//Id = 3,
                     RowID = 1, ColID = 3,
                     cellValue = 0, R = "1"
                 },
                 new Matrix_Element{ 
-					ElementID = 4,
+					//Id = 4,
                     RowID = 1, ColID = 4,
                     cellValue = 0, R = "1"
                 },
                 new Matrix_Element{
-					ElementID = 5,
+					//Id = 5,
                     RowID = 1, ColID = 5,
                     cellValue = 0, R = "1"
                 },
                 new Matrix_Element{ 
-					ElementID = 6,
+					//Id = 6,
                     RowID = 2, ColID = 1,
                     cellValue = 0, R = "1"
                 },
                 new Matrix_Element{ 
-					ElementID = 7,
+					//Id = 7,
                     RowID = 2, ColID = 2,
                     cellValue = 0, R = "1"
                 },
                 new Matrix_Element{ 
-					ElementID = 8,
+					//Id = 8,
                     RowID = 2, ColID = 3,
                     cellValue = 1, R = "1"
                 },
                 new Matrix_Element{ 
-					ElementID = 9,
+					//Id = 9,
                     RowID = 2, ColID = 4,
                     cellValue = 0, R = "1"
                 },
                 new Matrix_Element{ 
-					ElementID = 10,
+					//Id = 10,
                     RowID = 2, ColID = 5,
                     cellValue = 0, R = "1"
                 },
                 new Matrix_Element{ 
-					ElementID = 11,
+					//Id = 11,
                     RowID = 3, ColID = 1,
                     cellValue = 0, R = "1"
                 },
                 new Matrix_Element{ 
-					ElementID = 12,
+					//Id = 12,
                     RowID = 3, ColID = 2,
                     cellValue = 0, R = "1"
                 },
                 new Matrix_Element{ 
-					ElementID = 13,
+					//Id = 13,
                     RowID = 3, ColID = 3,
                     cellValue = 0, R = "1"
                 },
                 new Matrix_Element{ 
-					ElementID = 14,
+					//Id = 14,
                     RowID = 3, ColID = 4,
                     cellValue = 1, R = "1"
                 },
                 new Matrix_Element{ 
-					ElementID = 15,
+					//Id = 15,
                     RowID = 3, ColID = 5,
                     cellValue = 0, R = "1"
                 },
                 new Matrix_Element{ 
-					ElementID = 16,
+					//Id = 16,
                     RowID = 4, ColID = 1,
                     cellValue = 0, R = "1"
                 },
                 new Matrix_Element{ 
-					ElementID = 17,
+					//Id = 17,
                     RowID = 4, ColID = 2,
                     cellValue = 0, R = "1"
                 },
                 new Matrix_Element{ 
-					ElementID = 18,
+					//Id = 18,
                     RowID = 4, ColID = 3,
                     cellValue = 0, R = "1"
                 },
                 new Matrix_Element{ 
-					ElementID = 19,
+					//Id = 19,
                     RowID = 4, ColID = 4,
                     cellValue = 0, R = "1"
                 },
                 new Matrix_Element{ 
-					ElementID = 20,
+					//Id = 20,
                     RowID = 4, ColID = 5,
                     cellValue = 1, R = "1"
                 },
                 new Matrix_Element{ 
-					ElementID = 21,
+					//Id = 21,
                     RowID = 5, ColID = 1,
                     cellValue = 0, R = "1"
                 },
                 new Matrix_Element{ 
-					ElementID = 22,
+					//Id = 22,
                     RowID = 5, ColID = 2,
                     cellValue = 0, R = "1"
                 },
                 new Matrix_Element{ 
-					ElementID = 23,
+					//Id = 23,
                     RowID = 5, ColID = 3,
                     cellValue = 0, R = "1"
                 },
                 new Matrix_Element{ 
-					ElementID = 24,
+					//Id = 24,
                     RowID = 5, ColID = 4,
                     cellValue = 0, R = "1"
                 },
                 new Matrix_Element{ 
-					ElementID = 25,
+					//Id = 25,
                     RowID = 5, ColID = 5,
                     cellValue = 0, R = "1"
                 },
@@ -1773,2742 +1773,2717 @@ namespace Trojan.Models
 //=============Matrix R12 =============//
             
                 new Matrix_Element{ 
-					ElementID = 26,
+					//Id = 26,
                     RowID = 1, ColID = 6,
                     cellValue = 1, R = "12"
                 },
                 new Matrix_Element{ 
-					ElementID = 27,
+					//Id = 27,
                     RowID = 1, ColID = 7,
                     cellValue = 0, R = "12"
                 },
                 new Matrix_Element{ 
-					ElementID = 28,
+					//Id = 28,
                     RowID = 1, ColID = 8,
                     cellValue = 0, R = "12"
                 },
                 new Matrix_Element{ 
-					ElementID = 29,
+					//Id = 29,
                     RowID = 1, ColID = 9,
                     cellValue = 0, R = "12"
                 },
                 new Matrix_Element{ 
-					ElementID = 30,
+					//Id = 30,
                     RowID = 1, ColID = 10,
                     cellValue = 0, R = "12"
                 },
                 new Matrix_Element{ 
-					ElementID = 31,
+					//Id = 31,
                     RowID = 1, ColID = 11,
                     cellValue = 0, R = "12"
                 },
                 new Matrix_Element{ 
-					ElementID = 32,
+					//Id = 32,
                     RowID = 2, ColID = 6,
                     cellValue = 0, R = "12"
                 },
                 new Matrix_Element{ 
-					ElementID = 33,
+					//Id = 33,
                     RowID = 2, ColID = 7,
                     cellValue = 1, R = "12"
                 },
                 new Matrix_Element{ 
-					ElementID = 34,
+					//Id = 34,
                     RowID = 2, ColID = 8,
                     cellValue = 0, R = "12"
                 },
                 new Matrix_Element{ 
-					ElementID = 35,
+					//Id = 35,
                     RowID = 2, ColID = 9,
                     cellValue = 0, R = "12"
                 },
                 new Matrix_Element{ 
-					ElementID = 36,
+					//Id = 36,
                     RowID = 2, ColID = 10,
                     cellValue = 0, R = "12"
                 },
                 new Matrix_Element{ 
-					ElementID = 37,
+					//Id = 37,
                     RowID = 2, ColID = 11,
                     cellValue = 0, R = "12"
                 },
                 new Matrix_Element{ 
-					ElementID = 38,
+					//Id = 38,
                     RowID = 3, ColID = 6,
                     cellValue = 0, R = "12"
                 },
                 new Matrix_Element{ 
-					ElementID = 39,
+					//Id = 39,
                     RowID = 3, ColID = 7,
                     cellValue = 0, R = "12"
                 },
                 new Matrix_Element{ 
-					ElementID = 40,
+					//Id = 40,
                     RowID = 3, ColID = 8,
                     cellValue = 0, R = "12"
                 },
                 new Matrix_Element{ 
-					ElementID = 41,
+					//Id = 41,
                     RowID = 3, ColID = 9,
                     cellValue = 0, R = "12"
                 },
                 new Matrix_Element{ 
-					ElementID = 42,
+					//Id = 42,
                     RowID = 3, ColID = 10,
                     cellValue = 0, R = "12"
                 },
                 new Matrix_Element{ 
-					ElementID = 43,
+					//Id = 43,
                     RowID = 3, ColID = 11,
                     cellValue = 1, R = "12"
                 },
                 new Matrix_Element{ 
-					ElementID = 44,
+					//Id = 44,
                     RowID = 4, ColID = 6,
                     cellValue = 1, R = "12"
                 },
                 new Matrix_Element{ 
-					ElementID = 45,
+					//Id = 45,
                     RowID = 4, ColID = 7,
                     cellValue = 0, R = "12"
                 },
                 new Matrix_Element{ 
-					ElementID = 46,
+					//Id = 46,
                     RowID = 4, ColID = 8,
                     cellValue = 0, R = "12"
                 },
                 new Matrix_Element{ 
-					ElementID = 47,
+					//Id = 47,
                     RowID = 4, ColID = 9,
                     cellValue = 1, R = "12"
                 },
                 new Matrix_Element{ 
-					ElementID = 48,
+					//Id = 48,
                     RowID = 4, ColID = 10,
                     cellValue = 0, R = "12"
                 },
                 new Matrix_Element{ 
-					ElementID = 49,
+					//Id = 49,
                     RowID = 4, ColID = 11,
                     cellValue = 0, R = "12"
                 },
                 new Matrix_Element{ 
-					ElementID = 50,
+					//Id = 50,
                     RowID = 5, ColID = 6,
                     cellValue = 1, R = "12"
                 },
                 new Matrix_Element{ 
-					ElementID = 51,
+					//Id = 51,
                     RowID = 5, ColID = 7,
                     cellValue = 0, R = "12"
                 },
                 new Matrix_Element{ 
-					ElementID = 52,
+					//Id = 52,
                     RowID = 5, ColID = 8,
                     cellValue = 0, R = "12"
                 },
                 new Matrix_Element{ 
-					ElementID = 53,
+					//Id = 53,
                     RowID = 5, ColID = 9,
                     cellValue = 0, R = "12"
                 },
                 new Matrix_Element{ 
-					ElementID = 54,
+					//Id = 54,
                     RowID = 5, ColID = 10,
                     cellValue = 0, R = "12"
                 },     
                 new Matrix_Element{ 
-					ElementID = 55,
+					//Id = 55,
                     RowID = 5, ColID = 11,
                     cellValue = 0, R = "12"
                 },
 
 //================Matrix R2 ===============//
                 new Matrix_Element{ 
-					ElementID = 56,
+					//Id = 56,
                     RowID = 6, ColID = 6,
                     cellValue = 0, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 57,
+					//Id = 57,
                     RowID = 6, ColID = 7,
                     cellValue = 1, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 58,
+					//Id = 58,
                     RowID = 6, ColID = 8,
                     cellValue = 0, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 59,
+					//Id = 59,
                     RowID = 6, ColID = 9,
                     cellValue = 0, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 60,
+					//Id = 60,
                     RowID = 6, ColID = 10,
                     cellValue = 0, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 61,
+					//Id = 61,
                     RowID = 6, ColID = 11,
                     cellValue = 0, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 62,
+					//Id = 62,
                     RowID = 7, ColID = 6,
                     cellValue = 0, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 63,
+					//Id = 63,
                     RowID = 7, ColID = 7,
                     cellValue = 0, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 64,
+					//Id = 64,
                     RowID = 7, ColID = 8,
                     cellValue = 1, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 65,
+					//Id = 65,
                     RowID = 7, ColID = 9,
                     cellValue = 0, R = "2"
                 },
                 new Matrix_Element{
-					ElementID = 66,
+					//Id = 66,
                     RowID = 7, ColID = 10,
                     cellValue = 0, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 67,
+					//Id = 67,
                     RowID = 7, ColID = 11,
                     cellValue = 0, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 68,
+					//Id = 68,
                     RowID = 8, ColID = 6,
                     cellValue = 0, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 69,
+					//Id = 69,
                     RowID = 8, ColID = 7,
                     cellValue = 0, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 70,
+					//Id = 70,
                     RowID = 8, ColID = 8,
                     cellValue = 0, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 71,
+					//Id = 71,
                     RowID = 8, ColID = 9,
                     cellValue = 1, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 72,
+					//Id = 72,
                     RowID = 8, ColID = 10,
                     cellValue = 0, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 73,
+					//Id = 73,
                     RowID = 8, ColID = 11,
                     cellValue = 0, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 74,
+					//Id = 74,
                     RowID = 9, ColID = 6,
                     cellValue = 0, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 75,
+					//Id = 75,
                     RowID = 9, ColID = 7,
                     cellValue = 0, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 76,
+					//Id = 76,
                     RowID = 9, ColID = 8,
                     cellValue = 0, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 77,
+					//Id = 77,
                     RowID = 9, ColID = 9,
                     cellValue = 0, R = "2"
                 },
                 new Matrix_Element{
-					ElementID = 78,
+					//Id = 78,
                     RowID = 9, ColID = 10,
                     cellValue = 1, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 79,
+					//Id = 79,
                     RowID = 9, ColID = 11,
                     cellValue = 0, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 80,
+					//Id = 80,
                     RowID = 10, ColID = 6,
                     cellValue = 0, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 81,
+					//Id = 81,
                     RowID = 10, ColID = 7,
                     cellValue = 0, R = "2"
                 },
                 new Matrix_Element{
-					ElementID = 82,
+					//Id = 82,
                     RowID = 10, ColID = 8,
                     cellValue = 0, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 83,
+					//Id = 83,
                     RowID = 10, ColID = 9,
                     cellValue = 0, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 84,
+					//Id = 84,
                     RowID = 10, ColID = 10,
                     cellValue = 0, R = "2"
                 },     
                 new Matrix_Element{ 
-					ElementID = 85,
+					//Id = 85,
                     RowID = 10, ColID = 11,
                     cellValue = 1, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 86,
+					//Id = 86,
                     RowID = 11, ColID = 6,
                     cellValue = 0, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 87,
+					//Id = 87,
                     RowID = 11, ColID = 7,
                     cellValue = 0, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 88,
+					//Id = 88,
                     RowID = 11, ColID = 8,
                     cellValue = 0, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 89,
+					//Id = 89,
                     RowID = 11, ColID = 9,
                     cellValue = 0, R = "2"
                 },
                 new Matrix_Element{ 
-					ElementID = 90,
+					//Id = 90,
                     RowID = 11, ColID = 10,
                     cellValue = 0, R = "2"
                 },     
                 new Matrix_Element{ 
-					ElementID = 91,
+					//Id = 91,
                     RowID = 11, ColID = 11,
                     cellValue = 0, R = "2"
                 },
 //============== Matrix R23 ===============//
                 new Matrix_Element{ 
-					ElementID = 92,
+					//Id = 92,
                     RowID = 6, ColID = 12,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 93,
+					//Id = 93,
                     RowID = 6, ColID = 13,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 94,
+					//Id = 94,
                     RowID = 6, ColID = 14,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 95,
+					//Id = 95,
                     RowID = 6, ColID = 15,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 96,
+					//Id = 96,
                     RowID = 6, ColID = 16,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 97,
+					//Id = 97,
                     RowID = 6, ColID = 17,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 98,
+					//Id = 98,
                     RowID = 6, ColID = 18,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 99,
+					//Id = 99,
                     RowID = 6, ColID = 19,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 100,
+					//Id = 100,
                     RowID = 6, ColID = 20,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 101,
+					//Id = 101,
                     RowID = 6, ColID = 21,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 102,
+					//Id = 102,
                     RowID = 6, ColID = 22,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 103,
+					//Id = 103,
                     RowID = 6, ColID = 23,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 104,
+					//Id = 104,
                     RowID = 6, ColID = 24,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 105,
+					//Id = 105,
                     RowID = 6, ColID = 25,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 106,
+					//Id = 106,
                     RowID = 6, ColID = 26,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 107,
+					//Id = 107,
                     RowID = 6, ColID = 27,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 108,
+					//Id = 108,
                     RowID = 6, ColID = 28,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 109,
+					//Id = 109,
                     RowID = 7, ColID = 12,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 110,
+					//Id = 110,
                     RowID = 7, ColID = 13,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{
-					ElementID = 111,
+					//Id = 111,
                     RowID = 7, ColID = 14,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 112,
+					//Id = 112,
                     RowID = 7, ColID = 15,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{
-					ElementID = 113,
+					//Id = 113,
                     RowID = 7, ColID = 16,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{
-					ElementID = 114,
+					//Id = 114,
                     RowID = 7, ColID = 17,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 115,
+					//Id = 115,
                     RowID = 7, ColID = 18,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 116,
+					//Id = 116,
                     RowID = 7, ColID = 19,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 117,
+					//Id = 117,
                     RowID = 7, ColID = 20,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 118,
+					//Id = 118,
                     RowID = 7, ColID = 21,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 119,
+					//Id = 119,
                     RowID = 7, ColID = 22,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 120,
+					//Id = 120,
                     RowID = 7, ColID = 23,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 121,
+					//Id = 121,
                     RowID = 7, ColID = 24,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 122,
+					//Id = 122,
                     RowID = 7, ColID = 25,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 123,
+					//Id = 123,
                     RowID = 7, ColID = 26,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 124,
+					//Id = 124,
                     RowID = 7, ColID = 27,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 125,
+					//Id = 125,
                     RowID = 7, ColID = 28,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 126,
+					//Id = 126,
                     RowID = 8, ColID = 12,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 127,
+					//Id = 127,
                     RowID = 8, ColID = 13,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 128,
+					//Id = 128,
                     RowID = 8, ColID = 14,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 129,
+					//Id = 129,
                     RowID = 8, ColID = 15,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 130,
+					//Id = 130,
                     RowID = 8, ColID = 16,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 131,
+					//Id = 131,
                     RowID = 8, ColID = 17,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 132,
+					//Id = 132,
                     RowID = 8, ColID = 18,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 133,
+					//Id = 133,
                     RowID = 8, ColID = 19,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 134,
+					//Id = 134,
                     RowID = 8, ColID = 20,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 135,
+					//Id = 135,
                     RowID = 8, ColID = 21,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 136,
+					//Id = 136,
                     RowID = 8, ColID = 22,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 137,
+					//Id = 137,
                     RowID = 8, ColID = 23,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 138,
+					//Id = 138,
                     RowID = 8, ColID = 24,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 139,
+					//Id = 139,
                     RowID = 8, ColID = 25,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 140,
+					//Id = 140,
                     RowID = 8, ColID = 26,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 141,
+					//Id = 141,
                     RowID = 8, ColID = 27,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 142,
+					//Id = 142,
                     RowID = 8, ColID = 28,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 143,
+					//Id = 143,
                     RowID = 9, ColID = 12,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 144,
+					//Id = 144,
                     RowID = 9, ColID = 13,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 145,
+					//Id = 145,
                     RowID = 9, ColID = 14,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 146,
+					//Id = 146,
                     RowID = 9, ColID = 15,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 147,
+					//Id = 147,
                     RowID = 9, ColID = 16,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 148,
+					//Id = 148,
                     RowID = 9, ColID = 17,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 149,
+					//Id = 149,
                     RowID = 9, ColID = 18,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 150,
+					//Id = 150,
                     RowID = 9, ColID = 19,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 151,
+					//Id = 151,
                     RowID = 9, ColID = 20,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 152,
+					//Id = 152,
                     RowID = 9, ColID = 21,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 153,
+					//Id = 153,
                     RowID = 9, ColID = 22,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 154,
+					//Id = 154,
                     RowID = 9, ColID = 23,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 155,
+					//Id = 155,
                     RowID = 9, ColID = 24,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 156,
+					//Id = 156,
                     RowID = 9, ColID = 25,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 157,
+					//Id = 157,
                     RowID = 9, ColID = 26,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 158,
+					//Id = 158,
                     RowID = 9, ColID = 27,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 159,
+					//Id = 159,
                     RowID = 9, ColID = 28,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 160,
+					//Id = 160,
                     RowID = 10, ColID = 12,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 161,
+					//Id = 161,
                     RowID = 10, ColID = 13,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 162,
+					//Id = 162,
                     RowID = 10, ColID = 14,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 163,
+					//Id = 163,
                     RowID = 10, ColID = 15,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 164,
+					//Id = 164,
                     RowID = 10, ColID = 16,
                     cellValue = 0, R = "23"
                 },     
                 new Matrix_Element{ 
-					ElementID = 165,
+					//Id = 165,
                     RowID = 10, ColID = 17,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 166,
+					//Id = 166,
                     RowID = 10, ColID = 18,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 167,
+					//Id = 167,
                     RowID = 10, ColID = 19,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 168,
+					//Id = 168,
                     RowID = 10, ColID = 20,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 169,
+					//Id = 169,
                     RowID = 10, ColID = 21,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 170,
+					//Id = 170,
                     RowID = 10, ColID = 22,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 171,
+					//Id = 171,
                     RowID = 10, ColID = 23,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 172,
+					//Id = 172,
                     RowID = 10, ColID = 24,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 173,
+					//Id = 173,
                     RowID = 10, ColID = 25,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 174,
+					//Id = 174,
                     RowID = 10, ColID = 26,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 175,
+					//Id = 175,
                     RowID = 10, ColID = 27,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 176,
+					//Id = 176,
                     RowID = 10, ColID = 28,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 177,
+					//Id = 177,
                     RowID = 11, ColID = 12,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 178,
+					//Id = 178,
                     RowID = 11, ColID = 13,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 179,
+					//Id = 179,
                     RowID = 11, ColID = 14,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 180,
+					//Id = 180,
                     RowID = 11, ColID = 15,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 181,
+					//Id = 181,
                     RowID = 11, ColID = 16,
                     cellValue = 0, R = "23"
                 },     
                 new Matrix_Element{ 
-					ElementID = 182,
+					//Id = 182,
                     RowID = 11, ColID = 17,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 183,
+					//Id = 183,
                     RowID = 11, ColID = 18,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 184,
+					//Id = 184,
                     RowID = 11, ColID = 19,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 185,
+					//Id = 185,
                     RowID = 11, ColID = 20,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 186,
+					//Id = 186,
                     RowID = 11, ColID = 21,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 187,
+					//Id = 187,
                     RowID = 11, ColID = 22,
                     cellValue = 0, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 188,
+					//Id = 188,
                     RowID = 11, ColID = 23,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 189,
+					//Id = 189,
                     RowID = 11, ColID = 24,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 190,
+					//Id = 190,
                     RowID = 11, ColID = 25,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 191,
+					//Id = 191,
                     RowID = 11, ColID = 26,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 192,
+					//Id = 192,
                     RowID = 11, ColID = 27,
                     cellValue = 1, R = "23"
                 },
                 new Matrix_Element{ 
-					ElementID = 193,
+					//Id = 193,
                     RowID = 11, ColID = 28,
                     cellValue = 1, R = "23"
                 },
 //==============Matrix R3 =================//
                 new Matrix_Element{ 
-					ElementID = 194,
+					//Id = 194,
                     RowID = 12, ColID = 12,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 195,
+					//Id = 195,
                     RowID = 12, ColID = 13,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 196,
+					//Id = 196,
                     RowID = 12, ColID = 14,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 197,
+					//Id = 197,
                     RowID = 12, ColID = 15,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 198,
+					//Id = 198,
                     RowID = 12, ColID = 16,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 199,
+					//Id = 199,
                     RowID = 12, ColID = 17,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 200,
+					//Id = 200,
                     RowID = 12, ColID = 18,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 201,
+					//Id = 201,
                     RowID = 12, ColID = 19,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 202,
+					//Id = 202,
                     RowID = 12, ColID = 20,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 203,
+					//Id = 203,
                     RowID = 12, ColID = 21,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 204,
+					//Id = 204,
                     RowID = 12, ColID = 22,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 205,
+					//Id = 205,
                     RowID = 12, ColID = 23,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 206,
+					//Id = 206,
                     RowID = 12, ColID = 24,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 207,
+					//Id = 207,
                     RowID = 12, ColID = 25,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 208,
+					//Id = 208,
                     RowID = 12, ColID = 26,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 209,
+					//Id = 209,
                     RowID = 12, ColID = 27,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 210,
+					//Id = 210,
                     RowID = 12, ColID = 28,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 211,
+					//Id = 211,
                     RowID = 13, ColID = 12,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 212,
+					//Id = 212,
                     RowID = 13, ColID = 13,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 213,
+					//Id = 213,
                     RowID = 13, ColID = 14,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 214,
+					//Id = 214,
                     RowID = 13, ColID = 15,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 215,
+					//Id = 215,
                     RowID = 13, ColID = 16,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 216,
+					//Id = 216,
                     RowID = 13, ColID = 17,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 217,
+					//Id = 217,
                     RowID = 13, ColID = 18,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 218,
+					//Id = 218,
                     RowID = 13, ColID = 19,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 219,
+					//Id = 219,
                     RowID = 13, ColID = 20,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 220,
+					//Id = 220,
                     RowID = 13, ColID = 21,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 221,
+					//Id = 221,
                     RowID = 13, ColID = 22,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 222,
+					//Id = 222,
                     RowID = 13, ColID = 23,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 223,
+					//Id = 223,
                     RowID = 13, ColID = 24,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 224,
+					//Id = 224,
                     RowID = 13, ColID = 25,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 225,
+					//Id = 225,
                     RowID = 13, ColID = 26,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 226,
+					//Id = 226,
                     RowID = 13, ColID = 27,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 227,
+					//Id = 227,
                     RowID = 13, ColID = 28,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 228,
+					//Id = 228,
                     RowID = 14, ColID = 12,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 229,
+					//Id = 229,
                     RowID = 14, ColID = 13,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 230,
+					//Id = 230,
                     RowID = 14, ColID = 14,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 231,
+					//Id = 231,
                     RowID = 14, ColID = 15,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 232,
+					//Id = 232,
                     RowID = 14, ColID = 16,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 233,
+					//Id = 233,
                     RowID = 14, ColID = 17,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 234,
+					//Id = 234,
                     RowID = 14, ColID = 18,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 235,
+					//Id = 235,
                     RowID = 14, ColID = 19,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 236,
+					//Id = 236,
                     RowID = 14, ColID = 20,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 237,
+					//Id = 237,
                     RowID = 14, ColID = 21,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 238,
+					//Id = 238,
                     RowID = 14, ColID = 22,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 239,
+					//Id = 239,
                     RowID = 14, ColID = 23,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 240,
+					//Id = 240,
                     RowID = 14, ColID = 24,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 241,
+					//Id = 241,
                     RowID = 14, ColID = 25,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 242,
+					//Id = 242,
                     RowID = 14, ColID = 26,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 243,
+					//Id = 243,
                     RowID = 14, ColID = 27,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 244,
+					//Id = 244,
                     RowID = 14, ColID = 28,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 245,
+					//Id = 245,
                     RowID = 15, ColID = 12,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 246,
+					//Id = 246,
                     RowID = 15, ColID = 13,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 247,
+					//Id = 247,
                     RowID = 15, ColID = 14,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 248,
+					//Id = 248,
                     RowID = 15, ColID = 15,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 249,
+					//Id = 249,
                     RowID = 15, ColID = 16,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 250,
+					//Id = 250,
                     RowID = 15, ColID = 17,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 251,
+					//Id = 251,
                     RowID = 15, ColID = 18,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 252,
+					//Id = 252,
                     RowID = 15, ColID = 19,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 253,
+					//Id = 253,
                     RowID = 15, ColID = 20,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 254,
+					//Id = 254,
                     RowID = 15, ColID = 21,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 255,
+					//Id = 255,
                     RowID = 15, ColID = 22,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 256,
+					//Id = 256,
                     RowID = 15, ColID = 23,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 257,
+					//Id = 257,
                     RowID = 15, ColID = 24,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 258,
+					//Id = 258,
                     RowID = 15, ColID = 25,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 259,
+					//Id = 259,
                     RowID = 15, ColID = 26,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 260,
+					//Id = 260,
                     RowID = 15, ColID = 27,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 261,
+					//Id = 261,
                     RowID = 15, ColID = 28,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 262,
+					//Id = 262,
                     RowID = 16, ColID = 12,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 263,
+					//Id = 263,
                     RowID = 16, ColID = 13,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 264,
+					//Id = 264,
                     RowID = 16, ColID = 14,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 265,
+					//Id = 265,
                     RowID = 16, ColID = 15,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 266,
+					//Id = 266,
                     RowID = 16, ColID = 16,
                     cellValue = 0, R = "3"
                 },     
                 new Matrix_Element{ 
-					ElementID = 267,
+					//Id = 267,
                     RowID = 16, ColID = 17,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 268,
+					//Id = 268,
                     RowID = 16, ColID = 18,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 269,
+					//Id = 269,
                     RowID = 16, ColID = 19,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 270,
+					//Id = 270,
                     RowID = 16, ColID = 20,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 271,
+					//Id = 271,
                     RowID = 16, ColID = 21,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 272,
+					//Id = 272,
                     RowID = 16, ColID = 22,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 273,
+					//Id = 273,
                     RowID = 16, ColID = 23,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 274,
+					//Id = 274,
                     RowID = 16, ColID = 24,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 275,
+					//Id = 275,
                     RowID = 16, ColID = 25,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 276,
+					//Id = 276,
                     RowID = 16, ColID = 26,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 277,
+					//Id = 277,
                     RowID = 16, ColID = 27,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 278,
+					//Id = 278,
                     RowID = 16, ColID = 28,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 279,
+					//Id = 279,
                     RowID = 17, ColID = 12,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 280,
+					//Id = 280,
                     RowID = 17, ColID = 13,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 281,
+					//Id = 281,
                     RowID = 17, ColID = 14,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 282,
+					//Id = 282,
                     RowID = 17, ColID = 15,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 283,
+					//Id = 283,
                     RowID = 17, ColID = 16,
                     cellValue = 0, R = "3"
                 },     
                 new Matrix_Element{
-					ElementID = 284,
+					//Id = 284,
                     RowID = 17, ColID = 17,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 285,
+					//Id = 285,
                     RowID = 17, ColID = 18,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 286,
+					//Id = 286,
                     RowID = 17, ColID = 19,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 287,
+					//Id = 287,
                     RowID = 17, ColID = 20,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 288,
+					//Id = 288,
                     RowID = 17, ColID = 21,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 289,
+					//Id = 289,
                     RowID = 17, ColID = 22,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 290,
+					//Id = 290,
                     RowID = 17, ColID = 23,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 291,
+					//Id = 291,
                     RowID = 17, ColID = 24,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 292,
+					//Id = 292,
                     RowID = 17, ColID = 25,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 293,
+					//Id = 293,
                     RowID = 17, ColID = 26,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 294,
+					//Id = 294,
                     RowID = 17, ColID = 27,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 295,
+					//Id = 295,
                     RowID = 17, ColID = 28,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 296,
+					//Id = 296,
                     RowID = 18, ColID = 12,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 297,
+					//Id = 297,
                     RowID = 18, ColID = 13,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 298,
+					//Id = 298,
                     RowID = 18, ColID = 14,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 299,
+					//Id = 299,
                     RowID = 18, ColID = 15,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 300,
+					//Id = 300,
                     RowID = 18, ColID = 16,
                     cellValue = 1, R = "3"
                 },     
                 new Matrix_Element{ 
-					ElementID = 301,
+					//Id = 301,
                     RowID = 18, ColID = 17,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 302,
+					//Id = 302,
                     RowID = 18, ColID = 18,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 303,
+					//Id = 303,
                     RowID = 18, ColID = 19,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 304,
+					//Id = 304,
                     RowID = 18, ColID = 20,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 305,
+					//Id = 305,
                     RowID = 18, ColID = 21,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 306,
+					//Id = 306,
                     RowID = 18, ColID = 22,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 307,
+					//Id = 307,
                     RowID = 18, ColID = 23,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 308,
+					//Id = 308,
                     RowID = 18, ColID = 24,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 309,
+					//Id = 309,
                     RowID = 18, ColID = 25,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 310,
+					//Id = 310,
                     RowID = 18, ColID = 26,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 311,
+					//Id = 311,
                     RowID = 18, ColID = 27,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 312,
+					//Id = 312,
                     RowID = 18, ColID = 28,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 313,
+					//Id = 313,
                     RowID = 19, ColID = 12,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 314,
+					//Id = 314,
                     RowID = 19, ColID = 13,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 315,
+					//Id = 315,
                     RowID = 19, ColID = 14,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 316,
+					//Id = 316,
                     RowID = 19, ColID = 15,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 317,
+					//Id = 317,
                     RowID = 19, ColID = 16,
                     cellValue = 0, R = "3"
                 },     
                 new Matrix_Element{
-					ElementID = 318,
+					//Id = 318,
                     RowID = 19, ColID = 17,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 319,
+					//Id = 319,
                     RowID = 19, ColID = 18,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 320,
+					//Id = 320,
                     RowID = 19, ColID = 19,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 321,
+					//Id = 321,
                     RowID = 19, ColID = 20,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 322,
+					//Id = 322,
                     RowID = 19, ColID = 21,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 323,
+					//Id = 323,
                     RowID = 19, ColID = 22,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 324,
+					//Id = 324,
                     RowID = 19, ColID = 23,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 325,
+					//Id = 325,
                     RowID = 19, ColID = 24,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 326,
+					//Id = 326,
                     RowID = 19, ColID = 25,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 327,
+					//Id = 327,
                     RowID = 19, ColID = 26,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 328,
+					//Id = 328,
                     RowID = 19, ColID = 27,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 329,
+					//Id = 329,
                     RowID = 19, ColID = 28,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 330,
+					//Id = 330,
                     RowID = 20, ColID = 12,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 331,
+					//Id = 331,
                     RowID = 20, ColID = 13,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 332,
+					//Id = 332,
                     RowID = 20, ColID = 14,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 333,
+					//Id = 333,
                     RowID = 20, ColID = 15,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 334,
+					//Id = 334,
                     RowID = 20, ColID = 16,
                     cellValue = 0, R = "3"
                 },     
                 new Matrix_Element{ 
-					ElementID = 335,
+					//Id = 335,
                     RowID = 20, ColID = 17,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 336,
+					//Id = 336,
                     RowID = 20, ColID = 18,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 337,
+					//Id = 337,
                     RowID = 20, ColID = 19,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 338,
+					//Id = 338,
                     RowID = 20, ColID = 20,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 339,
+					//Id = 339,
                     RowID = 20, ColID = 21,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 340,
+					//Id = 340,
                     RowID = 20, ColID = 22,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 341,
+					//Id = 341,
                     RowID = 20, ColID = 23,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 342,
+					//Id = 342,
                     RowID = 20, ColID = 24,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 343,
+					//Id = 343,
                     RowID = 20, ColID = 25,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 344,
+					//Id = 344,
                     RowID = 20, ColID = 26,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 345,
+					//Id = 345,
                     RowID = 20, ColID = 27,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 346,
+					//Id = 346,
                     RowID = 20, ColID = 28,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 347,
+					//Id = 347,
                     RowID = 21, ColID = 12,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 348,
+					//Id = 348,
                     RowID = 21, ColID = 13,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 349,
+					//Id = 349,
                     RowID = 21, ColID = 14,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 350,
+					//Id = 350,
                     RowID = 21, ColID = 15,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 351,
+					//Id = 351,
                     RowID = 21, ColID = 16,
                     cellValue = 1, R = "3"
                 },     
                 new Matrix_Element{ 
-					ElementID = 352,
+					//Id = 352,
                     RowID = 21, ColID = 17,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 353,
+					//Id = 353,
                     RowID = 21, ColID = 18,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 354,
+					//Id = 354,
                     RowID = 21, ColID = 19,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 355,
+					//Id = 355,
                     RowID = 21, ColID = 20,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 356,
+					//Id = 356,
                     RowID = 21, ColID = 21,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 357,
+					//Id = 357,
                     RowID = 21, ColID = 22,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 358,
+					//Id = 358,
                     RowID = 21, ColID = 23,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 359,
+					//Id = 359,
                     RowID = 21, ColID = 24,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 360,
+					//Id = 360,
                     RowID = 21, ColID = 25,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 361,
+					//Id = 361,
                     RowID = 21, ColID = 26,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 362,
+					//Id = 362,
                     RowID = 21, ColID = 27,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 363,
+					//Id = 363,
                     RowID = 21, ColID = 28,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 364,
+					//Id = 364,
                     RowID = 22, ColID = 12,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 365,
+					//Id = 365,
                     RowID = 22, ColID = 13,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 366,
+					//Id = 366,
                     RowID = 22, ColID = 14,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 367,
+					//Id = 367,
                     RowID = 22, ColID = 15,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 368,
+					//Id = 368,
                     RowID = 22, ColID = 16,
                     cellValue = 1, R = "3"
                 },     
                 new Matrix_Element{
-					ElementID = 369,
+					//Id = 369,
                     RowID = 22, ColID = 17,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 370,
+					//Id = 370,
                     RowID = 22, ColID = 18,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 371,
+					//Id = 371,
                     RowID = 22, ColID = 19,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 372,
+					//Id = 372,
                     RowID = 22, ColID = 20,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 373,
+					//Id = 373,
                     RowID = 22, ColID = 21,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 374,
+					//Id = 374,
                     RowID = 22, ColID = 22,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 375,
+					//Id = 375,
                     RowID = 22, ColID = 23,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 376,
+					//Id = 376,
                     RowID = 22, ColID = 24,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 377,
+					//Id = 377,
                     RowID = 22, ColID = 25,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 378,
+					//Id = 378,
                     RowID = 22, ColID = 26,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 379,
+					//Id = 379,
                     RowID = 22, ColID = 27,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 380,
+					//Id = 380,
                     RowID = 22, ColID = 28,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 381,
+					//Id = 381,
                     RowID = 23, ColID = 12,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 382,
+					//Id = 382,
                     RowID = 23, ColID = 13,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 383,
+					//Id = 383,
                     RowID = 23, ColID = 14,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 384,
+					//Id = 384,
                     RowID = 23, ColID = 15,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 385,
+					//Id = 385,
                     RowID = 23, ColID = 16,
                     cellValue = 1, R = "3"
                 },     
                 new Matrix_Element{ 
-					ElementID = 386,
+					//Id = 386,
                     RowID = 23, ColID = 17,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 387,
+					//Id = 387,
                     RowID = 23, ColID = 18,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 388,
+					//Id = 388,
                     RowID = 23, ColID = 19,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 389,
+					//Id = 389,
                     RowID = 23, ColID = 20,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 390,
+					//Id = 390,
                     RowID = 23, ColID = 21,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 391,
+					//Id = 391,
                     RowID = 23, ColID = 22,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 392,
+					//Id = 392,
                     RowID = 23, ColID = 23,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 393,
+					//Id = 393,
                     RowID = 23, ColID = 24,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 394,
+					//Id = 394,
                     RowID = 23, ColID = 25,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 395,
+					//Id = 395,
                     RowID = 23, ColID = 26,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 396,
+					//Id = 396,
                     RowID = 23, ColID = 27,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 397,
+					//Id = 397,
                     RowID = 23, ColID = 28,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 398,
+					//Id = 398,
                     RowID = 24, ColID = 12,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 399,
+					//Id = 399,
                     RowID = 24, ColID = 13,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 400,
+					//Id = 400,
                     RowID = 24, ColID = 14,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 401,
+					//Id = 401,
                     RowID = 24, ColID = 15,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 402,
+					//Id = 402,
                     RowID = 24, ColID = 16,
                     cellValue = 0, R = "3"
                 },     
                 new Matrix_Element{ 
-					ElementID = 403,
+					//Id = 403,
                     RowID = 24, ColID = 17,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 404,
+					//Id = 404,
                     RowID = 24, ColID = 18,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 405,
+					//Id = 405,
                     RowID = 24, ColID = 19,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 406,
+					//Id = 406,
                     RowID = 24, ColID = 20,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 407,
+					//Id = 407,
                     RowID = 24, ColID = 21,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 408,
+					//Id = 408,
                     RowID = 24, ColID = 22,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 409,
+					//Id = 409,
                     RowID = 24, ColID = 23,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 410,
+					//Id = 410,
                     RowID = 24, ColID = 24,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 411,
+					//Id = 411,
                     RowID = 24, ColID = 25,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 412,
+					//Id = 412,
                     RowID = 24, ColID = 26,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 413,
+					//Id = 413,
                     RowID = 24, ColID = 27,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 414,
+					//Id = 414,
                     RowID = 24, ColID = 28,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 415,
+					//Id = 415,
                     RowID = 25, ColID = 12,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 416,
+					//Id = 416,
                     RowID = 25, ColID = 13,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 417,
+					//Id = 417,
                     RowID = 25, ColID = 14,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 418,
+					//Id = 418,
                     RowID = 25, ColID = 15,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 419,
+					//Id = 419,
                     RowID = 25, ColID = 16,
                     cellValue = 1, R = "3"
                 },     
                 new Matrix_Element{ 
-					ElementID = 420,
+					//Id = 420,
                     RowID = 25, ColID = 17,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 421,
+					//Id = 421,
                     RowID = 25, ColID = 18,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 422,
+					//Id = 422,
                     RowID = 25, ColID = 19,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 423,
+					//Id = 423,
                     RowID = 25, ColID = 20,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 424,
+					//Id = 424,
                     RowID = 25, ColID = 21,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 425,
+					//Id = 425,
                     RowID = 25, ColID = 22,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 426,
+					//Id = 426,
                     RowID = 25, ColID = 23,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 427,
+					//Id = 427,
                     RowID = 25, ColID = 24,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 428,
+					//Id = 428,
                     RowID = 25, ColID = 25,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 429,
+					//Id = 429,
                     RowID = 25, ColID = 26,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 430,
+					//Id = 430,
                     RowID = 25, ColID = 27,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 431,
+					//Id = 431,
                     RowID = 25, ColID = 28,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 432,
+					//Id = 432,
                     RowID = 26, ColID = 12,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 433,
+					//Id = 433,
                     RowID = 26, ColID = 13,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 434,
+					//Id = 434,
                     RowID = 26, ColID = 14,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 435,
+					//Id = 435,
                     RowID = 26, ColID = 15,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 436,
+					//Id = 436,
                     RowID = 26, ColID = 16,
                     cellValue = 1, R = "3"
                 },     
                 new Matrix_Element{ 
-					ElementID = 437,
+					//Id = 437,
                     RowID = 26, ColID = 17,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 438,
+					//Id = 438,
                     RowID = 26, ColID = 18,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 439,
+					//Id = 439,
                     RowID = 26, ColID = 19,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 440,
+					//Id = 440,
                     RowID = 26, ColID = 20,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 441,
+					//Id = 441,
                     RowID = 26, ColID = 21,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 442,
+					//Id = 442,
                     RowID = 26, ColID = 22,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 443,
+					//Id = 443,
                     RowID = 26, ColID = 23,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 444,
+					//Id = 444,
                     RowID = 26, ColID = 24,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 445,
+					//Id = 445,
                     RowID = 26, ColID = 25,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 446,
+					//Id = 446,
                     RowID = 26, ColID = 26,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 447,
+					//Id = 447,
                     RowID = 26, ColID = 27,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 448,
+					//Id = 448,
                     RowID = 26, ColID = 28,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 449,
+					//Id = 449,
                     RowID = 27, ColID = 12,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 450,
+					//Id = 450,
                     RowID = 27, ColID = 13,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 451,
+					//Id = 451,
                     RowID = 27, ColID = 14,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 452,
+					//Id = 452,
                     RowID = 27, ColID = 15,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 453,
+					//Id = 453,
                     RowID = 27, ColID = 16,
                     cellValue = 1, R = "3"
                 },     
                 new Matrix_Element{ 
-					ElementID = 454,
+					//Id = 454,
                     RowID = 27, ColID = 17,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 455,
+					//Id = 455,
                     RowID = 27, ColID = 18,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 456,
+					//Id = 456,
                     RowID = 27, ColID = 19,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 457,
+					//Id = 457,
                     RowID = 27, ColID = 20,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 458,
+					//Id = 458,
                     RowID = 27, ColID = 21,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 459,
+					//Id = 459,
                     RowID = 27, ColID = 22,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 460,
+					//Id = 460,
                     RowID = 27, ColID = 23,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 461,
+					//Id = 461,
                     RowID = 27, ColID = 24,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 462,
+					//Id = 462,
                     RowID = 27, ColID = 25,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 463,
+					//Id = 463,
                     RowID = 27, ColID = 26,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 464,
+					//Id = 464,
                     RowID = 27, ColID = 27,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 465,
+					//Id = 465,
                     RowID = 27, ColID = 28,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 466,
+					//Id = 466,
                     RowID = 28, ColID = 12,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 467,
+					//Id = 467,
                     RowID = 28, ColID = 13,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 468,
+					//Id = 468,
                     RowID = 28, ColID = 14,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 469,
+					//Id = 469,
                     RowID = 28, ColID = 15,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 470,
+					//Id = 470,
                     RowID = 28, ColID = 16,
                     cellValue = 1, R = "3"
                 },     
                 new Matrix_Element{
-					ElementID = 471,
+					//Id = 471,
                     RowID = 28, ColID = 17,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{
-					ElementID = 472,
+					//Id = 472,
                     RowID = 28, ColID = 18,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 473,
+					//Id = 473,
                     RowID = 28, ColID = 19,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 474,
+					//Id = 474,
                     RowID = 28, ColID = 20,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 475,
+					//Id = 475,
                     RowID = 28, ColID = 21,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 476,
+					//Id = 476,
                     RowID = 28, ColID = 22,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 477,
+					//Id = 477,
                     RowID = 28, ColID = 23,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 478,
+					//Id = 478,
                     RowID = 28, ColID = 24,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 479,
+					//Id = 479,
                     RowID = 28, ColID = 25,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 480,
+					//Id = 480,
                     RowID = 28, ColID = 26,
                     cellValue = 1, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 481,
+					//Id = 481,
                     RowID = 28, ColID = 27,
                     cellValue = 0, R = "3"
                 },
                 new Matrix_Element{ 
-					ElementID = 482,
+					//Id = 482,
                     RowID = 28, ColID = 28,
                     cellValue = 0, R = "3"
                 },
 //================= Matrix R34 ==============//
                 new Matrix_Element{ 
-					ElementID = 483,
+					//Id = 483,
                     RowID = 12, ColID = 29,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 484,
+					//Id = 484,
                     RowID = 12, ColID = 30,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 485,
+					//Id = 485,
                     RowID = 12, ColID = 31,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 486,
+					//Id = 486,
                     RowID = 12, ColID = 32,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 487,
+					//Id = 487,
                     RowID = 12, ColID = 33,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 488,
-                    RowID = 12, ColID = 29,
-                    cellValue = 1, R = "34"
-                },
-                new Matrix_Element{ 
-					ElementID = 489,
-                    RowID = 12, ColID = 30,
-                    cellValue = 1, R = "34"
-                },
-                new Matrix_Element{ 
-					ElementID = 490,
-                    RowID = 12, ColID = 31,
-                    cellValue = 1, R = "34"
-                },
-                new Matrix_Element{ 
-					ElementID = 491,
-                    RowID = 12, ColID = 32,
-                    cellValue = 1, R = "34"
-                },
-                new Matrix_Element{ 
-					ElementID = 492,
-                    RowID = 12, ColID = 33,
-                    cellValue = 1, R = "34"
-                },
-                new Matrix_Element{ 
-					ElementID = 493,
+					//Id = 493,
                     RowID = 13, ColID = 29,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 494,
+					//Id = 494,
                     RowID = 13, ColID = 30,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 495,
+					//Id = 495,
                     RowID = 13, ColID = 31,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{
-					ElementID = 496,
+					//Id = 496,
                     RowID = 13, ColID = 32,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 497,
+					//Id = 497,
                     RowID = 13, ColID = 33,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 498,
+					//Id = 498,
                     RowID = 14, ColID = 29,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 499,
+					//Id = 499,
                     RowID = 14, ColID = 30,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 500,
+					//Id = 500,
                     RowID = 14, ColID = 31,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 501,
+					//Id = 501,
                     RowID = 14, ColID = 32,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 502,
+					//Id = 502,
                     RowID = 14, ColID = 33,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 503,
+					//Id = 503,
                     RowID = 15, ColID = 29,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 504,
+					//Id = 504,
                     RowID = 15, ColID = 30,
                     cellValue = 0, R = "34"
                 },
                 new Matrix_Element{
-					ElementID = 505,
+					//Id = 505,
                     RowID = 15, ColID = 31,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 506,
+					//Id = 506,
                     RowID = 15, ColID = 32,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 507,
+					//Id = 507,
                     RowID = 15, ColID = 33,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 508,
+					//Id = 508,
                     RowID = 16, ColID = 29,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 509,
+					//Id = 509,
                     RowID = 16, ColID = 30,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 510,
+					//Id = 510,
                     RowID = 16, ColID = 31,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{
-					ElementID = 511,
+					//Id = 511,
                     RowID = 16, ColID = 32,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 512,
+					//Id = 512,
                     RowID = 16, ColID = 33,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 513,
+					//Id = 513,
                     RowID = 17, ColID = 29,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 514,
+					//Id = 514,
                     RowID = 17, ColID = 30,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 515,
+					//Id = 515,
                     RowID = 17, ColID = 31,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 516,
+					//Id = 516,
                     RowID = 17, ColID = 32,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 517,
+					//Id = 517,
                     RowID = 17, ColID = 33,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 518,
+					//Id = 518,
                     RowID = 18, ColID = 29,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 519,
+					//Id = 519,
                     RowID = 18, ColID = 30,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 520,
+					//Id = 520,
                     RowID = 18, ColID = 31,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 521,
+					//Id = 521,
                     RowID = 18, ColID = 32,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 522,
+					//Id = 522,
                     RowID = 18, ColID = 33,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{
-					ElementID = 523,
+					//Id = 523,
                     RowID = 19, ColID = 29,
                     cellValue = 0, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 524,
+					//Id = 524,
                     RowID = 19, ColID = 30,
                     cellValue = 0, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 525,
+					//Id = 525,
                     RowID = 19, ColID = 31,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 526,
+					//Id = 526,
                     RowID = 19, ColID = 32,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{
-					ElementID = 527,
+					//Id = 527,
                     RowID = 19, ColID = 33,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{
-					ElementID = 528,
+					//Id = 528,
                     RowID = 20, ColID = 29,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 529,
+					//Id = 529,
                     RowID = 20, ColID = 30,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 530,
+					//Id = 530,
                     RowID = 20, ColID = 31,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 531,
+					//Id = 531,
                     RowID = 20, ColID = 32,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 532,
+					//Id = 532,
                     RowID = 20, ColID = 33,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{
-					ElementID = 533,
+					//Id = 533,
                     RowID = 21, ColID = 29,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{
-					ElementID = 534,
+					//Id = 534,
                     RowID = 21, ColID = 30,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 535,
+					//Id = 535,
                     RowID = 21, ColID = 31,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{
-					ElementID = 536,
+					//Id = 536,
                     RowID = 21, ColID = 32,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{
-					ElementID = 537,
+					//Id = 537,
                     RowID = 21, ColID = 33,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 538,
+					//Id = 538,
                     RowID = 22, ColID = 29,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 539,
+					//Id = 539,
                     RowID = 22, ColID = 30,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 540,
+					//Id = 540,
                     RowID = 22, ColID = 31,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 541,
+					//Id = 541,
                     RowID = 22, ColID = 32,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{
-					ElementID = 542,
+					//Id = 542,
                     RowID = 22, ColID = 33,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 543,
+					//Id = 543,
                     RowID = 23, ColID = 29,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 544,
+					//Id = 544,
                     RowID = 23, ColID = 30,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 545,
+					//Id = 545,
                     RowID = 23, ColID = 31,
                     cellValue = 0, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 546,
+					//Id = 546,
                     RowID = 23, ColID = 32,
                     cellValue = 0, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 547,
+					//Id = 547,
                     RowID = 23, ColID = 33,
                     cellValue = 0, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 548,
+					//Id = 548,
                     RowID = 24, ColID = 29,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 549,
+					//Id = 549,
                     RowID = 24, ColID = 30,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 550,
+					//Id = 550,
                     RowID = 24, ColID = 31,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 551,
+					//Id = 551,
                     RowID = 24, ColID = 32,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{
-					ElementID = 552,
+					//Id = 552,
                     RowID = 24, ColID = 33,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 553,
+					//Id = 553,
                     RowID = 25, ColID = 29,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 554,
+					//Id = 554,
                     RowID = 25, ColID = 30,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 555,
+					//Id = 555,
                     RowID = 25, ColID = 31,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 556,
+					//Id = 556,
                     RowID = 25, ColID = 32,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 557,
+					//Id = 557,
                     RowID = 25, ColID = 33,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 558,
+					//Id = 558,
                     RowID = 26, ColID = 29,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 559,
+					//Id = 559,
                     RowID = 26, ColID = 30,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{
-					ElementID = 560,
+					//Id = 560,
                     RowID = 26, ColID = 31,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 561,
+					//Id = 561,
                     RowID = 26, ColID = 32,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 562,
+					//Id = 562,
                     RowID = 26, ColID = 33,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 563,
+					//Id = 563,
                     RowID = 27, ColID = 29,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 564,
+					//Id = 564,
                     RowID = 27, ColID = 30,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 565,
+					//Id = 565,
                     RowID = 27, ColID = 31,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 566,
+					//Id = 566,
                     RowID = 27, ColID = 32,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 567,
+					//Id = 567,
                     RowID = 27, ColID = 33,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 568,
+					//Id = 568,
                     RowID = 28, ColID = 29,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 569,
+					//Id = 569,
                     RowID = 28, ColID = 30,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 570,
+					//Id = 570,
                     RowID = 28, ColID = 31,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 571,
+					//Id = 571,
                     RowID = 28, ColID = 32,
                     cellValue = 1, R = "34"
                 },
                 new Matrix_Element{ 
-					ElementID = 572,
+					//Id = 572,
                     RowID = 28, ColID = 33,
                     cellValue = 1, R = "34"
                 },

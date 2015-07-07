@@ -52,3 +52,4 @@ C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\Micros
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\obj\Debug\Trojan.dll
 C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\obj\Debug\Trojan.pdb
+C:\Users\Nicholas\Documents\Visual Studio 2013\Projects\Trojan\Trojan\obj\Debug\Trojan.csprojResolveAssemblyReference.cache

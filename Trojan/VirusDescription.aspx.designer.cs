@@ -112,21 +112,12 @@ namespace Trojan {
         protected global::System.Web.UI.WebControls.Button ClearBtn;
         
         /// <summary>
-        /// RelationDiv control.
+        /// ListView_Connections control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl RelationDiv;
-        
-        /// <summary>
-        /// RelationGrid control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView RelationGrid;
+        protected global::System.Web.UI.WebControls.ListView ListView_Connections;
     }
 }
