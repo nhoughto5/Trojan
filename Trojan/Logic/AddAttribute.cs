@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using Trojan.Database;
+using Trojan.TrojanDataBase;
 
 namespace Trojan.Logic
 {
@@ -10,7 +10,7 @@ namespace Trojan.Logic
     {
         public bool AddAttribute(string AttributeName, string AttributeDesc, string F_in, string F_out, string AttributeCategory, string AttributeImagePath)
         {
-            var myAttribute = new Trojan.Database.Attribute();
+            var myAttribute = new Trojan.TrojanDataBase.Attribute();
             myAttribute.AttributeName = AttributeName;
             myAttribute.Description = AttributeDesc;
             myAttribute.F_in = Convert.ToInt32(F_in);

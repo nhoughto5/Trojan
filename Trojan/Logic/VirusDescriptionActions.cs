@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-//using Trojan.Database;
-using Trojan.Database;
+//using Trojan.TrojanDataBase;
+using Trojan.TrojanDataBase;
 
 namespace Trojan.Logic
 {
@@ -86,7 +86,7 @@ namespace Trojan.Logic
         }
         public bool Get_OnOff(string cartID, int attributeID)
         {
-            using (var _db = new Trojan.Database.TrojanDBContext())
+            using (var _db = new Trojan.TrojanDataBase.TrojanDBContext())
             {
                 try
                 {
@@ -140,7 +140,7 @@ namespace Trojan.Logic
 
         public void UpdateVirusDescriptionDatabase(String cartId, VirusDescriptionUpdates[] CartItemUpdates)
         {
-            using (var db = new Trojan.Database.TrojanDBContext())
+            using (var db = new Trojan.TrojanDataBase.TrojanDBContext())
             {
                 try
                 {
@@ -174,7 +174,7 @@ namespace Trojan.Logic
 
         public void RemoveItem(string removeCartID, int removeAttributeID)
         {
-            using (var _db = new Trojan.Database.TrojanDBContext())
+            using (var _db = new Trojan.TrojanDataBase.TrojanDBContext())
             {
                 try
                 {
@@ -195,7 +195,7 @@ namespace Trojan.Logic
 
         public void UpdateItem(string updateCartID, int updateAttributeID, bool OnOff)
         {
-            using (var _db = new Trojan.Database.TrojanDBContext())
+            using (var _db = new Trojan.TrojanDataBase.TrojanDBContext())
             {
                 try
                 {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Trojan.Database;
+using Trojan.TrojanDataBase;
 using Trojan.Logic;
 
 namespace Trojan.Admin
@@ -79,21 +79,21 @@ namespace Trojan.Admin
 
         public IQueryable GetCategories()
         {
-            var _db = new Trojan.Database.TrojanDBContext();
+            var _db = new Trojan.TrojanDataBase.TrojanDBContext();
             IQueryable query = _db.Categories;
             return query;
         }
 
         public IQueryable GetAttributes()
         {
-            var _db = new Trojan.Database.TrojanDBContext();
+            var _db = new Trojan.TrojanDataBase.TrojanDBContext();
             IQueryable query = _db.Attributes;
             return query;
         }
 
         protected void RemoveAttributeButton_Click(object sender, EventArgs e)
         {
-            using (var _db = new Trojan.Database.TrojanDBContext())
+            using (var _db = new Trojan.TrojanDataBase.TrojanDBContext())
             {
                 int attributeId = Convert.ToInt16(DropDownRemoveAttribute.SelectedValue);
                 var myItem = (from c in _db.Attributes where c.AttributeId == attributeId select c).FirstOrDefault();

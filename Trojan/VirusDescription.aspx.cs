@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Trojan.Database;
+using Trojan.TrojanDataBase;
 using Trojan.Logic;
 using System.Collections.Specialized;
 using System.Collections;

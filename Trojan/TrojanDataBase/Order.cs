@@ -7,16 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Trojan.Database
+namespace Trojan.TrojanDataBase
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class OrderDetail
+    public partial class Order
     {
-        public int OrderDetailId { get; set; }
         public int OrderId { get; set; }
+        public System.DateTime OrderDate { get; set; }
         public string Username { get; set; }
-        public string VirusId { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
     }
 }

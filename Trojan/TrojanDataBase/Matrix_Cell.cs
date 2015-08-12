@@ -7,17 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Trojan.Database
+namespace Trojan.TrojanDataBase
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Category
+    public partial class Matrix_Cell
     {
-        public int CategoryId { get; set; }
-        public string CategoryName { get; set; }
-        public string Description { get; set; }
+        public int Cell_Id { get; set; }
+        public int RowId { get; set; }
+        public int ColumnId { get; set; }
+        public Nullable<bool> value { get; set; }
+        public string submatrix { get; set; }
+        public int MatrixMatrix_Id { get; set; }
+        public string MatrixName { get; set; }
     
-        public virtual Attribute Attribute { get; set; }
+        public virtual Matrix Matrix { get; set; }
     }
 }

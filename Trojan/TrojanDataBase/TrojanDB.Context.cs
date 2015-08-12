@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Trojan.Database
+namespace Trojan.TrojanDataBase
 {
     using System;
     using System.Data.Entity;

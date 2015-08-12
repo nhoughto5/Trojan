@@ -7,22 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Trojan.Database
+namespace Trojan.TrojanDataBase
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Matrix
+    public partial class Virus
     {
-        public Matrix()
-        {
-            this.Matrix_Cell = new HashSet<Matrix_Cell>();
-        }
-    
-        public int Matrix_Id { get; set; }
+        public int Virus_Id { get; set; }
         public string name { get; set; }
+        public int UserUser_Id { get; set; }
     
-        public virtual Virus Vir { get; set; }
-        public virtual ICollection<Matrix_Cell> Matrix_Cell { get; set; }
+        public virtual User User { get; set; }
+        public virtual Matrix Matrix { get; set; }
     }
 }

@@ -7,7 +7,7 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Linq;
-using Trojan.Database;
+using Trojan.TrojanDataBase;
 using Trojan.Logic;
 
 namespace Trojan
@@ -79,7 +79,7 @@ namespace Trojan
 
         public IQueryable<Category> GetCategories()
         {
-            var _db = new Trojan.Database.TrojanDBContext();
+            var _db = new Trojan.TrojanDataBase.TrojanDBContext();
             IQueryable<Category> query = _db.Categories;
             return query;
         }

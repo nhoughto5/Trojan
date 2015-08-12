@@ -249,7 +249,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Database\TrojanDB.edmx.sql" />
+    <Content Include="TrojanDataBase\TrojanDB.edmx.sql" />
     <Content Include="ErrorPage.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Images\logo.jpg" />
@@ -268,19 +268,19 @@
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="Checkout\Web.config" />
     <Content Include="Admin\Web.config" />
-    <EntityDeploy Include="Database\TrojanDB.edmx">
+    <EntityDeploy Include="TrojanDataBase\TrojanDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>TrojanDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Database\TrojanDB.Context.tt">
+    <Content Include="TrojanDataBase\TrojanDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>TrojanDB.edmx</DependentUpon>
       <LastGenOutput>TrojanDB.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Database\TrojanDB.edmx.diagram">
+    <Content Include="TrojanDataBase\TrojanDB.edmx.diagram">
       <DependentUpon>TrojanDB.edmx</DependentUpon>
     </Content>
-    <Content Include="Database\TrojanDB.tt">
+    <Content Include="TrojanDataBase\TrojanDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>TrojanDB.edmx</DependentUpon>
       <LastGenOutput>TrojanDB.cs</LastGenOutput>
@@ -525,47 +525,47 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Database\Attribute.cs">
+    <Compile Include="TrojanDataBase\Attribute.cs">
       <DependentUpon>TrojanDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\Category.cs">
+    <Compile Include="TrojanDataBase\Category.cs">
       <DependentUpon>TrojanDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\DatabaseInit.cs" />
-    <Compile Include="Database\Matrix.cs">
+    <Compile Include="TrojanDataBase\DatabaseInit.cs" />
+    <Compile Include="TrojanDataBase\Matrix.cs">
       <DependentUpon>TrojanDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\Matrix_Cell.cs">
+    <Compile Include="TrojanDataBase\Matrix_Cell.cs">
       <DependentUpon>TrojanDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\Order.cs">
+    <Compile Include="TrojanDataBase\Order.cs">
       <DependentUpon>TrojanDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\OrderDetail.cs">
+    <Compile Include="TrojanDataBase\OrderDetail.cs">
       <DependentUpon>TrojanDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\TrojanDB.Context.cs">
+    <Compile Include="TrojanDataBase\TrojanDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TrojanDB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\TrojanDB.cs">
+    <Compile Include="TrojanDataBase\TrojanDB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TrojanDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\TrojanDB.Designer.cs">
+    <Compile Include="TrojanDataBase\TrojanDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TrojanDB.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Database\User.cs">
+    <Compile Include="TrojanDataBase\User.cs">
       <DependentUpon>TrojanDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\Virus.cs">
+    <Compile Include="TrojanDataBase\Virus.cs">
       <DependentUpon>TrojanDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\VirusDescriptionItems.cs">
+    <Compile Include="TrojanDataBase\VirusDescriptionItems.cs">
       <DependentUpon>TrojanDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">

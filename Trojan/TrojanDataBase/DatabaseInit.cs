@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
 
-namespace Trojan.Database
+namespace Trojan.TrojanDataBase
 {
     public class DatabaseInit : DropCreateDatabaseIfModelChanges<TrojanDBContext>
     {

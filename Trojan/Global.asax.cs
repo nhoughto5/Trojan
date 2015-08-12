@@ -7,7 +7,7 @@ using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
 using System.Data.Entity;
-using Trojan.Database;
+using Trojan.TrojanDataBase;
 using Trojan.Logic;
 
 namespace Trojan

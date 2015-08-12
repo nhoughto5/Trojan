@@ -7,23 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Trojan.Database
+namespace Trojan.TrojanDataBase
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Attribute
+    public partial class Category
     {
-        public int AttributeId { get; set; }
-        public string AttributeName { get; set; }
-        public string Description { get; set; }
-        public string ImagePath { get; set; }
-        public int F_in { get; set; }
-        public int F_out { get; set; }
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }
+        public string Description { get; set; }
     
-        public virtual Category Category { get; set; }
-        public virtual VirusDescriptionItems VirusDescriptionItem { get; set; }
+        public virtual Attribute Attribute { get; set; }
     }
 }

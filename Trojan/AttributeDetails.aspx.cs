@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Trojan.Database;
+using Trojan.TrojanDataBase;
 using System.Web.ModelBinding;
 
 namespace Trojan
@@ -16,12 +16,12 @@ namespace Trojan
 
         }
 
-        public IQueryable<Trojan.Database.Attribute> GetAttribute(
+        public IQueryable<Trojan.TrojanDataBase.Attribute> GetAttribute(
                             [QueryString("AttributeID")] int? AttributeId,
                             [RouteData] string AttributeName)
         {
-            var _db = new Trojan.Database.TrojanDBContext();
-            IQueryable<Trojan.Database.Attribute> query = _db.Attributes;
+            var _db = new Trojan.TrojanDataBase.TrojanDBContext();
+            IQueryable<Trojan.TrojanDataBase.Attribute> query = _db.Attributes;
             if (AttributeId.HasValue && AttributeId > 0)
             {
                 query = query.Where(p => p.AttributeId == AttributeId);
