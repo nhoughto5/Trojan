@@ -8,7 +8,7 @@ using System.Data;
 using System.Configuration;
 using System.Web;
 using Trojan;
-using Trojan.Models;
+using Trojan.Database;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -75,11 +75,11 @@ public class NVPAPICaller
         // Get the Shopping Cart Attributes
         using (Trojan.Logic.VirusDescriptionActions myCartOrders = new Trojan.Logic.VirusDescriptionActions())
         {
-            List<Virus_Item> myOrderList = myCartOrders.GetDescriptionItems();
+            List<VirusDescriptionItems> myOrderList = myCartOrders.GetDescriptionItems();
 
             for (int i = 0; i < myOrderList.Count; i++)
             {
-                encoder["L_PAYMENTREQUEST_0_NAME" + i] = myOrderList[i].Attribute.AttributeName.ToString();
+                encoder["L_PAYMENTREQUEST_0_NAME" + i] = myOrderList[i].Attrib.AttributeName.ToString();
                 //encoder["L_PAYMENTREQUEST_0_AMT" + i] = myOrderList[i].Attribute.UnitPrice.ToString();
                 //encoder["L_PAYMENTREQUEST_0_QTY" + i] = myOrderList[i].Quantity.ToString();
             }

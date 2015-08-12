@@ -85,7 +85,7 @@
         </div>
         <div id="CategoryMenu" style="text-align: center">       
             <asp:ListView ID="categoryList"  
-                ItemType="Trojan.Models.Category" 
+                ItemType="Trojan.Database.Category" 
                 runat="server"
                 SelectMethod="GetCategories" >
                 <ItemTemplate>

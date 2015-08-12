@@ -7,7 +7,7 @@ using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
 using System.Data.Entity;
-using Trojan.Models;
+using Trojan.Database;
 using Trojan.Logic;
 
 namespace Trojan
@@ -21,7 +21,7 @@ namespace Trojan
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             // Initialize the Attribute database.
-            Database.SetInitializer(new AttributeDatabaseInitializer());
+            Database.SetInitializer(new DatabaseInit());
 
             // Create the custom role and user.
             RoleActions roleActions = new RoleActions();

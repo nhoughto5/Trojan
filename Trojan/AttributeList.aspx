@@ -8,7 +8,7 @@
 
             <asp:ListView ID="attributeList" runat="server" 
                 DataKeyNames="AttributeID" GroupItemCount="4"
-                ItemType="Trojan.Models.Attribute" SelectMethod="GetAttributes">
+                ItemType="Trojan.Database.Attribute" SelectMethod="GetAttributes">
                 <EmptyDataTemplate>
                     <table >
                         <tr>

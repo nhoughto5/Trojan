@@ -18,9 +18,12 @@ namespace Trojan.Database
         public string AttributeName { get; set; }
         public string Description { get; set; }
         public string ImagePath { get; set; }
-        public short F_in { get; set; }
-        public short F_out { get; set; }
+        public int F_in { get; set; }
+        public int F_out { get; set; }
+        public int CategoryId { get; set; }
+        public string CategoryName { get; set; }
     
         public virtual Category Category { get; set; }
+        public virtual VirusDescriptionItems VirusDescriptionItem { get; set; }
     }
 }

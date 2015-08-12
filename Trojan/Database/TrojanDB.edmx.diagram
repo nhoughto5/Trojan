@@ -9,12 +9,16 @@
         <EntityTypeShape EntityType="TrojanDB.Virus" Width="1.5" PointX="5.25" PointY="1" />
         <EntityTypeShape EntityType="TrojanDB.Matrix" Width="1.5" PointX="8" PointY="2.375" />
         <EntityTypeShape EntityType="TrojanDB.Matrix_Cell" Width="1.5" PointX="11.25" PointY="2.875" />
-        <EntityTypeShape EntityType="TrojanDB.Category" Width="1.5" PointX="5.75" PointY="5.25" />
-        <EntityTypeShape EntityType="TrojanDB.Attribute" Width="1.5" PointX="8.875" PointY="5.875" />
+        <EntityTypeShape EntityType="TrojanDB.Category" Width="1.5" PointX="5.125" PointY="6.125" />
+        <EntityTypeShape EntityType="TrojanDB.Attribute" Width="1.5" PointX="8.25" PointY="6" />
         <AssociationConnector Association="TrojanDB.UserVirus" />
         <AssociationConnector Association="TrojanDB.VirusMatrix" />
         <AssociationConnector Association="TrojanDB.MatrixToCell" />
         <AssociationConnector Association="TrojanDB.CategoryAttribute" />
+        <EntityTypeShape EntityType="TrojanDB.Order" Width="1.5" PointX="4.375" PointY="10.125" />
+        <EntityTypeShape EntityType="TrojanDB.OrderDetail" Width="1.5" PointX="7.5" PointY="10.75" />
+        <EntityTypeShape EntityType="TrojanDB.VirusDescriptionItems" Width="1.5" PointX="9.5" PointY="11.125" />
+        <AssociationConnector Association="TrojanDB.VirusDescriptionItemsAttribute" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Trojan.Models;
+using Trojan.Database;
 
 namespace Trojan.Checkout
 {
@@ -41,7 +41,7 @@ namespace Trojan.Checkout
                     TransactionId.Text = PaymentConfirmation;
 
 
-                    AttributeContext _db = new AttributeContext();
+                    TrojanDBContext _db = new TrojanDBContext();
                     // Get the current order id.
                     int currentOrderId = -1;
                     if (Session["currentOrderId"] != string.Empty)
@@ -54,7 +54,7 @@ namespace Trojan.Checkout
                         // Get the order based on order id.
                         myCurrentOrder = _db.Orders.Single(o => o.OrderId == currentOrderId);
                         // Update the order to reflect payment has been completed.
-                        myCurrentOrder.PaymentTransactionId = PaymentConfirmation;
+                        //myCurrentOrder.PaymentTransactionId = PaymentConfirmation;
                         // Save to DB.
                         _db.SaveChanges();
                     }

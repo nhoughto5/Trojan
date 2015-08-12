@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Trojan.Models;
+using Trojan.Database;
 
 namespace Trojan.Checkout
 {
@@ -32,13 +32,13 @@ namespace Trojan.Checkout
                     myOrder.Username = User.Identity.Name;
                     myOrder.FirstName = decoder["FIRSTNAME"].ToString();
                     myOrder.LastName = decoder["LASTNAME"].ToString();
-                    myOrder.Address = decoder["SHIPTOSTREET"].ToString();
-                    myOrder.City = decoder["SHIPTOCITY"].ToString();
-                    myOrder.State = decoder["SHIPTOSTATE"].ToString();
-                    myOrder.PostalCode = decoder["SHIPTOZIP"].ToString();
-                    myOrder.Country = decoder["SHIPTOCOUNTRYCODE"].ToString();
+                    //myOrder.Address = decoder["SHIPTOSTREET"].ToString();
+                    //myOrder.City = decoder["SHIPTOCITY"].ToString();
+                    //myOrder.State = decoder["SHIPTOSTATE"].ToString();
+                    //myOrder.PostalCode = decoder["SHIPTOZIP"].ToString();
+                    //myOrder.Country = decoder["SHIPTOCOUNTRYCODE"].ToString();
                     myOrder.Email = decoder["EMAIL"].ToString();
-                    myOrder.Total = Convert.ToDecimal(decoder["AMT"].ToString());
+                    //myOrder.Total = Convert.ToDecimal(decoder["AMT"].ToString());
 
                     // Verify total payment amount as set on CheckoutStart.aspx.
                     try
@@ -56,7 +56,7 @@ namespace Trojan.Checkout
                     }
 
                     // Get DB context.
-                    AttributeContext _db = new AttributeContext();
+                    TrojanDBContext _db = new TrojanDBContext();
 
                     // Add order to DB.
                     _db.Orders.Add(myOrder);
@@ -65,7 +65,7 @@ namespace Trojan.Checkout
                     // Get the shopping cart items and process them.
                     using (Trojan.Logic.VirusDescriptionActions usersShoppingCart = new Trojan.Logic.VirusDescriptionActions())
                     {
-                        List<Virus_Item> myOrderList = usersShoppingCart.GetDescriptionItems();
+                        List<VirusDescriptionItems> myOrderList = usersShoppingCart.GetDescriptionItems();
 
                         // Add OrderDetail information to the DB for each Attribute purchased.
                         for (int i = 0; i < myOrderList.Count; i++)
@@ -74,7 +74,7 @@ namespace Trojan.Checkout
                             var myOrderDetail = new OrderDetail();
                             myOrderDetail.OrderId = myOrder.OrderId;
                             myOrderDetail.Username = User.Identity.Name;
-                            myOrderDetail.AttributeId = myOrderList[i].AttributeId;
+                            //myOrderDetail.AttributeId = myOrderList[i].AttributeId;
                             //myOrderDetail.Quantity = myOrderList[i].Quantity;
                             //myOrderDetail.UnitPrice = myOrderList[i].Attribute.UnitPrice;
 

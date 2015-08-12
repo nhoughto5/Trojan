@@ -12,16 +12,11 @@ namespace Trojan.Database
     using System;
     using System.Collections.Generic;
     
-    public partial class Matrix_Cell
+    public partial class OrderDetail
     {
-        public int Cell_Id { get; set; }
-        public int RowId { get; set; }
-        public int ColumnId { get; set; }
-        public Nullable<bool> value { get; set; }
-        public string submatrix { get; set; }
-        public int MatrixMatrix_Id { get; set; }
-        public string MatrixName { get; set; }
-    
-        public virtual Matrix Matrix { get; set; }
+        public int OrderDetailId { get; set; }
+        public int OrderId { get; set; }
+        public string Username { get; set; }
+        public string VirusId { get; set; }
     }
 }

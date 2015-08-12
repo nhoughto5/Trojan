@@ -13,10 +13,10 @@ namespace Trojan.Database
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TrojanDBContainer : DbContext
+    public partial class TrojanDBContext : DbContext
     {
-        public TrojanDBContainer()
-            : base("name=TrojanDBContainer")
+        public TrojanDBContext()
+            : base("name=TrojanDBContext")
         {
         }
     
@@ -31,5 +31,8 @@ namespace Trojan.Database
         public virtual DbSet<Matrix_Cell> Matrix_Cell { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Attribute> Attributes { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<OrderDetail> OrderDetails { get; set; }
+        public virtual DbSet<VirusDescriptionItems> VirusDescriptionItems { get; set; }
     }
 }

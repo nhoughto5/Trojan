@@ -4,15 +4,194 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Namespace="TrojanDB.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
-        <EntityContainer Name="TrojanDBTargetContainer" >
-        </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+    <Schema Namespace="TrojanDB.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="TrojanDBStoreContainer">
+    <EntitySet Name="Users" EntityType="TrojanDB.Store.Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Virus" EntityType="TrojanDB.Store.Virus" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Matrices" EntityType="TrojanDB.Store.Matrices" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Matrix_Cell" EntityType="TrojanDB.Store.Matrix_Cell" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Categories" EntityType="TrojanDB.Store.Categories" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Attributes" EntityType="TrojanDB.Store.Attributes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Orders" EntityType="TrojanDB.Store.Orders" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OrderDetails" EntityType="TrojanDB.Store.OrderDetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VirusDescriptionItems" EntityType="TrojanDB.Store.VirusDescriptionItems" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="UserVirus" Association="TrojanDB.Store.UserVirus">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Virus" EntitySet="Virus" />
+    </AssociationSet>
+    <AssociationSet Name="VirusMatrix" Association="TrojanDB.Store.VirusMatrix">
+      <End Role="Virus" EntitySet="Virus" />
+      <End Role="Matrix" EntitySet="Matrices" />
+    </AssociationSet>
+    <AssociationSet Name="MatrixToCell" Association="TrojanDB.Store.MatrixToCell">
+      <End Role="Matrix" EntitySet="Matrices" />
+      <End Role="Matrix_Cell" EntitySet="Matrix_Cell" />
+    </AssociationSet>
+    <AssociationSet Name="CategoryAttribute" Association="TrojanDB.Store.CategoryAttribute">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Attribute" EntitySet="Attributes" />
+    </AssociationSet>
+    <AssociationSet Name="VirusDescriptionItemsAttribute" Association="TrojanDB.Store.VirusDescriptionItemsAttribute">
+      <End Role="VirusDescriptionItems" EntitySet="VirusDescriptionItems" />
+      <End Role="Attribute" EntitySet="Attributes" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="User_Id" />
+    </Key>
+    <Property Name="User_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Virus">
+    <Key>
+      <PropertyRef Name="Virus_Id" />
+    </Key>
+    <Property Name="Virus_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UserUser_Id" Type="int" Nullable="false" />
+    <Property Name="Matrix_Matrix_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Matrices">
+    <Key>
+      <PropertyRef Name="Matrix_Id" />
+    </Key>
+    <Property Name="Matrix_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Matrix_Cell">
+    <Key>
+      <PropertyRef Name="Cell_Id" />
+    </Key>
+    <Property Name="Cell_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RowId" Type="int" Nullable="false" />
+    <Property Name="ColumnId" Type="int" Nullable="false" />
+    <Property Name="value" Type="bit" Nullable="true" />
+    <Property Name="submatrix" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MatrixMatrix_Id" Type="int" Nullable="false" />
+    <Property Name="MatrixName" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Attribute_AttributeId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Attributes">
+    <Key>
+      <PropertyRef Name="AttributeId" />
+    </Key>
+    <Property Name="AttributeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AttributeName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ImagePath" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="F_in" Type="int" Nullable="false" />
+    <Property Name="F_out" Type="int" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderDate" Type="datetime" Nullable="false" />
+    <Property Name="Username" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrderDetails">
+    <Key>
+      <PropertyRef Name="OrderDetailId" />
+    </Key>
+    <Property Name="OrderDetailId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderId" Type="int" Nullable="false" />
+    <Property Name="Username" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="VirusId" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VirusDescriptionItems">
+    <Key>
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Name="ItemId" Type="nvarchar" StoreGeneratedPattern="Identity" Nullable="false" MaxLength="250" />
+    <Property Name="VirusId" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="On_Off" Type="bit" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="AttributeId" Type="int" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="Attribute1_AttributeId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="UserVirus">
+    <End Role="User" Type="TrojanDB.Store.Users" Multiplicity="1" />
+    <End Role="Virus" Type="TrojanDB.Store.Virus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="User_Id" />
+      </Principal>
+      <Dependent Role="Virus">
+        <PropertyRef Name="UserUser_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VirusMatrix">
+    <End Role="Virus" Type="TrojanDB.Store.Virus" Multiplicity="*" />
+    <End Role="Matrix" Type="TrojanDB.Store.Matrices" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Matrix">
+        <PropertyRef Name="Matrix_Id" />
+      </Principal>
+      <Dependent Role="Virus">
+        <PropertyRef Name="Matrix_Matrix_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MatrixToCell">
+    <End Role="Matrix" Type="TrojanDB.Store.Matrices" Multiplicity="1" />
+    <End Role="Matrix_Cell" Type="TrojanDB.Store.Matrix_Cell" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Matrix">
+        <PropertyRef Name="Matrix_Id" />
+      </Principal>
+      <Dependent Role="Matrix_Cell">
+        <PropertyRef Name="MatrixMatrix_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CategoryAttribute">
+    <End Role="Category" Type="TrojanDB.Store.Categories" Multiplicity="*" />
+    <End Role="Attribute" Type="TrojanDB.Store.Attributes" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Attribute">
+        <PropertyRef Name="AttributeId" />
+      </Principal>
+      <Dependent Role="Category">
+        <PropertyRef Name="Attribute_AttributeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VirusDescriptionItemsAttribute">
+    <End Role="VirusDescriptionItems" Type="TrojanDB.Store.VirusDescriptionItems" Multiplicity="*" />
+    <End Role="Attribute" Type="TrojanDB.Store.Attributes" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Attribute">
+        <PropertyRef Name="AttributeId" />
+      </Principal>
+      <Dependent Role="VirusDescriptionItems">
+        <PropertyRef Name="Attribute1_AttributeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="TrojanDB" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
-        <EntityContainer Name="TrojanDBContainer" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="TrojanDBContext" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Users" EntityType="TrojanDB.User" />
           <EntitySet Name="Virus" EntityType="TrojanDB.Virus" />
           <EntitySet Name="Matrices" EntityType="TrojanDB.Matrix" />
@@ -33,6 +212,13 @@
           </AssociationSet>
           <AssociationSet Name="CategoryAttribute" Association="TrojanDB.CategoryAttribute">
             <End Role="Category" EntitySet="Categories" />
+            <End Role="Attribute" EntitySet="Attributes" />
+          </AssociationSet>
+          <EntitySet Name="Orders" EntityType="TrojanDB.Order" />
+          <EntitySet Name="OrderDetails" EntityType="TrojanDB.OrderDetail" />
+          <EntitySet Name="VirusDescriptionItems" EntityType="TrojanDB.VirusDescriptionItems" />
+          <AssociationSet Name="VirusDescriptionItemsAttribute" Association="TrojanDB.VirusDescriptionItemsAttribute">
+            <End Role="VirusDescriptionItems" EntitySet="VirusDescriptionItems" />
             <End Role="Attribute" EntitySet="Attributes" />
           </AssociationSet>
         </EntityContainer>
@@ -70,12 +256,13 @@
             <PropertyRef Name="Cell_Id" />
           </Key>
           <Property Name="Cell_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="RowId" Type="Int16" Nullable="false" />
-          <Property Name="ColumnId" Type="Int16" Nullable="false" />
+          <Property Name="RowId" Type="Int32" Nullable="false" />
+          <Property Name="ColumnId" Type="Int32" Nullable="false" />
           <Property Name="value" Type="Boolean" Nullable="true" />
           <Property Name="submatrix" Type="String" Nullable="false" />
           <NavigationProperty Name="Matrix" Relationship="TrojanDB.MatrixToCell" FromRole="Matrix_Cell" ToRole="Matrix" />
           <Property Name="MatrixMatrix_Id" Type="Int32" Nullable="false" />
+          <Property Name="MatrixName" Type="String" Nullable="false" />
         </EntityType>
         <EntityType Name="Category">
           <Key>
@@ -94,9 +281,12 @@
           <Property Name="AttributeName" Type="String" Nullable="false" />
           <Property Name="Description" Type="String" Nullable="false" />
           <Property Name="ImagePath" Type="String" Nullable="false" />
-          <Property Name="F_in" Type="Int16" Nullable="false" />
-          <Property Name="F_out" Type="Int16" Nullable="false" />
+          <Property Name="F_in" Type="Int32" Nullable="false" />
+          <Property Name="F_out" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Category" Relationship="TrojanDB.CategoryAttribute" FromRole="Attribute" ToRole="Category" />
+          <Property Name="CategoryId" Type="Int32" Nullable="false" />
+          <Property Name="CategoryName" Type="String" Nullable="false" />
+          <NavigationProperty Name="VirusDescriptionItem" Relationship="TrojanDB.VirusDescriptionItemsAttribute" FromRole="Attribute" ToRole="VirusDescriptionItems" />
         </EntityType>
         <Association Name="UserVirus">
           <End Type="TrojanDB.User" Role="User" Multiplicity="1" />
@@ -130,17 +320,171 @@
           <End Type="TrojanDB.Category" Role="Category" Multiplicity="1" />
           <End Type="TrojanDB.Attribute" Role="Attribute" Multiplicity="1" />
         </Association>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderDate" Type="DateTime" Nullable="false" />
+          <Property Name="Username" Type="String" Nullable="false" />
+          <Property Name="FirstName" Type="String" Nullable="false" />
+          <Property Name="LastName" Type="String" Nullable="false" />
+          <Property Name="Email" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OrderDetail">
+          <Key>
+            <PropertyRef Name="OrderDetailId" />
+          </Key>
+          <Property Name="OrderDetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderId" Type="Int32" Nullable="false" />
+          <Property Name="Username" Type="String" Nullable="false" />
+          <Property Name="VirusId" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VirusDescriptionItems">
+          <Key>
+            <PropertyRef Name="ItemId" />
+          </Key>
+          <Property Name="ItemId" Type="String" Nullable="false" annotation:StoreGeneratedPattern="Identity" MaxLength="250" />
+          <Property Name="VirusId" Type="String" Nullable="false" />
+          <Property Name="On_Off" Type="Boolean" Nullable="false" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" />
+          <Property Name="AttributeId" Type="Int32" Nullable="false" />
+          <Property Name="CategoryId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Attrib" Relationship="TrojanDB.VirusDescriptionItemsAttribute" FromRole="VirusDescriptionItems" ToRole="Attribute" />
+        </EntityType>
+        <Association Name="VirusDescriptionItemsAttribute">
+          <End Type="TrojanDB.VirusDescriptionItems" Role="VirusDescriptionItems" Multiplicity="1" />
+          <End Type="TrojanDB.Attribute" Role="Attribute" Multiplicity="1" />
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
-        <Alias Key="Model" Value="TrojanDB" />
-        <Alias Key="Target" Value="TrojanDB.Store" />
-        <EntityContainerMapping CdmEntityContainer="TrojanDBContainer" StorageEntityContainer="TrojanDBTargetContainer">
-        </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TrojanDBStoreContainer" CdmEntityContainer="TrojanDBContext">
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="IsTypeOf(TrojanDB.User)">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Virus">
+      <EntityTypeMapping TypeName="IsTypeOf(TrojanDB.Virus)">
+        <MappingFragment StoreEntitySet="Virus">
+          <ScalarProperty Name="Virus_Id" ColumnName="Virus_Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="UserUser_Id" ColumnName="UserUser_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Matrices">
+      <EntityTypeMapping TypeName="IsTypeOf(TrojanDB.Matrix)">
+        <MappingFragment StoreEntitySet="Matrices">
+          <ScalarProperty Name="Matrix_Id" ColumnName="Matrix_Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Matrix_Cell">
+      <EntityTypeMapping TypeName="IsTypeOf(TrojanDB.Matrix_Cell)">
+        <MappingFragment StoreEntitySet="Matrix_Cell">
+          <ScalarProperty Name="Cell_Id" ColumnName="Cell_Id" />
+          <ScalarProperty Name="RowId" ColumnName="RowId" />
+          <ScalarProperty Name="ColumnId" ColumnName="ColumnId" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="submatrix" ColumnName="submatrix" />
+          <ScalarProperty Name="MatrixMatrix_Id" ColumnName="MatrixMatrix_Id" />
+          <ScalarProperty Name="MatrixName" ColumnName="MatrixName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="IsTypeOf(TrojanDB.Category)">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Attributes">
+      <EntityTypeMapping TypeName="IsTypeOf(TrojanDB.Attribute)">
+        <MappingFragment StoreEntitySet="Attributes">
+          <ScalarProperty Name="AttributeId" ColumnName="AttributeId" />
+          <ScalarProperty Name="AttributeName" ColumnName="AttributeName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="F_in" ColumnName="F_in" />
+          <ScalarProperty Name="F_out" ColumnName="F_out" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="IsTypeOf(TrojanDB.Order)">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderDetails">
+      <EntityTypeMapping TypeName="IsTypeOf(TrojanDB.OrderDetail)">
+        <MappingFragment StoreEntitySet="OrderDetails">
+          <ScalarProperty Name="OrderDetailId" ColumnName="OrderDetailId" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="VirusId" ColumnName="VirusId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VirusDescriptionItems">
+      <EntityTypeMapping TypeName="IsTypeOf(TrojanDB.VirusDescriptionItems)">
+        <MappingFragment StoreEntitySet="VirusDescriptionItems">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="VirusId" ColumnName="VirusId" />
+          <ScalarProperty Name="On_Off" ColumnName="On_Off" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="AttributeId" ColumnName="AttributeId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="VirusMatrix" TypeName="TrojanDB.VirusMatrix" StoreEntitySet="Virus">
+      <EndProperty Name="Matrix">
+        <ScalarProperty Name="Matrix_Id" ColumnName="Matrix_Matrix_Id" />
+      </EndProperty>
+      <EndProperty Name="Virus">
+        <ScalarProperty Name="Virus_Id" ColumnName="Virus_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CategoryAttribute" TypeName="TrojanDB.CategoryAttribute" StoreEntitySet="Categories">
+      <EndProperty Name="Attribute">
+        <ScalarProperty Name="AttributeId" ColumnName="Attribute_AttributeId" />
+      </EndProperty>
+      <EndProperty Name="Category">
+        <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VirusDescriptionItemsAttribute" TypeName="TrojanDB.VirusDescriptionItemsAttribute" StoreEntitySet="VirusDescriptionItems">
+      <EndProperty Name="Attribute">
+        <ScalarProperty Name="AttributeId" ColumnName="Attribute1_AttributeId" />
+      </EndProperty>
+      <EndProperty Name="VirusDescriptionItems">
+        <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
@@ -154,6 +498,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="True" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
       </DesignerInfoPropertySet>
     </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->

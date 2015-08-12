@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using Trojan.Models;
+using Trojan.Database;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 
@@ -13,7 +13,7 @@ namespace Trojan.Logic
         internal void AddUserAndRole()
         {
             // Access the application context and create result variables.
-            Models.ApplicationDbContext context = new ApplicationDbContext();
+            Database.ApplicationDbContext context = new ApplicationDbContext();
             IdentityResult IdRoleResult;
             IdentityResult IdUserResult;
 

@@ -4,7 +4,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Owin;
-using Trojan.Models;
+using Trojan.Database;
 
 namespace Trojan.Account
 {

@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="VirusDescriptionTitle" runat="server" class="ContentHead"><h1>Virus Description</h1></div>
     <asp:GridView ID="DescriptionList" runat="server" AutoGenerateColumns="False" ShowFooter="True" GridLines="Vertical" CellPadding="4"
-        ItemType="Trojan.Models.Virus_Item" SelectMethod="GetVirusDescriptionItems" 
+        ItemType="Trojan.Database.VirusDescriptionItems" SelectMethod="GetVirusDescriptionItems" 
         CssClass="table table-striped table-bordered" >   
         <Columns>
         <asp:BoundField DataField="AttributeID" HeaderText="ID" SortExpression="AttributeID" />        

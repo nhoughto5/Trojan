@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Trojan.Models;
+using Trojan.Database;
 using Trojan.Logic;
 using System.Collections.Specialized;
 using System.Collections;
@@ -29,8 +29,8 @@ namespace Trojan
                 totalF_in = usersVirus.getTotalF_in();
                 totalF_out = usersVirus.getTotalF_out();
                 if(!Built){
-                    RelationDiv.Visible = false;
-                    RelationGrid.Visible = false;
+                    //RelationDiv.Visible = false;
+                    //RelationGrid.Visible = false;
                 }
                 if (totalNumberofAttributes > 0)
                 {
@@ -73,13 +73,13 @@ namespace Trojan
         private bool getBuiltStatus(){
             return Built;
         }
-        public List<Virus_Item> GetVirusDescriptionItems()
+        public List<VirusDescriptionItems> GetVirusDescriptionItems()
         {
             VirusDescriptionActions actions = new VirusDescriptionActions();
             return actions.GetDescriptionItems();
         }
 
-        public List<Virus_Item> UpdateCartItems()
+        public List<VirusDescriptionItems> UpdateCartItems()
         {
             using (VirusDescriptionActions usersShoppingCart = new VirusDescriptionActions())
             {
@@ -144,20 +144,20 @@ namespace Trojan
         {
             UpdateCartItems();
         }
-        List<int> getConnections(System.Linq.IQueryable<Matrix_Element> Row_Values)
+        List<int> getConnections(System.Linq.IQueryable<Matrix_Cell> Row_Values)
         {
-            List<Matrix_Element> Row = Row_Values.ToList();
+            List<Matrix_Cell> Row = Row_Values.ToList();
             List<int> connects = new List<int>();
             foreach (var item in Row)
             {
-                connects.Add(item.ColID);
+                connects.Add(item.ColumnId);
             }
             return connects;
         }
 
         public void Build_Virus()
         {
-            AttributeContext _db = new AttributeContext();
+            TrojanDBContext _db = new TrojanDBContext();
             List<int> tempList = new List<int>();
             int currentID;
             using (VirusDescriptionActions usersShoppingCart = new VirusDescriptionActions())
@@ -170,22 +170,22 @@ namespace Trojan
                     rowValues = GetValues(DescriptionList.Rows[i]);
                     cartUpdates[i].AttributeId = Convert.ToInt32(rowValues["AttributeID"]);
                     currentID = cartUpdates[i].AttributeId;
-                    System.Linq.IQueryable<Matrix_Element> Row = (from p in _db.default_Matrix where p.RowID == currentID select p);
+                    System.Linq.IQueryable<Matrix_Cell> Row = (from p in _db.default_Matrix where p.RowID == currentID select p);
                     tempList = getConnections(Row);
                 }
             }
         }
         protected void ClearBtn_Click(object sender, EventArgs e)
         {
-            RelationDiv.Visible = false;
-            RelationGrid.Visible = false;
-            RelationGrid.DataSource = null;
-            RelationGrid.DataBind();
+            //RelationDiv.Visible = false;
+            //RelationGrid.Visible = false;
+            //RelationGrid.DataSource = null;
+            //RelationGrid.DataBind();
         }
         protected void BuildBtn_Click(object sender, EventArgs e)
         {
-            RelationDiv.Visible = true;
-            RelationGrid.Visible = true;
+            //RelationDiv.Visible = true;
+            //RelationGrid.Visible = true;
             Build_Virus();
         }
     }

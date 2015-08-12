@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using Trojan.Models;
+//using Trojan.Database;
+using Trojan.Database;
 
 namespace Trojan.Logic
 {
@@ -10,7 +11,8 @@ namespace Trojan.Logic
     {
         public string VirusDescriptionID { get; set; }
 
-        private AttributeContext _db = new AttributeContext();
+        //private TrojanDBContext _db = new TrojanDBContext();
+        private TrojanDBContext _db = new TrojanDBContext();
 
         public const string DescriptionSessionKey = "VirusId";
 
@@ -26,13 +28,13 @@ namespace Trojan.Logic
             {
                 //If the selected Attribute is not already included in the description
                 //Add it and activate it's On_Off Status                 
-                virItem = new Virus_Item
+                virItem = new VirusDescriptionItems
                 {
                     ItemId = Guid.NewGuid().ToString(),
                     AttributeId = id,
                     VirusId = VirusDescriptionID,
-                    Attribute = _db.Attributes.SingleOrDefault(
-                     p => p.AttributeID == id),
+                    Attrib = _db.Attributes.SingleOrDefault(
+                     p => p.AttributeId == id),
                     On_Off = false,
                     DateCreated = DateTime.Now
                 };
@@ -75,7 +77,7 @@ namespace Trojan.Logic
             return HttpContext.Current.Session[DescriptionSessionKey].ToString();
         }
 
-        public List<Virus_Item> GetDescriptionItems()
+        public List<VirusDescriptionItems> GetDescriptionItems()
         {
             VirusDescriptionID = GetVirusId();
 
@@ -84,11 +86,11 @@ namespace Trojan.Logic
         }
         public bool Get_OnOff(string cartID, int attributeID)
         {
-            using (var _db = new Trojan.Models.AttributeContext())
+            using (var _db = new Trojan.Database.TrojanDBContext())
             {
                 try
                 {
-                    var myItem = (from c in _db.VirusDescriptionItems where c.VirusId == cartID && c.Attribute.AttributeID == attributeID select c).FirstOrDefault();
+                    var myItem = (from c in _db.VirusDescriptionItems where c.VirusId == cartID && c.Attrib.AttributeId == attributeID select c).FirstOrDefault();
                     return myItem.On_Off;
                 }
                 catch (Exception exp)
@@ -114,7 +116,7 @@ namespace Trojan.Logic
             // the current price for each of those Attributes in the cart.  
             // Sum all Attribute price totals to get the cart total.   
             int? total = 0;
-            total = (int?)(from virusItems in _db.VirusDescriptionItems where virusItems.VirusId == VirusDescriptionID select (int?)(virusItems.On_Off == true ? virusItems.Attribute.F_in : 0)).Sum();
+            total = (int?)(from virusItems in _db.VirusDescriptionItems where virusItems.VirusId == VirusDescriptionID select (int?)(virusItems.On_Off == true ? virusItems.Attrib.F_in : 0)).Sum();
             return total ?? 0;
         }
         public int getTotalF_out()
@@ -124,7 +126,7 @@ namespace Trojan.Logic
             // the current price for each of those Attributes in the cart.  
             // Sum all Attribute price totals to get the cart total.   
             int? total = 0;
-            total = (int?)(from virusItems in _db.VirusDescriptionItems where virusItems.VirusId == VirusDescriptionID select (int?)(virusItems.On_Off == true ? virusItems.Attribute.F_out : 0)).Sum();
+            total = (int?)(from virusItems in _db.VirusDescriptionItems where virusItems.VirusId == VirusDescriptionID select (int?)(virusItems.On_Off == true ? virusItems.Attrib.F_out : 0)).Sum();
             return total ?? 0;
         }
         public VirusDescriptionActions GetCart(HttpContext context)
@@ -138,18 +140,18 @@ namespace Trojan.Logic
 
         public void UpdateVirusDescriptionDatabase(String cartId, VirusDescriptionUpdates[] CartItemUpdates)
         {
-            using (var db = new Trojan.Models.AttributeContext())
+            using (var db = new Trojan.Database.TrojanDBContext())
             {
                 try
                 {
                     int CartItemCount = CartItemUpdates.Count();
-                    List<Virus_Item> myVirus = GetDescriptionItems();
+                    List<VirusDescriptionItems> myVirus = GetDescriptionItems();
                     foreach (var virusItem in myVirus)
                     {
                         // Iterate through all rows within shopping cart list
                         for (int i = 0; i < CartItemCount; i++)
                         {
-                            if (virusItem.Attribute.AttributeID == CartItemUpdates[i].AttributeId)
+                            if (virusItem.Attrib.AttributeId == CartItemUpdates[i].AttributeId)
                             {
                                 if (CartItemUpdates[i].RemoveItem == true)
                                 {
@@ -172,11 +174,11 @@ namespace Trojan.Logic
 
         public void RemoveItem(string removeCartID, int removeAttributeID)
         {
-            using (var _db = new Trojan.Models.AttributeContext())
+            using (var _db = new Trojan.Database.TrojanDBContext())
             {
                 try
                 {
-                    var myItem = (from c in _db.VirusDescriptionItems where c.VirusId == removeCartID && c.Attribute.AttributeID == removeAttributeID select c).FirstOrDefault();
+                    var myItem = (from c in _db.VirusDescriptionItems where c.VirusId == removeCartID && c.Attrib.AttributeId == removeAttributeID select c).FirstOrDefault();
                     if (myItem != null)
                     {
                         // Remove Item.
@@ -193,11 +195,11 @@ namespace Trojan.Logic
 
         public void UpdateItem(string updateCartID, int updateAttributeID, bool OnOff)
         {
-            using (var _db = new Trojan.Models.AttributeContext())
+            using (var _db = new Trojan.Database.TrojanDBContext())
             {
                 try
                 {
-                    var myItem = (from c in _db.VirusDescriptionItems where c.VirusId == updateCartID && c.Attribute.AttributeID == updateAttributeID select c).FirstOrDefault();
+                    var myItem = (from c in _db.VirusDescriptionItems where c.VirusId == updateCartID && c.Attrib.AttributeId == updateAttributeID select c).FirstOrDefault();
                     if (myItem != null)
                     {
                         myItem.On_Off = OnOff;
@@ -243,7 +245,7 @@ namespace Trojan.Logic
         public void MigrateCart(string cartId, string userName)
         {
             var shoppingCart = _db.VirusDescriptionItems.Where(c => c.VirusId == cartId);
-            foreach (Virus_Item item in shoppingCart)
+            foreach (VirusDescriptionItems item in shoppingCart)
             {
                 item.VirusId = userName;
             }
