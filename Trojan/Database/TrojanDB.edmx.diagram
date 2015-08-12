@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="932af02cb7784e3db694d181588bc393" Name="Diagram1" >
+        <EntityTypeShape EntityType="TrojanDB.User" Width="1.5" PointX="2.375" PointY="2" />
+        <EntityTypeShape EntityType="TrojanDB.Virus" Width="1.5" PointX="5.25" PointY="1" />
+        <EntityTypeShape EntityType="TrojanDB.Matrix" Width="1.5" PointX="8" PointY="2.375" />
+        <EntityTypeShape EntityType="TrojanDB.Matrix_Cell" Width="1.5" PointX="11.25" PointY="2.875" />
+        <EntityTypeShape EntityType="TrojanDB.Category" Width="1.5" PointX="5.75" PointY="5.25" />
+        <EntityTypeShape EntityType="TrojanDB.Attribute" Width="1.5" PointX="8.875" PointY="5.875" />
+        <AssociationConnector Association="TrojanDB.UserVirus" />
+        <AssociationConnector Association="TrojanDB.VirusMatrix" />
+        <AssociationConnector Association="TrojanDB.MatrixToCell" />
+        <AssociationConnector Association="TrojanDB.CategoryAttribute" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

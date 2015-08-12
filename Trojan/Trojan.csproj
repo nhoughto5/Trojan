@@ -51,6 +51,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -265,6 +267,23 @@
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="Checkout\Web.config" />
     <Content Include="Admin\Web.config" />
+    <EntityDeploy Include="Database\TrojanDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TrojanDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Database\TrojanDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TrojanDB.edmx</DependentUpon>
+      <LastGenOutput>TrojanDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Database\TrojanDB.edmx.diagram">
+      <DependentUpon>TrojanDB.edmx</DependentUpon>
+    </Content>
+    <Content Include="Database\TrojanDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TrojanDB.edmx</DependentUpon>
+      <LastGenOutput>TrojanDB.cs</LastGenOutput>
+    </Content>
     <None Include="Properties\PublishProfiles\UvicTrojanSystem.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -503,6 +522,33 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Database\Matrix.cs">
+      <DependentUpon>TrojanDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Matrix_Cell.cs">
+      <DependentUpon>TrojanDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TrojanDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrojanDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TrojanDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrojanDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TrojanDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrojanDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\User.cs">
+      <DependentUpon>TrojanDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Virus.cs">
+      <DependentUpon>TrojanDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -532,18 +578,6 @@
     <Compile Include="Matrix.aspx.designer.cs">
       <DependentUpon>Matrix.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Attribute.cs" />
-    <Compile Include="Models\AttributeContext.cs" />
-    <Compile Include="Models\AttributeDatabaseInitializer.cs" />
-    <Compile Include="Models\MatrixRow.cs" />
-    <Compile Include="Models\Matrix_Element.cs">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="Models\Order.cs" />
-    <Compile Include="Models\OrderDetails.cs" />
-    <Compile Include="Models\Virus_Item.cs" />
-    <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -582,7 +616,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

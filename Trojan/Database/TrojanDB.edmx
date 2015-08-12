@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Namespace="TrojanDB.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
+        <EntityContainer Name="TrojanDBTargetContainer" >
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="TrojanDB" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="TrojanDBContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Users" EntityType="TrojanDB.User" />
+          <EntitySet Name="Virus" EntityType="TrojanDB.Virus" />
+          <EntitySet Name="Matrices" EntityType="TrojanDB.Matrix" />
+          <EntitySet Name="Matrix_Cell" EntityType="TrojanDB.Matrix_Cell" />
+          <EntitySet Name="Categories" EntityType="TrojanDB.Category" />
+          <EntitySet Name="Attributes" EntityType="TrojanDB.Attribute" />
+          <AssociationSet Name="UserVirus" Association="TrojanDB.UserVirus">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Virus" EntitySet="Virus" />
+          </AssociationSet>
+          <AssociationSet Name="VirusMatrix" Association="TrojanDB.VirusMatrix">
+            <End Role="Virus" EntitySet="Virus" />
+            <End Role="Matrix" EntitySet="Matrices" />
+          </AssociationSet>
+          <AssociationSet Name="MatrixToCell" Association="TrojanDB.MatrixToCell">
+            <End Role="Matrix" EntitySet="Matrices" />
+            <End Role="Matrix_Cell" EntitySet="Matrix_Cell" />
+          </AssociationSet>
+          <AssociationSet Name="CategoryAttribute" Association="TrojanDB.CategoryAttribute">
+            <End Role="Category" EntitySet="Categories" />
+            <End Role="Attribute" EntitySet="Attributes" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="User_Id" />
+          </Key>
+          <Property Name="User_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" Nullable="false" />
+          <Property Name="Email" Type="String" Nullable="false" />
+          <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Virus" Relationship="TrojanDB.UserVirus" FromRole="User" ToRole="Virus" />
+        </EntityType>
+        <EntityType Name="Virus">
+          <Key>
+            <PropertyRef Name="Virus_Id" />
+          </Key>
+          <Property Name="Virus_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="TrojanDB.UserVirus" FromRole="Virus" ToRole="User" />
+          <Property Name="UserUser_Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Matrix" Relationship="TrojanDB.VirusMatrix" FromRole="Virus" ToRole="Matrix" />
+        </EntityType>
+        <EntityType Name="Matrix">
+          <Key>
+            <PropertyRef Name="Matrix_Id" />
+          </Key>
+          <Property Name="Matrix_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" />
+          <NavigationProperty Name="Vir" Relationship="TrojanDB.VirusMatrix" FromRole="Matrix" ToRole="Virus" />
+          <NavigationProperty Name="Matrix_Cell" Relationship="TrojanDB.MatrixToCell" FromRole="Matrix" ToRole="Matrix_Cell" />
+        </EntityType>
+        <EntityType Name="Matrix_Cell">
+          <Key>
+            <PropertyRef Name="Cell_Id" />
+          </Key>
+          <Property Name="Cell_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RowId" Type="Int16" Nullable="false" />
+          <Property Name="ColumnId" Type="Int16" Nullable="false" />
+          <Property Name="value" Type="Boolean" Nullable="true" />
+          <Property Name="submatrix" Type="String" Nullable="false" />
+          <NavigationProperty Name="Matrix" Relationship="TrojanDB.MatrixToCell" FromRole="Matrix_Cell" ToRole="Matrix" />
+          <Property Name="MatrixMatrix_Id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryId" />
+          </Key>
+          <Property Name="CategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="String" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" />
+          <NavigationProperty Name="Attribute" Relationship="TrojanDB.CategoryAttribute" FromRole="Category" ToRole="Attribute" />
+        </EntityType>
+        <EntityType Name="Attribute">
+          <Key>
+            <PropertyRef Name="AttributeId" />
+          </Key>
+          <Property Name="AttributeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AttributeName" Type="String" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" />
+          <Property Name="ImagePath" Type="String" Nullable="false" />
+          <Property Name="F_in" Type="Int16" Nullable="false" />
+          <Property Name="F_out" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="Category" Relationship="TrojanDB.CategoryAttribute" FromRole="Attribute" ToRole="Category" />
+        </EntityType>
+        <Association Name="UserVirus">
+          <End Type="TrojanDB.User" Role="User" Multiplicity="1" />
+          <End Type="TrojanDB.Virus" Role="Virus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="User_Id" />
+            </Principal>
+            <Dependent Role="Virus">
+              <PropertyRef Name="UserUser_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="VirusMatrix">
+          <End Type="TrojanDB.Virus" Role="Virus" Multiplicity="1" />
+          <End Type="TrojanDB.Matrix" Role="Matrix" Multiplicity="1" />
+        </Association>
+        <Association Name="MatrixToCell">
+          <End Type="TrojanDB.Matrix" Role="Matrix" Multiplicity="1" />
+          <End Type="TrojanDB.Matrix_Cell" Role="Matrix_Cell" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Matrix">
+              <PropertyRef Name="Matrix_Id" />
+            </Principal>
+            <Dependent Role="Matrix_Cell">
+              <PropertyRef Name="MatrixMatrix_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CategoryAttribute">
+          <End Type="TrojanDB.Category" Role="Category" Multiplicity="1" />
+          <End Type="TrojanDB.Attribute" Role="Attribute" Multiplicity="1" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
+        <Alias Key="Model" Value="TrojanDB" />
+        <Alias Key="Target" Value="TrojanDB.Store" />
+        <EntityContainerMapping CdmEntityContainer="TrojanDBContainer" StorageEntityContainer="TrojanDBTargetContainer">
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
